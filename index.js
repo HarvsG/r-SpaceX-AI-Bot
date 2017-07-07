@@ -31,7 +31,7 @@ const NO_INPUTS = [
   'Say that again.',
 ];
 
-exports.SpaceXFullfilment = (request, response) => {
+exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
 
   //let requestHeader = JSON.stringify(request.headers);
