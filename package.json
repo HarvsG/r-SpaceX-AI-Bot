@@ -1,5 +1,5 @@
 {
-  "name": "API.ai-r/SpaceX-Webhook",
+  "name": "API.ai-r-SpaceX-Webhook",
   "version": "0.0.1",
   "description": "A webhook to allow an API.ai app to get information for the r/SpaceX API",
   "main": "index.js",
