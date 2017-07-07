@@ -1,6 +1,6 @@
 {
-  "name": "API.ai PVouptut Webhook",
-  "description": "A webhook to allow an API.ai app to get information for the PVoutput API",
+  "name": "API.ai SpaceX Webhook",
+  "description": "A webhook to allow an API.ai app to get information for the r/SpaceX API",
   "repository": "https://github.com/HarvsG/API.ai-rSpaceX-Webhook",
   "logo": "",
   "keywords": ["api.ai", "natural language","SpaceX","Webhook","google cloud functions","r/SpaceX"]
