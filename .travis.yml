@@ -31,8 +31,7 @@ before_deploy:
 
   # use the decrypted service account credentials to authenticate the command line tool
   # get the encrypted variable names from travis cli: https://docs.travis-ci.com/user/encrypting-files/
-  - openssl aes-256-cbc -K $encrypted_e82afbcd63e2_key -iv $encrypted_e82afbcd63e2_iv -in r-SpaceX-AI-5554dcec5951.json.enc -out r-SpaceX-AI-5554d
-cec5951.json -d
+  - openssl aes-256-cbc -K $encrypted_e82afbcd63e2_key -iv $encrypted_e82afbcd63e2_iv -in r-SpaceX-AI-5554dcec5951.json.enc -out r-SpaceX-AI-5554dcec5951.json -d
   - gcloud auth activate-service-account --key-file gcloud-service-key.json
   #ADD YOUR PROJECT ID HERE -- this can be found on the On the Google Cloud Platform Dahsboard under 'Project info'
   - gcloud config set project r-spacex-ai
