@@ -58,7 +58,6 @@ exports.SpaceXFulfillment = (request, response) => {
 
   }
 
-  }
   let actionMap = new Map();
   actionMap.set(UNRECOGNIZED_DEEP_LINK, unrecognised);
   actionMap.set(GET_INFO, handler);
