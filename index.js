@@ -40,14 +40,14 @@ exports.SpaceXFulfillment = (request, response) => {
   //console.log('Request body: ' + requestBody);
 
   function unrecognised (app) {
-
+    return
   }
 
   function handler (app){
     // set one time use variables etc
-
     function foo (){
       //function that formats and sends request the r/SpaceX API
+      return
     }
     function bar (){
       //function that calls foo(args) then takes its response and generates a user friendly response and sends it to the bot
@@ -55,7 +55,7 @@ exports.SpaceXFulfillment = (request, response) => {
       //some code that fills speech
       app.ask(speech);
     }
-
+    return
   }
 
   let actionMap = new Map();
