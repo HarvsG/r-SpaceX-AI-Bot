@@ -1,0 +1,46 @@
+# REQUIRES CHANGES TO LINES 37 AND 42 TO WORK FOR YOUR PROJECT
+# Use Dockerized infrastructure
+sudo: false
+
+# Use node_js environnement
+language: node_js
+node_js:
+  - "6.9.1"
+
+# Cache Gcloud SDK between commands
+cache:
+  yarn: true
+  directories:
+  - "$HOME/google-cloud-sdk/"
+
+1env:
+  global:
+
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+before_deploy:
+  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+  - source /home/travis/google-cloud-sdk/path.bash.inc
+  - gcloud --quiet version
+  - gcloud --quiet components update
+
+  # use the decrypted service account credentials to authenticate the command line tool
+  # get the encrypted variable names from travis cli: https://docs.travis-ci.com/user/encrypting-files/
+  - openssl aes-256-cbc -K $TRAVIS_ENCRYPTED_key -iv $TRAVIS_ENCRYPTED_iv -in gcloud-service-key.json.enc -out gcloud-service-key.json -d
+  - gcloud auth activate-service-account --key-file gcloud-service-key.json
+  #ADD YOUR PROJECT ID HERE -- this can be found on the On the Google Cloud Platform Dahsboard under 'Project info'
+  - gcloud config set project PROJECT
+
+deploy:
+  - provider: script
+    script:
+      # change FUNCTION_NAME PROJECT and REPO to the values from the cloud console: https://console.cloud.google.com/code/develop. Note function name is from your main file, usualy index.js, the main function exports.FUNCTION_NAME
+      - gcloud --quiet beta functions deploy FUNCTION_NAME --source-url https://source.developers.google.com/p/PROJECT/r/REPO --source-path / --trigger-http
+    skip_cleanup: true
+    on:
+      branch: master
