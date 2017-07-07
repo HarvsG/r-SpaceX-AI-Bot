@@ -1,0 +1,17 @@
+{
+  "name": "API.ai-r/SpaceX-Webhook",
+  "version": "0.0.1",
+  "description": "A webhook to allow an API.ai app to get information for the r/SpaceX API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "George Harvey <ghjpharvey@gmail.com> (https://api.ai)",
+  "license": "",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "actions-on-google":"^1.1.1",
+    "query-string " : "^4.3.4"
+  }
+}
