@@ -31,16 +31,17 @@ before_deploy:
 
   # use the decrypted service account credentials to authenticate the command line tool
   # get the encrypted variable names from travis cli: https://docs.travis-ci.com/user/encrypting-files/
-  - openssl aes-256-cbc -K $TRAVIS_ENCRYPTED_key -iv $TRAVIS_ENCRYPTED_iv -in gcloud-service-key.json.enc -out gcloud-service-key.json -d
+  - openssl aes-256-cbc -K $encrypted_e82afbcd63e2_key -iv $encrypted_e82afbcd63e2_iv -in r-SpaceX-AI-5554dcec5951.json.enc -out r-SpaceX-AI-5554d
+cec5951.json -d
   - gcloud auth activate-service-account --key-file gcloud-service-key.json
   #ADD YOUR PROJECT ID HERE -- this can be found on the On the Google Cloud Platform Dahsboard under 'Project info'
-  - gcloud config set project PROJECT
+  - gcloud config set project r-spacex-ai
 
 deploy:
   - provider: script
     script:
       # change FUNCTION_NAME PROJECT and REPO to the values from the cloud console: https://console.cloud.google.com/code/develop. Note function name is from your main file, usualy index.js, the main function exports.FUNCTION_NAME
-      - gcloud --quiet beta functions deploy FUNCTION_NAME --source-url https://source.developers.google.com/p/PROJECT/r/REPO --source-path / --trigger-http
+      - gcloud --quiet beta functions deploy SpaceXFulfillment --source-url https://source.developers.google.com/p/r-spacex-ai/r/r-SpaceX-AI-google-source-repo --source-path / --trigger-http
     skip_cleanup: true
     on:
       branch: master
