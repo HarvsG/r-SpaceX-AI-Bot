@@ -9,7 +9,10 @@ const queryString = require('query-string');
 
 // API.AI actions
 const UNRECOGNIZED_DEEP_LINK = 'deeplink.unknown';
-const GET_INFO = 'get.info';
+const GET_COMPANY_INFO = 'get.companyInformation';
+const GET_VEHICLE_INFO = 'get.vehicleInformation';
+const GET_LAUNCH_INFO = 'get.launchInformation';
+const GET_LAUNCHPAD_INFO = '';
 
 
 // API.AI parameter names
@@ -57,10 +60,52 @@ exports.SpaceXFulfillment = (request, response) => {
     }
     return
   }
+  
+  function getCompanyInfo (app){
+
+    http.get('https://api.spacexdata.com/info', (res) => {
+      const { statusCode } = res;
+      const contentType = res.headers['content-type'];
+
+      let error;
+      if (statusCode !== 200) {
+        error = new Error('Request Failed.\n' +
+                          `Status Code: ${statusCode}`);
+      } else if (!/^application\/json/.test(contentType)) {
+        error = new Error('Invalid content-type.\n' +
+                          `Expected application/json but received ${contentType}`);
+      }
+      if (error) {
+        console.error(error.message);
+        // consume response data to free up memory
+        res.resume();
+        return;
+      }
+
+      res.setEncoding('utf8');
+      let rawData = '';
+      res.on('data', (chunk) => { rawData += chunk; });
+      res.on('end', () => {
+        try {
+          const parsedCompanyData = JSON.parse(rawData);
+          console.log(parsedCompanyData);
+          // some code to pick the relevant company data from the user request
+          
+        } catch (e) {
+          console.error(e.message);
+        }
+      });
+    }).on('error', (e) => {
+      console.error(`Got error: ${e.message}`);
+    });
+    
+  }
 
   let actionMap = new Map();
   actionMap.set(UNRECOGNIZED_DEEP_LINK, unrecognised);
-  actionMap.set(GET_INFO, handler);
+  actionMap.set(GET_COMPANY_INFO, getCompanyInfo);
+  actionMap.set(GET_VEHICLE_INFO, handler);
+  actionMap.set(GET_LAUNCH_INFO, handler);
 
   app.handleRequest(actionMap);
 
