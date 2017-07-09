@@ -63,7 +63,7 @@ exports.SpaceXFulfillment = (request, response) => {
   
   function getCompanyInfo (app){
 
-    http.get('https://api.spacexdata.com/info', (res) => {
+    https.get('https://api.spacexdata.com/info', (res) => {
       const { statusCode } = res;
       const contentType = res.headers['content-type'];
 
