@@ -1,1 +1,62 @@
-// this will be an example of a JSON request sent from the bot for refernce for developers to use. 
+{
+  "id": "48d47ff3-6f67-4dec-93a1-22e33548ca68",
+  "timestamp": "2017-07-09T21:43:20.701Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "how many people does SpaceX employ?",
+    "action": "get.companyInformation",
+    "actionIncomplete": false,
+    "parameters": {
+      "CompanyParams": "employee"
+    },
+    "contexts": [
+      {
+        "name": "global",
+        "parameters": {
+          "CompanyParams.original": "how many people",
+          "CompanyParams": "employee"
+        },
+        "lifespan": 98
+      },
+      {
+        "name": "defaultwelcomeintent-followup",
+        "parameters": {
+          "CompanyParams.original": "how many people",
+          "CompanyParams": "employee"
+        },
+        "lifespan": 1
+      },
+      {
+        "name": "welcome",
+        "parameters": {
+          "CompanyParams.original": "how many people",
+          "CompanyParams": "employee"
+        },
+        "lifespan": 4
+      }
+    ],
+    "metadata": {
+      "intentId": "0b4aa955-4dfc-48dc-bfaf-1341118cc0fb",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "companyInformation"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 206,
+    "errorType": "partial_content",
+    "errorDetails": "Webhook call failed. Error: Request timeout."
+  },
+  "sessionId": "b1c4a6c2-fdda-4f33-b53a-5cc4c134d6aa"
+}
