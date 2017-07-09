@@ -90,7 +90,8 @@ exports.SpaceXFulfillment = (request, response) => {
           const parsedCompanyData = JSON.parse(rawData);
           console.log(parsedCompanyData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-          app.ask(request.body.result.parameters.CompanyParams)
+          
+          app.ask("Your answer is " + parsedCompanyData[request.body.result.parameters.CompanyParams]);
         } catch (e) {
           console.error(e.message);
         }
