@@ -42,7 +42,7 @@ function companyInfoTemplate (data, parameter) {
     "name": `The company is called Space Exploration Technologies or ${data.name} for short.`,
     "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}`,
     "founded": `${data.name} was founded in ${data.founded} by ${data.founder}`,
-    "employees": `${data.name} currently has about ${data.employees}`,
+    "employees": `${data.name} currently has about ${data.employees} employees`,
     "vehicles": `${data.name} currently has ${data.vehicles} different vehicles`,
     "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites`,
     "test_sites": `${data.name} currently operates ${data.test_sites} test site`,
