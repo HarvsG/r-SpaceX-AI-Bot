@@ -74,7 +74,11 @@ exports.SpaceXFulfillment = (request, response) => {
       let companyParameter = request.body.result.parameters.CompanyParams;
       let botResponse = {
         'speech':companyInfoTemplate(data, companyParameter),
-        'displayText':companyInfoTemplate(data, companyParameter)
+        'displayText':companyInfoTemplate(data, companyParameter),
+        'text': "This is in a text field",
+        'data':{
+          "slack": 'slack message in data-slack'
+        }
       }
       app.ask(botResponse);
     }
