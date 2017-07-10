@@ -77,7 +77,7 @@ exports.SpaceXFulfillment = (request, response) => {
         'displayText':companyInfoTemplate(data, companyParameter),
         'text': "This is in a text field",
         'data':{
-          "slack": 'slack message in data-slack'
+          "slack": {"text": "This is a line of text.\nAnd this is another one."}
         }
       }
       app.ask(botResponse);
