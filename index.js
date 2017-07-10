@@ -72,7 +72,11 @@ exports.SpaceXFulfillment = (request, response) => {
   function getCompanyInfo (app){
     function callbackCompany (app, data){
       let companyParameter = request.body.result.parameters.CompanyParams;
-      app.ask(companyInfoTemplate(data, companyParameter));
+      let botResponse = {
+        'speech':companyInfoTemplate(data, companyParameter),
+        'displayText':companyInfoTemplate(data, companyParameter)
+      }
+      app.ask(botResponse);
     }
     APIrequest(app, '/info', callbackCompany)
   }
