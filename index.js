@@ -86,9 +86,9 @@ exports.SpaceXFulfillment = (request, response) => {
     }
   }
   
-  function APIrequest (app, desination, callback) {
-
-    https.get('https://api.spacexdata.com'+desination, (res) => {
+  function APIrequest (app, path, callback) {
+    // this function takes a des
+    https.get('https://api.spacexdata.com' + path, (res) => {
       const { statusCode } = res;
       const contentType = res.headers['content-type'];
 
