@@ -34,6 +34,7 @@ const NO_INPUTS = [
   'Say that again.',
 ];
 
+
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
 
@@ -43,27 +44,33 @@ exports.SpaceXFulfillment = (request, response) => {
   //console.log('Request body: ' + requestBody);
 
   function unrecognised (app) {
-    return
+    app.ask("Sorry I didn't get that");
   }
 
-  function handler (app){
-    // set one time use variables etc
-    function foo (){
-      //function that formats and sends request the r/SpaceX API
-      return
+  function getCompanyInfo (app){
+    function callbackCompany (app, data){
+      let companyParameter = request.body.result.parameters.CompanyParams
+      let APIresponse =  data[companyParameter];
+      app.ask()
     }
-    function bar (){
-      //function that calls foo(args) then takes its response and generates a user friendly response and sends it to the bot
-      var speech = "";
-      //some code that fills speech
-      app.ask(speech);
-    }
-    return
+    APIrequest(app, '/info', callbackCompany)
   }
   
-  function getCompanyInfo (app){
+  function getVehicleInfo (app){
+    function callbackVehicle (app, data){
+      
+    }
+  }
+  
+  function getLaunchInfo (app){
+    function callbackLaunch (app, data){
+      
+    }
+  }
+  
+  function APIrequest (app, desination, callback) {
 
-    https.get('https://api.spacexdata.com/info', (res) => {
+    https.get('https://api.spacexdata.com'+desination, (res) => {
       const { statusCode } = res;
       const contentType = res.headers['content-type'];
 
@@ -87,11 +94,10 @@ exports.SpaceXFulfillment = (request, response) => {
       res.on('data', (chunk) => { rawData += chunk; });
       res.on('end', () => {
         try {
-          const parsedCompanyData = JSON.parse(rawData);
-          console.log(parsedCompanyData);
+          const parsedData = JSON.parse(rawData);
+          console.log(parsedData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-          
-          app.ask("Your answer is " + parsedCompanyData[request.body.result.parameters.CompanyParams]);
+          callback(app, parsedData)
         } catch (e) {
           console.error(e.message);
         }
@@ -105,8 +111,8 @@ exports.SpaceXFulfillment = (request, response) => {
   let actionMap = new Map();
   actionMap.set(UNRECOGNIZED_DEEP_LINK, unrecognised);
   actionMap.set(GET_COMPANY_INFO, getCompanyInfo);
-  actionMap.set(GET_VEHICLE_INFO, handler);
-  actionMap.set(GET_LAUNCH_INFO, handler);
+  actionMap.set(GET_VEHICLE_INFO, getVehicleInfo);
+  actionMap.set(GET_LAUNCH_INFO, getLaunchInfo);
 
   app.handleRequest(actionMap);
 
