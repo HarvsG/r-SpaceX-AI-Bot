@@ -7,6 +7,9 @@ const https = require('https');
 const http = require('http');
 const queryString = require('query-string');
 
+//Links
+const API_URL = 'https://api.spacexdata.com';
+
 // API.AI actions
 const UNRECOGNIZED_DEEP_LINK = 'deeplink.unknown';
 const GET_COMPANY_INFO = 'get.companyInformation';
@@ -88,7 +91,7 @@ exports.SpaceXFulfillment = (request, response) => {
   
   function APIrequest (app, path, callback) {
     // this function takes a des
-    https.get('https://api.spacexdata.com' + path, (res) => {
+    https.get(API_URL + path, (res) => {
       const { statusCode } = res;
       const contentType = res.headers['content-type'];
 
