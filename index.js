@@ -33,22 +33,26 @@ const NO_INPUTS = [
   'I didn\'t hear that.',
   'Say that again.',
 ];
-const COMPANY_INFO = {
-  "name": "The company is called Space Exploration Technologies or ${data.name} for short.",
-  "founder": "${data.name}'s founder was ${data.founder} in ${data.founded}",
-  "founded": "${data.name} was founded in ${data.founded} by ${data.founder}",
-  "employees": "${data.name} currently has about ${data.employees}",
-  "vehicles": "${data.name} currently has ${data.vehicles} different vehicles",
-  "launch_sites": "${data.name} currently operates ${data.launch_sites} independant launch sites",
-  "test_sites": "${data.name} currently operates ${data.test_sites} test site",
-  "ceo": "The current Chief Executive Officer of ${data.name} is ${data.ceo}",
-  "cto": "The current Chief Technology Officer of ${data.name} is ${data.cto}",
-  "coo": "The current Chief Operating Officer of ${data.name} is ${data.coo}",
-  "cto_propulsion": "${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}",
-  "valuation": "${data.name} is currently valued at ${data.valuation}USD",
-  "headquarters": "${data.name}'s headquarters is based in ${data.headquarters.city},${data.headquarters.state}, its address is ${data.headquarters.address}",
-  "summary": "${data.summary}"
-};
+
+function companyInfoTemplate (data, parameter) {
+  const COMPANY_INFO = {
+    "name": `The company is called Space Exploration Technologies or ${data.name} for short.`,
+    "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}`,
+    "founded": `${data.name} was founded in ${data.founded} by ${data.founder}`,
+    "employees": `${data.name} currently has about ${data.employees}`,
+    "vehicles": `${data.name} currently has ${data.vehicles} different vehicles`,
+    "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites`,
+    "test_sites": `${data.name} currently operates ${data.test_sites} test site`,
+    "ceo": `The current Chief Executive Officer of ${data.name} is ${data.ceo}`,
+    "cto": `The current Chief Technology Officer of ${data.name} is ${data.cto}`,
+    "coo": `The current Chief Operating Officer of ${data.name} is ${data.coo}`,
+    "cto_propulsion": `${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}`,
+    "valuation": `${data.name} is currently valued at ${data.valuation}USD`,
+    "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city},${data.headquarters.state}, its address is ${data.headquarters.address}`,
+    "summary": `${data.summary}`
+  };
+  return COMPANY_INFO[parameter]
+}
 
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
@@ -64,8 +68,8 @@ exports.SpaceXFulfillment = (request, response) => {
 
   function getCompanyInfo (app){
     function callbackCompany (app, data){
-      let companyParameter = request.body.result.parameters.CompanyParams
-      app.ask(COMPANY_INFO.companyParameter)
+      let companyParameter = request.body.result.parameters.CompanyParams;
+      app.ask(companyInfoTemplate(data, companyParameter));
     }
     APIrequest(app, '/info', callbackCompany)
   }
