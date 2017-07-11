@@ -81,10 +81,12 @@ function companyInfoTemplate (data, parameter) {
 }
 function launchInfoTemplate (data, parameter, past) {
   let tense = past? "is due to take place at" :"took place at"
+  let date = new Date(data.launch_date);
+  let dateString0 = date.toDateString();
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${data.time_utc}UTC on ${data.launch_date}.`,
+    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${data.time_utc}UTC on ${dateString0}. `,
     "time_utc": `${data.time_utc}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
