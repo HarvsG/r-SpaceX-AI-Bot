@@ -195,6 +195,7 @@ exports.SpaceXFulfillment = (request, response) => {
         console.log(launchInfoTemplate(ele, launchQueryParameter, true));
         speech += launchInfoTemplate(ele, launchQueryParameter, true);
       }
+      speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions":speech;
       let botResponse = {
         'speech': speech,
         'displayText': speech,
