@@ -53,7 +53,7 @@ const ENTITY_SEARCH_VALUE = {
   "Falcon 1":"Falcon 1",
   "Falcon 9":"Falcon 9",
   "Falcon Heavy":"Falcon Heavy",
-  "Dragon 1":"",
+  "Dragon 1":"Dragon 1",
   "Dragon 2":"",
   "ITS Spaceship":"",
   "ITS Booster":"",
