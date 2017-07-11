@@ -57,45 +57,6 @@ function companyInfoTemplate (data, parameter) {
   return COMPANY_INFO[parameter]
 }
 
-function HTTPSgetRequest (path){
-  https.get(API_URL + path, (res) => {
-    const { statusCode } = res;
-    const contentType = res.headers['content-type'];
-
-    let error;
-    if (statusCode !== 200) {
-      error = new Error('Request Failed.\n' +
-                        `Status Code: ${statusCode}`);
-    } else if (!/^application\/json/.test(contentType)) {
-      error = new Error('Invalid content-type.\n' +
-                        `Expected application/json but received ${contentType}`);
-    }
-    if (error) {
-      console.error(error.message);
-      // consume response data to free up memory
-      res.resume();
-      return;
-    }
-
-    res.setEncoding('utf8');
-    let rawData = '';
-    res.on('data', (chunk) => { rawData += chunk; });
-    res.on('end', () => {
-      try {
-        const parsedData = JSON.parse(rawData);
-        console.log(parsedData);
-        // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-        return parsedData
-
-      } catch (e) {
-        console.error(e.message);
-      }
-    });
-  }).on('error', (e) => {
-    console.error(`Got error: ${e.message}`);
-  });
-}
-
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
 
@@ -108,53 +69,68 @@ exports.SpaceXFulfillment = (request, response) => {
     app.ask("Sorry I didn't get that");
   }
 
-  
   function getCompanyInfo (app){
     function callbackCompany (app, data){
       let companyParameter = request.body.result.parameters.CompanyParams;
-      console.log('Compant parameter of interest is: ' + companyParameter)
       let botResponse = {
         'speech':companyInfoTemplate(data, companyParameter),
         'displayText':companyInfoTemplate(data, companyParameter),
       }
       app.ask(botResponse);
     }
-    APIrequest(app, ['/info'], callbackCompany)
+    APIrequest(app, '/info', callbackCompany)
   }
-  
   
   function getVehicleInfo (app){
     function callbackVehicle (app, data){
       
     }
-    APIrequest(app, ['/vehicles'], callbackVehicle);
   }
-  
   
   function getLaunchInfo (app){
     function callbackLaunch (app, data){
       
     }
-    APIrequest(app, ['/launches','/upcoming'], callbackLaunch);
   }
   
-  
-  function APIrequest (app, paths, callback) {
-    
-    if (paths.length == 1){
-      console.log('only one path given');
-      callback(app, HTTPSgetRequest(paths[0]));
-    } 
-    else {
-      console.log('More than one path given');
-      let collatedData = []
-      for (var i = 0; i < paths.length; i++) {
-        collatedData = collatedData.concat(HTTPSgetRequest(paths[i]));
+  function APIrequest (app, path, callback) {
+    // this function takes a des
+    https.get(API_URL + path, (res) => {
+      const { statusCode } = res;
+      const contentType = res.headers['content-type'];
+
+      let error;
+      if (statusCode !== 200) {
+        error = new Error('Request Failed.\n' +
+                          `Status Code: ${statusCode}`);
+      } else if (!/^application\/json/.test(contentType)) {
+        error = new Error('Invalid content-type.\n' +
+                          `Expected application/json but received ${contentType}`);
       }
-      
-      callback(app, collatedData)
-      
-    }
+      if (error) {
+        console.error(error.message);
+        // consume response data to free up memory
+        res.resume();
+        return;
+      }
+
+      res.setEncoding('utf8');
+      let rawData = '';
+      res.on('data', (chunk) => { rawData += chunk; });
+      res.on('end', () => {
+        try {
+          const parsedData = JSON.parse(rawData);
+          console.log(parsedData);
+          // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
+          callback(app, parsedData)
+        } catch (e) {
+          console.error(e.message);
+        }
+      });
+    }).on('error', (e) => {
+      console.error(`Got error: ${e.message}`);
+    });
+    
   }
 
   let actionMap = new Map();
