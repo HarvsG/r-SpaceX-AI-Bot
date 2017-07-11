@@ -174,7 +174,7 @@ exports.SpaceXFulfillment = (request, response) => {
         let searchVal = ENTITY_SEARCH_VALUE[paramsList[element]];
         
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
-        for (let x = 0; x < data.length; x++) {
+        for (let x = 0; x < masterResults.length; x++) {
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
           if (masterResults[x][searchField].indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
