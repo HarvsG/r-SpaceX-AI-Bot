@@ -169,6 +169,7 @@ exports.SpaceXFulfillment = (request, response) => {
       // goes through each of the searchable paramenters, searches for them in the list of launches and then shortens the list to the ones that satisfy the search
       for (var i = 0; i < cleanedParamsList.length; i++) {
         let element = cleanedParamsList[i];
+        console.log('Element is: ' + element);
         let results = [];
         // gets the search field from the Parameter:api_term pairing made in the header
         let searchField = ENTITY_SEARCH_FIELD[element];
