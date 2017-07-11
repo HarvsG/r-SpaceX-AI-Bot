@@ -36,13 +36,28 @@ const NO_INPUTS = [
   'I didn\'t hear that.',
   'Say that again.',
 ];
-const ENTITY_SEARCH = {
+const ENTITY_SEARCH_FIELD = {
   'Vehicles':'rocket',
   'LaunchPads':'launch_site',
   'LaunchOrdinal':'flight_number',
 };
-const LAUNCH_PAD_ID = {
-  
+const ENTITY_SEARCH_VALUE = {
+  "kwajalein_atoll": "Kwajalein",
+  "ccafs_slc_40": "CCAFS LC-40",
+  "ccafs_lc_13": "",
+  "ksc_lc_39a": "KSC LC39A",
+  "vafb_slc_3w": "",
+  "vafb_slc_4e": "VAFBS LC-4E",
+  "vafb_slc_4w": "",
+  "stls": "",
+  "Falcon 1":"Falcon 1",
+  "Falcon 9":"Falcon 9",
+  "Falcon Heavy":"Falcon Heavy",
+  "Dragon 1":"",
+  "Dragon 2":"",
+  "ITS Spaceship":"",
+  "ITS Booster":"",
+  "ITS Tanker":""
 };
 
 function companyInfoTemplate (data, parameter) {
@@ -154,13 +169,14 @@ exports.SpaceXFulfillment = (request, response) => {
         let element = cleanedParamsList[i];
         let results = [];
         // gets the search field from the Parameter:api_term pairing made in the header
-        let searchField = ENTITY_SEARCH[element];
+        let searchField = ENTITY_SEARCH_FIELD[element];
         // this may also need a pairing dictionary as the line above does
-        let searchVal = paramsList[element];
+        let searchVal = ENTITY_SEARCH_VALUE[paramsList[element]];
         
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < data.length; x++) {
-          if (masterResults[x][searchField] == searchVal) {
+          //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
+          if (masterResults[x][searchField].indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
           }
         }
