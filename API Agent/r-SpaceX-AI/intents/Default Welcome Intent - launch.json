@@ -1,0 +1,115 @@
+{
+  "userSays": [
+    {
+      "id": "8028c8fd-facd-4814-b3de-426323e98a77",
+      "data": [
+        {
+          "text": "launches please"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0ac1b642-3c6f-4997-85ad-dcdea0e8a515",
+      "data": [
+        {
+          "text": "There\u0027s something I\u0027d like to know about launches"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a41121af-c00f-4474-af44-abc81fc6a0a4",
+      "data": [
+        {
+          "text": "I have a question about launches"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "35b76737-8fc7-4fef-8728-5cd8070b0d08",
+      "data": [
+        {
+          "text": "I\u0027d like to know about the launch schedule"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f1e8dbe6-641c-4b55-82da-75ba1b6e4ce1",
+      "data": [
+        {
+          "text": "launches"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7ef499e7-f66a-4bfd-a324-eb42f60c7734",
+      "data": [
+        {
+          "text": "I want to know about launches"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bbcd5061-a6bd-47a0-9b3b-2bacb7bfb7e4",
+      "data": [
+        {
+          "text": "I\u0027d like to know about launches please"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "c5ec36d7-bb54-44b2-a068-588e159ee6c7",
+  "parentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "rootParentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "name": "Default Welcome Intent - launch",
+  "auto": true,
+  "contexts": [
+    "DefaultWelcomeIntent-followup",
+    "global",
+    "welcome"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom",
+      "affectedContexts": [
+        {
+          "name": "launches",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "global",
+          "parameters": {},
+          "lifespan": 99
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ok, what would you like to know about launches?"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

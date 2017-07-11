@@ -2,7 +2,7 @@
   "userSays": [],
   "id": "ae6d016f-27e5-41a9-9dee-299b4ff3a1e0",
   "name": "Default Fallback Intent",
-  "auto": true,
+  "auto": false,
   "contexts": [],
   "responses": [
     {

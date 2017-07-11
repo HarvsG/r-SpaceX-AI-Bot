@@ -1,0 +1,104 @@
+{
+  "userSays": [
+    {
+      "id": "d717f06a-8f5b-4812-9ed9-7c0233b993b2",
+      "data": [
+        {
+          "text": "SpaceX itself"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b67f2932-db44-47d8-80ef-c48dd41bcc12",
+      "data": [
+        {
+          "text": "SpaceX"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e901ab7f-bb62-4143-8a88-12326f741829",
+      "data": [
+        {
+          "text": "The company"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "435181e8-8928-4d40-8efe-f63bcf1e8758",
+      "data": [
+        {
+          "text": "The company itself"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "79288fd9-913d-42f9-bc10-aa42019df9f3",
+      "data": [
+        {
+          "text": "I have a few questions about SpaceX"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "342d8fed-f4e0-4bc4-9d75-8bacb3acb9e9",
+      "data": [
+        {
+          "text": "I\u0027d like to know about the company actually"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "17feafd7-4e52-44a3-9a6b-1aefaffdd425",
+  "parentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "rootParentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "name": "Default Welcome Intent - company",
+  "auto": true,
+  "contexts": [
+    "DefaultWelcomeIntent-followup",
+    "global",
+    "welcome"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-3",
+      "affectedContexts": [
+        {
+          "name": "company",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Ok, so what would you like to know about SpaceX?",
+            "Ok, what would you like to know about the Space Exploration Technologies Corporation?",
+            "What questions do you have about the company?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,158 @@
+{
+  "userSays": [
+    {
+      "id": "fc6d7cd9-2717-478f-b7db-dc3b490e1f79",
+      "data": [
+        {
+          "text": "I\u0027d like to know about spaceships please"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "00bee301-f54d-4e32-b45a-01ba2d3399f1",
+      "data": [
+        {
+          "text": "spaceships"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "779ed25a-601e-48a0-af47-940264efdeac",
+      "data": [
+        {
+          "text": "launch vehicles"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "80066679-29e9-4b08-ad9e-1d7c160d97f6",
+      "data": [
+        {
+          "text": "vehicles"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b115a2bc-6011-4871-b563-993d4a429069",
+      "data": [
+        {
+          "text": "Launch vehicles please"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "06ef31f1-9220-450b-897d-b0b916c05b3c",
+      "data": [
+        {
+          "text": "rockets please"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "32352a53-38bf-43ac-bf9b-03a790348683",
+      "data": [
+        {
+          "text": "I want to ask a question about the rockets"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1fecdcb0-7db0-4932-9b56-f6abbcbc22d7",
+      "data": [
+        {
+          "text": "I want to know about the boosters"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "79c465a5-0e4f-4104-bfe4-78b1e6b179cc",
+      "data": [
+        {
+          "text": "I want to know about the rockets themselves"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "dd5e5ac1-ef98-46bb-81c2-6c9878fe487c",
+      "data": [
+        {
+          "text": "I have a question about vehicles"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "61e5d801-e2bb-458a-a74c-e1b5adb20dab",
+      "data": [
+        {
+          "text": "I have a question about launch vehicles"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "04ad979d-ac4a-47f0-bd8a-1b36e129a1ed",
+  "parentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "rootParentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "name": "Default Welcome Intent - vehicle",
+  "auto": true,
+  "contexts": [
+    "DefaultWelcomeIntent-followup",
+    "welcome",
+    "global"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom-2",
+      "affectedContexts": [
+        {
+          "name": "vehicles",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "global",
+          "parameters": {},
+          "lifespan": 99
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Ok, so what would you like to know about the launch vehicles?",
+            "What would you like to know about the launch vehicles?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

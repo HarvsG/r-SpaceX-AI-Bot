@@ -2,12 +2,14 @@
   "description": "This chat bot will answer queries all about SpaceX",
   "language": "en",
   "googleAssistant": {
-    "googleAssistantCompatible": false,
+    "googleAssistantCompatible": true,
     "project": "r-spacex-ai",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
     "systemIntents": [],
-    "endIntentIds": [],
+    "endIntentIds": [
+      "b7026236-55ac-415f-864e-f62b0932d916"
+    ],
     "oAuthLinking": {
       "required": false,
       "grantType": "AUTH_CODE_GRANT"
@@ -18,7 +20,7 @@
   },
   "defaultTimezone": "Europe/Madrid",
   "webhook": {
-    "url": "https://us-central1-pvoutput-ai.cloudfunctions.net/SpaceXFulfillment",
+    "url": "https://us-central1-r-spacex-ai.cloudfunctions.net/SpaceXFulfillment",
     "headers": {
       "": ""
     },

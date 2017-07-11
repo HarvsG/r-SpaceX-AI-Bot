@@ -1,0 +1,15 @@
+{
+  "id": "583543ca-f20a-4210-bca8-42631564fb96",
+  "name": "LaunchOrdinal",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@sys.ordinal:ordinal",
+      "synonyms": [
+        "@sys.ordinal:ordinal"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

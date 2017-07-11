@@ -1,0 +1,34 @@
+{
+  "id": "57e6aa15-0043-4022-8a80-1c32293e58a1",
+  "name": "LaunchTemporal",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "next",
+      "synonyms": [
+        "next",
+        "upcoming",
+        "future",
+        "tomorrow\u0027s",
+        "will tonight\u0027s",
+        "will today\u0027s"
+      ]
+    },
+    {
+      "value": "last",
+      "synonyms": [
+        "last",
+        "just been",
+        "yesterday\u0027s",
+        "the other day",
+        "was this morning\u0027s",
+        "was today\u0027s",
+        "was tonight\u0027s",
+        "the other week\u0027s",
+        "latest"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

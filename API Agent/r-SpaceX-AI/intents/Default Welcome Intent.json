@@ -1,5 +1,96 @@
 {
-  "userSays": [],
+  "userSays": [
+    {
+      "id": "4797bf58-c8a3-4335-8c61-92889f23895d",
+      "data": [
+        {
+          "text": "Hey"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "716200c2-e0db-4ff3-ad1e-3c8fb4daf464",
+      "data": [
+        {
+          "text": "Hi there"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0958ad11-2b5b-4fa0-b9bb-60f32b7f6495",
+      "data": [
+        {
+          "text": "How\u0027s it going?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f9df90f6-b043-4e18-832f-224e677cc54d",
+      "data": [
+        {
+          "text": "Is anyone there?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b59e8fce-1d9f-47a5-8013-f777bb8bbed3",
+      "data": [
+        {
+          "text": "Hiya"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ed26229d-2a7d-45c4-940a-7e452057f873",
+      "data": [
+        {
+          "text": "Hi"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b78ddb6a-b4ac-42f8-9ede-1c5142692c3b",
+      "data": [
+        {
+          "text": "Howdy"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "af4b7a62-9405-483d-8a4b-b4314e3582e7",
+      "data": [
+        {
+          "text": "Hello"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a71c4289-6c71-4256-8b0a-12ab5b1dd4da",
+      "data": [
+        {
+          "text": "Hello!"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
   "id": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
   "name": "Default Welcome Intent",
   "auto": true,
@@ -8,19 +99,35 @@
     {
       "resetContexts": false,
       "action": "input.welcome",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "welcome",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "global",
+          "parameters": {},
+          "lifespan": 99
+        },
+        {
+          "name": "DefaultWelcomeIntent-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
       "parameters": [],
       "messages": [
         {
           "type": 0,
           "speech": [
-            "Hi!",
-            "Hello!",
-            "Good day!",
-            "Greetings!"
+            "Hello, I am the r/SpaceX bot, I know most things SpaceX. I can help you with launch information, vehicle information or information about the company itself, so which would you like to know about?",
+            "Hello, I am the r/SpaceX bot, I know all about SpaceX. I can tell you about launches, launch vehicles or SpaceX itself, so which will it be?",
+            "Hello, I am the r/SpaceX bot, I know all about SpaceX. What can I help you with; launches, launch vehicles or SpaceX itself"
           ]
         }
-      ]
+      ],
+      "defaultResponsePlatforms": {}
     }
   ],
   "priority": 500000,
@@ -30,6 +137,9 @@
   "events": [
     {
       "name": "WELCOME"
+    },
+    {
+      "name": "SLACK_WELCOME"
     }
   ]
 }
