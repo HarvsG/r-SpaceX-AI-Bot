@@ -108,9 +108,11 @@ exports.SpaceXFulfillment = (request, response) => {
     app.ask("Sorry I didn't get that");
   }
 
+  
   function getCompanyInfo (app){
     function callbackCompany (app, data){
       let companyParameter = request.body.result.parameters.CompanyParams;
+      console.log('Compant parameter of interest is: ' + companyParameter)
       let botResponse = {
         'speech':companyInfoTemplate(data, companyParameter),
         'displayText':companyInfoTemplate(data, companyParameter),
@@ -120,11 +122,14 @@ exports.SpaceXFulfillment = (request, response) => {
     APIrequest(app, ['/info'], callbackCompany)
   }
   
+  
   function getVehicleInfo (app){
     function callbackVehicle (app, data){
       
     }
+    APIrequest(app, ['/vehicles'], callbackVehicle);
   }
+  
   
   function getLaunchInfo (app){
     function callbackLaunch (app, data){
@@ -133,17 +138,21 @@ exports.SpaceXFulfillment = (request, response) => {
     APIrequest(app, ['/launches','/upcoming'], callbackLaunch);
   }
   
+  
   function APIrequest (app, paths, callback) {
     
     if (paths.length == 1){
-      callback(HTTPSgetRequest(paths[0]));
+      console.log('only one path given');
+      callback(app, HTTPSgetRequest(paths[0]));
     } 
     else {
+      console.log('More than one path given');
       let collatedData = []
       for (var i = 0; i < paths.length; i++) {
         collatedData = collatedData.concat(HTTPSgetRequest(paths[i]));
       }
-      callback(collatedData)
+      
+      callback(app, collatedData)
       
     }
   }
