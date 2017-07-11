@@ -170,11 +170,13 @@ exports.SpaceXFulfillment = (request, response) => {
         let results = [];
         // gets the search field from the Parameter:api_term pairing made in the header
         let searchField = ENTITY_SEARCH_FIELD[element];
+        console.log('Search Field is: '+searchField);
         // this may also need a pairing dictionary as the line above does
         let searchVal = ENTITY_SEARCH_VALUE[paramsList[element]];
         
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < masterResults.length; x++) {
+          console.log('Master results value is: '+ masterResults[x][searchField]);
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
           if (masterResults[x][searchField].indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
