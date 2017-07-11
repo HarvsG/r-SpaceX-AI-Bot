@@ -192,6 +192,7 @@ exports.SpaceXFulfillment = (request, response) => {
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
+        console.log(launchInfoTemplate(ele, launchQueryParameter, true));
         speech += launchInfoTemplate(ele, launchQueryParameter, true);
       }
       let botResponse = {
