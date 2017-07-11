@@ -187,14 +187,26 @@ exports.SpaceXFulfillment = (request, response) => {
         }
         masterResults = results;
       }
-      console.log('masterResults');
-      console.log(masterResults);
+      
+      let past = true;
+      
+      if (request.body.result.parameters.LaunchTemporal == 'next'){
+        //makes master results equal to only its first element
+        masterResults = [masterResults[0]]
+        past = false;
+        
+      }else if(request.body.result.parameters.LaunchTemporal == 'last'){
+        //makes master results equal to only its last element
+        masterResults = [masterResults[masterResults.length-1]]
+      }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== ''){
+        
+      }
       
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
 
-        speech += launchInfoTemplate(ele, launchQueryParameter, true);
+        speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions.":speech;
       let botResponse = {
