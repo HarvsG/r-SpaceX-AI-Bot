@@ -162,7 +162,7 @@ exports.SpaceXFulfillment = (request, response) => {
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
       for (var key in paramsList) {
         if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && paramsList[key] !== ''){
-          cleanedParamsList.push(paramsList[key]);
+          cleanedParamsList.push(key);
         }
       }
       
