@@ -123,22 +123,29 @@ exports.SpaceXFulfillment = (request, response) => {
   }
   
   function getVehicleInfo (app){
+  
     function callbackVehicle (app, data){}
     APIrequest(app, '/vehicles', callbackVehicle);
   }
   
   function getLaunchInfo (app){
+  // this function handles GET_LAUNCH_INFO requests
+    
     function callbackLaunch (app, data){
+    // this function is called as the callback from within APIrequest(app, '/launches', callbackLaunch)
       
+      // gives a shorthand variabel for the LaunchQueryParams (this is essentially the object of the user's question)
       let launchQueryParameter = request.body.result.parameters.LaunchQueryParams;
       
+      // Creates a masterResults copy of the data, this list will be chopped and changed, preserving 'data'
       let masterResults = data;
+      // the list of all the parameters, it will include things like the LaunchQueryParams and perhaps some empty parameters, we dont want these. 
       let paramsList = request.body.result.parameters;
       let cleanedParamsList = [];
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
       for (var key in paramsList) {
-        if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && paramsList.key !== ''){
-          cleanedParamsList.push(paramsList.key);
+        if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && paramsList[key] !== ''){
+          cleanedParamsList.push(paramsList[key]);
         }
       }
       
