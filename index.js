@@ -187,8 +187,8 @@ exports.SpaceXFulfillment = (request, response) => {
         }
         masterResults = results;
       }
-      
-
+      console.log('masterResults');
+      console.log(masterResults);
       
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
