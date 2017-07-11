@@ -56,6 +56,39 @@ function companyInfoTemplate (data, parameter) {
   };
   return COMPANY_INFO[parameter]
 }
+function launchInfoTemplate (data, parameter, past) {
+  let tense = past? "is due to take place at" :"took place at"
+  const LAUNCH_INFO = {
+    "flight_number": `${data.flight_number}`,
+    "launch_year": `${data.launch_year}`,
+    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${data.time_utc}UTC on ${data.launch_date}`,
+    "time_utc": `${data.time_utc}`,
+    "time_local": `${data.time_local}`,
+    "rocket": `${data.rocket}`,
+    "rocket_type": `${data.type}`,
+    "core_serial": `${data.core_serial}`,
+    "cap_serial": `${data.cap_serial}`,
+    "launch_site": `${data.launch_site}`,
+    "payload_1": `${data.payload_1}`,
+    "payload_2": `${data.payload_2}`,
+    "payload_type": `${data.payload_type}`,
+    "payload_mass_kg": `${data.payload_mass_kg}`,
+    "payload_mass_lbs": `${data.payload_mass_lbs}`,
+    "orbit": `${data.orbit}`,
+    "customer_1": `${data.customer_1}`,
+    "customer_2": `${data.customer_2}`,
+    "launch_success": `${data.launch_success}`,
+    "reused": `${data.reused}`,
+    "land_success": `${data.land_success}`,
+    "landing_type": `${data.landing_type}`,
+    "landing_vehicle": `${data.landing_vehicle}`,
+    "mission_patch": `${data.mission_patch}`,
+    "article_link": `${data.article_link}`,
+    "video_link": `${data.video_link}`,
+    "details": `${data.details}`
+  }
+  return LAUNCH_INFO[parameter]
+}
 
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
@@ -78,19 +111,22 @@ exports.SpaceXFulfillment = (request, response) => {
       }
       app.ask(botResponse);
     }
-    APIrequest(app, '/info', callbackCompany)
+    APIrequest(app, '/info', callbackCompany);
   }
   
   function getVehicleInfo (app){
     function callbackVehicle (app, data){
       
     }
+    APIrequest(app, '/vehicles', callbackVehicle);
   }
   
   function getLaunchInfo (app){
     function callbackLaunch (app, data){
       
     }
+    APIrequest(app, '/launches', callbackLaunch);
+    APIrequest(app, '/launches/upcoming', callbackLaunch);
   }
   
   function APIrequest (app, path, callback) {
