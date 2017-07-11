@@ -46,6 +46,7 @@ const ENTITY_SEARCH_VALUE = {
   "ccafs_slc_40": "CCAFS LC-40",
   "ccafs_lc_13": "",
   "ksc_lc_39a": "KSC LC39A",
+  "39a": "KSC LC39A", // this should not have to exist but API.ai keeps failing to resolve it to its true entity value
   "vafb_slc_3w": "",
   "vafb_slc_4e": "VAFBS LC-4E",
   "vafb_slc_4w": "",
@@ -161,7 +162,7 @@ exports.SpaceXFulfillment = (request, response) => {
       let cleanedParamsList = [];
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
       for (var key in paramsList) {
-        if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && paramsList[key] !== ''){
+        if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && key !== 'LaunchOrdinal' && paramsList[key] !== ''){
           cleanedParamsList.push(key);
         }
       }
