@@ -36,6 +36,14 @@ const NO_INPUTS = [
   'I didn\'t hear that.',
   'Say that again.',
 ];
+const ENTITY_SEARCH = {
+  'Vehicles':'rocket',
+  'LaunchPads':'launch_site',
+  'LaunchOrdinal':'flight_number',
+};
+const LAUNCH_PAD_ID = {
+  
+};
 
 function companyInfoTemplate (data, parameter) {
   const COMPANY_INFO = {
@@ -59,9 +67,9 @@ function companyInfoTemplate (data, parameter) {
 function launchInfoTemplate (data, parameter, past) {
   let tense = past? "is due to take place at" :"took place at"
   const LAUNCH_INFO = {
-    "flight_number": `${data.flight_number}`,
-    "launch_year": `${data.launch_year}`,
-    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${data.time_utc}UTC on ${data.launch_date}`,
+    "flight_number": `${data.flight_number}.`,
+    "launch_year": `${data.launch_year}.`,
+    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${data.time_utc}UTC on ${data.launch_date}.`,
     "time_utc": `${data.time_utc}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
@@ -115,15 +123,53 @@ exports.SpaceXFulfillment = (request, response) => {
   }
   
   function getVehicleInfo (app){
-    function callbackVehicle (app, data){
-      
-    }
+    function callbackVehicle (app, data){}
     APIrequest(app, '/vehicles', callbackVehicle);
   }
   
   function getLaunchInfo (app){
     function callbackLaunch (app, data){
       
+      let launchQueryParameter = request.body.result.parameters.LaunchQueryParams;
+      
+      let masterResults = data;
+      let paramsList = request.body.result.parameters;
+      let cleanedParamsList = [];
+      // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
+      for (var key in paramsList) {
+        if (key !== 'LaunchQueryParams' && key !== 'LaunchTemporal' && paramsList.key !== ''){
+          cleanedParamsList.push(paramsList.key);
+        }
+      }
+      
+      // goes through each of the searchable paramenters, searches for them in the list of launches and then shortens the list to the ones that satisfy the search
+      for (var i = 0; i < cleanedParamsList.length; i++) {
+        let element = cleanedParamsList[i];
+        let results = [];
+        // gets the search field from the Parameter:api_term pairing made in the header
+        let searchField = ENTITY_SEARCH[element];
+        // this may also need a pairing dictionary as the line above does
+        let searchVal = paramsList[element];
+        
+        // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
+        for (let x = 0; x < data.length; x++) {
+          if (masterResults[x][searchField] == searchVal) {
+            results.push(masterResults[x]);
+          }
+        }
+        masterResults = results;
+      }
+      
+      let speech = '';
+      for (let n = 0; n < masterResults.length; n++) {
+        let ele = masterResults[n];
+        speech += launchInfoTemplate(ele, launchQueryParameter, true);
+      }
+      let botResponse = {
+        'speech': speech,
+        'displayText': speech,
+      }
+      app.ask(botResponse);
     }
     APIrequest(app, '/launches', callbackLaunch);
     APIrequest(app, '/launches/upcoming', callbackLaunch);
