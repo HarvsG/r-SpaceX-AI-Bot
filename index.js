@@ -80,7 +80,7 @@ function companyInfoTemplate (data, parameter) {
   return COMPANY_INFO[parameter]
 }
 function launchInfoTemplate (data, parameter, past) {
-  let tense = past? "is due to take place at" :"took place at"
+  let tense = past?  "took place at":"is due to take place at";
   let date = new Date(data.launch_date);
   let dateString0 = date.toDateString();
   const LAUNCH_INFO = {
