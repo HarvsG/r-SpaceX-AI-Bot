@@ -192,14 +192,15 @@ exports.SpaceXFulfillment = (request, response) => {
       
       if (request.body.result.parameters.LaunchTemporal == 'next'){
         //makes master results equal to only its first element
-        masterResults = [masterResults[0]]
+        masterResults = [masterResults[0]];
         past = false;
         
       }else if(request.body.result.parameters.LaunchTemporal == 'last'){
         //makes master results equal to only its last element
-        masterResults = [masterResults[masterResults.length-1]]
+        masterResults = [masterResults[masterResults.length-1]];
       }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== ''){
-        
+        //makes master results equal to only its nth element
+        masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
       }
       
       let speech = '';
