@@ -195,15 +195,20 @@ exports.SpaceXFulfillment = (request, response) => {
         console.log(launchInfoTemplate(ele, launchQueryParameter, true));
         speech += launchInfoTemplate(ele, launchQueryParameter, true);
       }
-      speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions":speech;
+      speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions.":speech;
       let botResponse = {
         'speech': speech,
         'displayText': speech,
       }
       app.ask(botResponse);
     }
-    APIrequest(app, '/launches', callbackLaunch);
-    //APIrequest(app, '/launches/upcoming', callbackLaunch);
+    
+    if (request.body.result.parameters.LaunchTemporal == 'next'){
+      APIrequest(app, '/launches/upcoming', callbackLaunch);
+    }else{
+      APIrequest(app, '/launches', callbackLaunch);
+    }
+    
   }
   
   function APIrequest (app, path, callback) {
