@@ -170,17 +170,16 @@ exports.SpaceXFulfillment = (request, response) => {
       // goes through each of the searchable paramenters, searches for them in the list of launches and then shortens the list to the ones that satisfy the search
       for (var i = 0; i < cleanedParamsList.length; i++) {
         let element = cleanedParamsList[i];
-        console.log('Element is: ' + element);
+
         let results = [];
         // gets the search field from the Parameter:api_term pairing made in the header
         let searchField = ENTITY_SEARCH_FIELD[element];
-        console.log('Search Field is: '+searchField);
+        
         // this may also need a pairing dictionary as the line above does
         let searchVal = ENTITY_SEARCH_VALUE[paramsList[element]];
         
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < masterResults.length; x++) {
-          console.log('Master results value is: '+ masterResults[x][searchField]);
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
           if (masterResults[x][searchField].indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
@@ -189,10 +188,12 @@ exports.SpaceXFulfillment = (request, response) => {
         masterResults = results;
       }
       
+
+      
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
-        console.log(launchInfoTemplate(ele, launchQueryParameter, true));
+
         speech += launchInfoTemplate(ele, launchQueryParameter, true);
       }
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions.":speech;
