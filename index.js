@@ -195,7 +195,7 @@ exports.SpaceXFulfillment = (request, response) => {
       app.ask(botResponse);
     }
     APIrequest(app, '/launches', callbackLaunch);
-    APIrequest(app, '/launches/upcoming', callbackLaunch);
+    //APIrequest(app, '/launches/upcoming', callbackLaunch);
   }
   
   function APIrequest (app, path, callback) {
