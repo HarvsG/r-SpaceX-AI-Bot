@@ -293,6 +293,7 @@ exports.SpaceXFulfillment = (request, response) => {
           }
         }
         masterResults = results;
+        console.log(masterResults);
       }
       console.log('1');
       let past = true;
@@ -310,6 +311,8 @@ exports.SpaceXFulfillment = (request, response) => {
         masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
       }
       console.log('2');
+      console.log(masterResults);
+      console.log(masterResults.length);
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
