@@ -188,7 +188,7 @@ function companyInfoTemplate (data, parameter) {
 function launchInfoTemplate (data, parameter, past) {
   let tense = past?  "took place at":"is due to take place at";
   let date = new Date(data.launch_date + ',' + data.time_utc);
-  let dateString0 = date.toDateString();
+  let dateString0 = date.toString();
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
