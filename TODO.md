@@ -4,7 +4,7 @@
 
 3. Creating verbose replies for all the query parameters
 
-4. Consider making [rich-content replies] (https://api.ai/docs/rich-messages#card).
+4. Consider making [rich-content replies](https://api.ai/docs/rich-messages#card).
 
 5. Different display and speech text where appropriate.
 
