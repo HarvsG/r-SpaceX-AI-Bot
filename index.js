@@ -271,8 +271,7 @@ exports.SpaceXFulfillment = (request, response) => {
           cleanedParamsList.push(key);
         }
       }
-      console.log('cleanedParamsList');
-      console.log(cleanedParamsList);
+
       // goes through each of the searchable paramenters, searches for them in the list of launches and then shortens the list to the ones that satisfy the search
       for (var i = 0; i < cleanedParamsList.length; i++) {
         let element = cleanedParamsList[i];
@@ -283,8 +282,7 @@ exports.SpaceXFulfillment = (request, response) => {
         
         // this may also need a pairing dictionary as the line above does
         let searchVal = paramsList[element];
-        console.log('searchVal');
-        console.log(searchVal);
+
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < masterResults.length; x++) {
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
@@ -293,10 +291,8 @@ exports.SpaceXFulfillment = (request, response) => {
           }
         }
         masterResults = results;
-        console.log('masterResults '+cleanedParamsList[i]);
-        console.log(masterResults);
       }
-      console.log('1');
+      
       let past = true;
       
       if (request.body.result.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
@@ -311,15 +307,9 @@ exports.SpaceXFulfillment = (request, response) => {
         //makes master results equal to only its nth element
         masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
       }
-      console.log('2');
-      console.log(masterResults);
-      console.log('masterResults.length');
-      console.log(masterResults.length);
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
-        console.log('ele');
-        console.log(ele);
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       console.log('3');
