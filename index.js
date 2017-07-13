@@ -305,7 +305,6 @@ exports.SpaceXFulfillment = (request, response) => {
         let ele = masterResults[n];
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
-      console.log('3');
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. Is there anything else I can help with? ":speech;
       let botResponse = {
         'speech': speech,
