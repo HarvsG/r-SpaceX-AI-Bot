@@ -41,24 +41,16 @@ const ENTITY_SEARCH_FIELD = {
   'LaunchPads':'launch_site',
   'LaunchOrdinal':'flight_number',
 };
-const ENTITY_SEARCH_VALUE = {
-  "kwajalein_atoll": "Kwajalein",
-  "ccafs_slc_40": "CCAFS LC-40",
-  "ccafs_lc_13": "",
-  "ksc_lc_39a": "KSC LC39A",
-  "39a": "KSC LC39A", // this should not have to exist but API.ai keeps failing to resolve it to its true entity value
-  "vafb_slc_3w": "",
-  "vafb_slc_4e": "VAFBS LC-4E",
-  "vafb_slc_4w": "",
-  "stls": "",
-  "Falcon 1":"Falcon 1",
-  "Falcon 9":"Falcon 9",
-  "Falcon Heavy":"Falcon Heavy",
-  "Dragon 1":"Dragon 1",
-  "Dragon 2":"",
-  "ITS Spaceship":"",
-  "ITS Booster":"",
-  "ITS Tanker":""
+const PAD_ID_NAME = {//This translation should probably happen via the API for future-proofing
+  "RDF":"McGregor Rocket Development Facility",
+  "kwajalein_atoll": "Kwajalein Atoll",
+  "ccafs_slc_40": "Cape Canaveral Space Launch Complex 40",
+  "ccafs_lc_13": "Cape Canaveral Launch Complex 13",
+  "ksc_lc_39a": "Kennedy Space Center Launch Complex 39A",
+  "vafb_slc_3w": "Vandenberg Air Force Base Space Launch Complex 3W",
+  "vafb_slc_4e": "Vandenberg Air Force Base Space Launch Complex 4E",
+  "vafb_slc_4w": "Vandenberg Air Force Base Space Launch Complex 4W",
+  "stls":"SpaceX South Texas Launch Site"
 };
 function vehicleInfoTemplate (data, parameter) {
   const VEHICLE_INFO = {
@@ -186,20 +178,20 @@ function companyInfoTemplate (data, parameter) {
   return COMPANY_INFO[parameter]
 }
 function launchInfoTemplate (data, parameter, past) {
-  let tense = past?  "took place at":"is due to take place at";
+  let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date + ',' + data.time_utc);
   let dateString0 = date.toUTCString();
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${data.launch_site} ${tense} ${dateString0}. `,
+    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${PAD_ID_NAME[data.launch_site]} ${tense} at ${dateString0}. `,
     "time_utc": `${data.time_utc}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
     "rocket_type": `${data.type}`,
     "core_serial": `${data.core_serial}`,
     "cap_serial": `${data.cap_serial}`,
-    "launch_site": `${data.launch_site}`,
+    "launch_site": `${PAD_ID_NAME[data.launch_site]}`,
     "payload_1": `${data.payload_1}`,
     "payload_2": `${data.payload_2}`,
     "payload_type": `${data.payload_type}`,
@@ -313,7 +305,7 @@ exports.SpaceXFulfillment = (request, response) => {
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       console.log('3');
-      speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions.":speech;
+      speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. Is there anything else I can help with? ":speech;
       let botResponse = {
         'speech': speech,
         'displayText': speech,
