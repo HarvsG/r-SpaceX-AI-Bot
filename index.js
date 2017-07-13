@@ -40,6 +40,7 @@ const ENTITY_SEARCH_FIELD = {
   'Vehicles':'rocket',
   'LaunchPads':'launch_site',
   'LaunchOrdinal':'flight_number',
+  'MissionOutcome':'launch_success'
 };
 const PAD_ID_NAME = {//This translation should probably happen via the API for future-proofing
   "RDF":"McGregor Rocket Development Facility",
@@ -277,8 +278,8 @@ exports.SpaceXFulfillment = (request, response) => {
 
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < masterResults.length; x++) {
-          //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0
-          if (masterResults[x][searchField].indexOf(searchVal) != -1) {
+          //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0. .toString as values will sometimes be booleen
+          if (masterResults[x][searchField].toString().indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
           }
         }
