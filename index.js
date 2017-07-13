@@ -293,6 +293,7 @@ exports.SpaceXFulfillment = (request, response) => {
           }
         }
         masterResults = results;
+        console.log('masterResults'+cleanedParamsList[i]);
         console.log(masterResults);
       }
       console.log('1');
@@ -312,10 +313,12 @@ exports.SpaceXFulfillment = (request, response) => {
       }
       console.log('2');
       console.log(masterResults);
+      console.log('masterResults.length');
       console.log(masterResults.length);
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
+        console.log('ele');
         console.log(ele);
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
