@@ -5,3 +5,5 @@ This is a webhook/[google cloud function](https://cloud.google.com/functions/) i
 
 # API agent
 Please see the readme in the [API Agent folder](https://github.com/HarvsG/r-SpaceX-AI-Bot/tree/master/API%20Agent) for more information.
+
+DEMO: Feel free to try the agent, go [here](https://bot.api.ai/r-SpaceX-ai) and start the conversation with a simple 'Hello'.
