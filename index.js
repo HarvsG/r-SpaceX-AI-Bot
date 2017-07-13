@@ -181,7 +181,7 @@ function companyInfoTemplate (data, parameter) {
 function launchInfoTemplate (data, parameter, past) {
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date + 'T' + data.time_utc);
-  let dateString0 = date.toUTCString();
+  let dateString0 = date.toDateString() + ", " + data.time_utc + " UTC"; //abandoned date.toUTCString(); as it displayed the seconds annoyingly
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
