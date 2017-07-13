@@ -281,7 +281,7 @@ exports.SpaceXFulfillment = (request, response) => {
         let searchField = ENTITY_SEARCH_FIELD[element];
         
         // this may also need a pairing dictionary as the line above does
-        let searchVal = ENTITY_SEARCH_VALUE[paramsList[element]];
+        let searchVal = paramsList[element];
         
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
         for (let x = 0; x < masterResults.length; x++) {
