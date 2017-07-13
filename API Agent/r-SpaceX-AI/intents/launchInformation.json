@@ -1,6 +1,188 @@
 {
   "userSays": [
     {
+      "id": "0ebbb89a-3920-4004-85c5-53da53dde360",
+      "data": [
+        {
+          "text": "Do you have a "
+        },
+        {
+          "text": "video link",
+          "alias": "LaunchQueryParams",
+          "meta": "@LaunchQueryParams",
+          "userDefined": false
+        },
+        {
+          "text": " for the "
+        },
+        {
+          "text": "last",
+          "alias": "LaunchTemporal",
+          "meta": "@LaunchTemporal",
+          "userDefined": true
+        },
+        {
+          "text": " launch?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f299c3b0-4584-4d6d-babb-93344ab3e2a5",
+      "data": [
+        {
+          "text": "When was",
+          "alias": "LaunchQueryParams",
+          "meta": "@LaunchQueryParams",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "last",
+          "alias": "LaunchTemporal",
+          "meta": "@LaunchTemporal",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "launch failure",
+          "alias": "MissionOutcome",
+          "meta": "@MissionOutcome",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "052f35a8-3ba7-4f16-8655-021ae065c5c1",
+      "data": [
+        {
+          "text": "When was",
+          "alias": "LaunchQueryParams",
+          "meta": "@LaunchQueryParams",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "first",
+          "alias": "LaunchOrdinal",
+          "meta": "@LaunchOrdinal",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "successful launch",
+          "alias": "MissionOutcome",
+          "meta": "@MissionOutcome",
+          "userDefined": false
+        },
+        {
+          "text": " of the "
+        },
+        {
+          "text": "falcon 1",
+          "alias": "Vehicles",
+          "meta": "@Vehicles",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3e4bc84f-d91c-4ebc-aab8-f23488fa2bf7",
+      "data": [
+        {
+          "text": "When was",
+          "alias": "LaunchQueryParams",
+          "meta": "@LaunchQueryParams",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "last",
+          "alias": "LaunchTemporal",
+          "meta": "@LaunchTemporal",
+          "userDefined": true
+        },
+        {
+          "text": " launch from "
+        },
+        {
+          "text": "slc40",
+          "alias": "LaunchPads",
+          "meta": "@LaunchPads",
+          "userDefined": false
+        },
+        {
+          "text": " on a "
+        },
+        {
+          "text": "falcon 9",
+          "alias": "Vehicles",
+          "meta": "@Vehicles",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "733590bb-5c80-4795-98ac-604a0d0ac341",
+      "data": [
+        {
+          "text": "When is",
+          "alias": "LaunchQueryParams",
+          "meta": "@LaunchQueryParams",
+          "userDefined": false
+        },
+        {
+          "text": " the "
+        },
+        {
+          "text": "next",
+          "alias": "LaunchTemporal",
+          "meta": "@LaunchTemporal",
+          "userDefined": true
+        },
+        {
+          "text": " launch from "
+        },
+        {
+          "text": "slc40",
+          "alias": "LaunchPads",
+          "meta": "@LaunchPads",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
       "id": "f1511e77-9d34-47af-8de0-7d015e01c733",
       "data": [
         {
@@ -146,37 +328,6 @@
         },
         {
           "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "20550870-82b2-46e0-94ac-1cd2d5ef3bc9",
-      "data": [
-        {
-          "text": "When was",
-          "alias": "LaunchQueryParams",
-          "meta": "@LaunchQueryParams",
-          "userDefined": false
-        },
-        {
-          "text": " the "
-        },
-        {
-          "text": "first",
-          "alias": "LaunchOrdinal",
-          "meta": "@LaunchOrdinal",
-          "userDefined": false
-        },
-        {
-          "text": " successful launch of the "
-        },
-        {
-          "text": "falcon 1",
-          "alias": "Vehicles",
-          "meta": "@Vehicles",
-          "userDefined": false
         }
       ],
       "isTemplate": false,
@@ -691,6 +842,12 @@
           "dataType": "@LaunchPads",
           "name": "LaunchPads",
           "value": "$LaunchPads",
+          "isList": false
+        },
+        {
+          "dataType": "@MissionOutcome",
+          "name": "MissionOutcome",
+          "value": "$MissionOutcome",
           "isList": false
         }
       ],

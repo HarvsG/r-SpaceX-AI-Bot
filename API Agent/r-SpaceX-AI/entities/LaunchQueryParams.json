@@ -207,12 +207,11 @@
     {
       "value": "launch_success",
       "synonyms": [
-        "mission a success",
-        "was the mission a success",
-        "mission a failure",
         "mission success",
         "mission successful",
-        "mission succeed"
+        "mission succeed",
+        "mission a success",
+        "mission a failure"
       ]
     },
     {
