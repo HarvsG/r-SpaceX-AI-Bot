@@ -293,21 +293,21 @@ exports.SpaceXFulfillment = (request, response) => {
           }
         }
         masterResults = results;
-        console.log('masterResults'+cleanedParamsList[i]);
+        console.log('masterResults '+cleanedParamsList[i]);
         console.log(masterResults);
       }
       console.log('1');
       let past = true;
       
-      if (request.body.result.parameters.LaunchTemporal == 'next'){
+      if (request.body.result.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
         //makes master results equal to only its first element
         masterResults = [masterResults[0]];
         past = false;
         
-      }else if(request.body.result.parameters.LaunchTemporal == 'last'){
+      }else if(request.body.result.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
         //makes master results equal to only its last element
         masterResults = [masterResults[masterResults.length-1]];
-      }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== ''){
+      }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
         //makes master results equal to only its nth element
         masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
       }
