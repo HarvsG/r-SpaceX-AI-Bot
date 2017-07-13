@@ -294,7 +294,7 @@ exports.SpaceXFulfillment = (request, response) => {
         }
         masterResults = results;
       }
-      
+      console.log('1');
       let past = true;
       
       if (request.body.result.parameters.LaunchTemporal == 'next'){
@@ -309,13 +309,14 @@ exports.SpaceXFulfillment = (request, response) => {
         //makes master results equal to only its nth element
         masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
       }
-      
+      console.log('2');
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
 
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
+      console.log('3');
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions.":speech;
       let botResponse = {
         'speech': speech,
