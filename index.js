@@ -313,7 +313,7 @@ exports.SpaceXFulfillment = (request, response) => {
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
         let ele = masterResults[n];
-
+        console.log(ele);
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       console.log('3');
