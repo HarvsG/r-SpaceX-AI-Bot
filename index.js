@@ -57,22 +57,21 @@ function vehicleInfoTemplate (data, parameter) {
   const VEHICLE_INFO = {
     "id": ``,
     "name": ``,
-    "active": ``,
-    "stages": ``,
-    "cost_per_launch": ``,
-    "success_rate_pct": ``,
-    "first_flight": ``,
+    "active": `The ${data.name} is ${data.active?  "active":"not active"}`,
+    "stages": `The ${data.name} has ${data.stages} stages`,
+    "cost_per_launch": `The launch cost of the ${data.name} is ${data.cost_per_launch}%`,
+    "success_rate_pct": `The success rate of the ${data.name} is ${data.success_rate_pct}%`,
+    "first_flight": `The first flight of the ${data.name} was ${new Date(data.first_flight).toDateString()}`,
     "country": ``,
     "company": ``,
-    "height": ``,
-    "diameter": ``,
-    "radius":`${data.diameter.meters/2} meters`,
-    "circumfrance":`${data.diameter.meters*Math.PI} meters`,
-    "mass": `${data.mass.kg} kilograms`,
-    "leo_weight": `${data.payload_weights[0].kg} kilograms to ${data.payload_weights[0].name}`,
-    "gto_weight": `${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}`,
-    "mars_weight": `${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}`,
-    "first_stage_reusable": `${data.first_stage.reusable}`,
+    "height": `The height of the ${data.name} is ${data.height.meters} meters`,
+    "diameter": `The diameter of the ${data.name} is ${data.diameter.meters} meters`,
+    "radius":`The radius of the ${data.name} is ${data.diameter.meters/2} meters`,
+    "mass": `The total mass tof the ${data.name} is ${data.mass.kg} kilograms`,
+    "leo_weight": `The ${data.name} can launch ${data.payload_weights[0].kg} kilograms to ${data.payload_weights[0].name}`,
+    "gto_weight": `The ${data.name} can launch ${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}`,
+    "mars_weight": `The ${data.name} can launch ${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}`,
+    "first_stage_reusable": `The ${data.name} is ${data.first_stage.reusable? "":"not "}a reusable rocket`,
     "first_stage_engine_count":`The first stage has ${data.first_stage.engines} engines`,
     "first_stage_fuel_amount":`${data.first_stage.fuel_amount_tons}`,
     "first_stage_burn_time":`${data.first_stage.burn_time_sec}`,
@@ -179,7 +178,9 @@ exports.SpaceXFulfillment = (request, response) => {
   
   function getVehicleInfo (app){
   
-    function callbackVehicle (app, data){}
+    function callbackVehicle (app, data){
+      
+    }
     APIrequest(app, '/vehicles', callbackVehicle);
   }
   
