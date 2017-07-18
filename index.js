@@ -180,13 +180,13 @@ function companyInfoTemplate (data, parameter) {
 }
 function launchInfoTemplate (data, parameter, past) {
   let tense = past?  "took place":"is due to take place";
-  let date = new Date(data.launch_date + 'T' + data.time_utc);
-  let dateString0 = date.toDateString() + ", " + data.time_utc + " UTC"; //abandoned date.toUTCString(); as it displayed the seconds annoyingly
+  let date = new Date(data.launch_date_utc);
+  let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${PAD_ID_NAME[data.launch_site]} ${tense} at ${dateString0}. `,
-    "time_utc": `${dateString0}`,
+    "launch_date_local": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${PAD_ID_NAME[data.launch_site]} ${tense} at ${dateString0}. `,
+    "launch_date_utc": `${dateString0}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
     "rocket_type": `${data.type}`,
