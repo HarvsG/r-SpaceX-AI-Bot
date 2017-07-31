@@ -281,7 +281,7 @@ exports.SpaceXFulfillment = (request, response) => {
           console.log(rawData);
           console.log(parsedData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-          callback(app, parsedData)
+          callback(app, rawData)
         } catch (e) {
           console.error(e.message);
         }
