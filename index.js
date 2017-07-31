@@ -42,17 +42,7 @@ const ENTITY_SEARCH_FIELD = {
   'LaunchOrdinal':'flight_number',
   'MissionOutcome':'launch_success'
 };
-const PAD_ID_NAME = {//This translation should probably happen via the API for future-proofing
-  "RDF":"McGregor Rocket Development Facility",
-  "kwajalein_atoll": "Kwajalein Atoll",
-  "ccafs_slc_40": "Cape Canaveral Space Launch Complex 40",
-  "ccafs_lc_13": "Cape Canaveral Launch Complex 13",
-  "ksc_lc_39a": "Kennedy Space Center Launch Complex 39A",
-  "vafb_slc_3w": "Vandenberg Air Force Base Space Launch Complex 3W",
-  "vafb_slc_4e": "Vandenberg Air Force Base Space Launch Complex 4E",
-  "vafb_slc_4w": "Vandenberg Air Force Base Space Launch Complex 4W",
-  "stls":"SpaceX South Texas Launch Site"
-};
+
 function vehicleInfoTemplate (data, parameter) {
   const VEHICLE_INFO = {
     "id": ``,
@@ -123,14 +113,14 @@ function launchInfoTemplate (data, parameter, past) {
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date_local": `The launch of ${data.payload_1} aboard SpaceX's ${data.rocket} from ${PAD_ID_NAME[data.launch_site]} ${tense} at ${dateString0}. `,
+    "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
     "rocket_type": `${data.type}`,
     "core_serial": `${data.core_serial}`,
     "cap_serial": `${data.cap_serial}`,
-    "launch_site": `${PAD_ID_NAME[data.launch_site]}`,//could consider adding a google maps rich data reply
+    "launch_site": `${data.launch_site.site_name}`,//could consider adding a google maps rich data reply
     "payload_1": `${data.payload_1}`,
     "payload_2": `${data.payload_2}`,
     "payload_type": `${data.payload_type}`,
