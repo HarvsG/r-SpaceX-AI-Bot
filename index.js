@@ -134,10 +134,10 @@ function launchInfoTemplate (data, parameter, past) {
     "land_success": `${data.land_success}`,
     "landing_type": `${data.landing_type}`,
     "landing_vehicle": `${data.landing_vehicle}`,
-    "mission_patch": `${data.mission_patch}`,
-    "article_link": `${data.article_link}`,
-    "video_link": `${data.video_link}`,
-    "details": `${data.details}`
+    "mission_patch": `${data.links.mission_patch}`,
+    "article_link": `${data.links.article_link}`,
+    "video_link": `${data.links.video_link}`,
+    "details": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
   }
   return LAUNCH_INFO[parameter]
 }
