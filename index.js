@@ -18,7 +18,7 @@ const GET_LAUNCH_INFO = 'get.launchInformation';
 const GET_LAUNCHPAD_INFO = '';
 
 
-// API.AI parameter names
+// API.AI parameter names. 
 const CATEGORY_ARGUMENT = 'category';
 
 // API.AI Contexts/lifespans
