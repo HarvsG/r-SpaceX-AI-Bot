@@ -278,6 +278,7 @@ exports.SpaceXFulfillment = (request, response) => {
       res.on('end', () => {
         try {
           const parsedData = JSON.parse(rawData);
+          console.log(rawData);
           console.log(parsedData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
           callback(app, parsedData)
