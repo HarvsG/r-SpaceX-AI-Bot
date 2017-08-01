@@ -107,6 +107,10 @@ function companyInfoTemplate (data, parameter) {
   return COMPANY_INFO[parameter]
 }
 function launchInfoTemplate (data, parameter, past) {
+  console.log('Addressing flight number:');
+  console.log(data.flight_number);
+  console.log('The data being used is:');
+  console.log(data);
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
