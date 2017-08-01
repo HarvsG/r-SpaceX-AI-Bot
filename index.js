@@ -119,7 +119,8 @@ function launchInfoTemplate (data, parameter, past) {
   console.log(data.payloads[0].payload_id);
   console.log("data.payloads[0]['payload_id']");
   console.log(data.payloads[0]['payload_id']);
-  let payload_id = data.payloads[0].payload_id
+  let payload_id = data.payloads[0].payload_id;
+  console.log('payload_id');
   console.log(payload_id);
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date_utc);
