@@ -1,4 +1,6 @@
 'use strict';
+/*jshint esversion: 6 */
+/* jshint node: true */
 //a version from scratch built using Actions on Google Client Library
 
 process.env.DEBUG = 'actions-on-google:*';
@@ -84,8 +86,8 @@ function vehicleInfoTemplate (data, parameter) {
     "landing_legs_material":`The landing legs on the ${data.name} are made from ${data.landing_legs.material}`,
     "landing_legs_number":`The ${data.name} has ${data.landing_legs.number} landing legs`,
     "description": "Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit."
-  }
-  return VEHICLE_INFO[parameter]
+  };
+  return VEHICLE_INFO[parameter];
 }
 function companyInfoTemplate (data, parameter) {
   const COMPANY_INFO = {
@@ -104,7 +106,7 @@ function companyInfoTemplate (data, parameter) {
     "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city},${data.headquarters.state}, its address is ${data.headquarters.address}`,
     "summary": `${data.summary}`
   };
-  return COMPANY_INFO[parameter]
+  return COMPANY_INFO[parameter];
 }
 function launchInfoTemplate (data, parameter, past) {
   console.log('Addressing flight number:');
@@ -142,9 +144,9 @@ function launchInfoTemplate (data, parameter, past) {
     "article_link": `${data.links.article_link}`,
     "video_link": `${data.links.video_link}`,
     "details": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
-  }
-  console.log('launchInfoTemplate() is returning' + LAUNCH_INFO[parameter]);
-  return LAUNCH_INFO[parameter]
+  };
+  console.log('launchInfoTemplate() is returning: ' + LAUNCH_INFO[parameter]);
+  return LAUNCH_INFO[parameter];
 }
 
 exports.SpaceXFulfillment = (request, response) => {
@@ -160,7 +162,7 @@ exports.SpaceXFulfillment = (request, response) => {
       let botResponse = {
         'speech':companyInfoTemplate(data, companyParameter),
         'displayText':companyInfoTemplate(data, companyParameter),
-      }
+      };
       app.ask(botResponse);
     }
     APIrequest(app, '/info', callbackCompany);
@@ -239,7 +241,7 @@ exports.SpaceXFulfillment = (request, response) => {
       let botResponse = {
         'speech': speech,
         'displayText': speech,
-      }
+      };
       app.ask(botResponse);
     }
 
@@ -280,10 +282,10 @@ exports.SpaceXFulfillment = (request, response) => {
           const parsedData = JSON.parse(rawData);
           console.log('rawData');
           console.log(rawData);
-          console.log('parsedData');;
-          console.log(parsedData);;
+          console.log('parsedData');
+          console.log(parsedData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-          callback(app, parsedData)
+          callback(app, parsedData);
         } catch (e) {
           console.error(e.message);
         }
