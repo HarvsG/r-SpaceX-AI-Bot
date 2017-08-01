@@ -117,6 +117,8 @@ function launchInfoTemplate (data, parameter, past) {
   console.log(data.payloads[0]);
   console.log('data.payloads[0].payload_id');
   console.log(data.payloads[0].payload_id);
+  console.log("data.payloads[0]['payload_id']");
+  console.log(data.payloads[0]['payload_id']);
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
