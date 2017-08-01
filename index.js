@@ -111,6 +111,12 @@ function launchInfoTemplate (data, parameter, past) {
   console.log(data.flight_number);
   console.log('The data being used is:');
   console.log(data);
+  console.log('data.payloads');
+  console.log(data.payloads);
+  console.log('data.payloads[0]');
+  console.log(data.payloads[0]);
+  console.log('data.payloads[0].payload_id');
+  console.log(data.payloads[0].payload_id);
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
@@ -143,6 +149,7 @@ function launchInfoTemplate (data, parameter, past) {
     "video_link": `${data.links.video_link}`,
     "details": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
   }
+  console.log('launchInfoTemplate() is returning' + LAUNCH_INFO[parameter]);
   return LAUNCH_INFO[parameter]
 }
 
