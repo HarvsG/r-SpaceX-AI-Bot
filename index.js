@@ -18,7 +18,7 @@ const GET_LAUNCH_INFO = 'get.launchInformation';
 const GET_LAUNCHPAD_INFO = '';
 
 
-// API.AI parameter names. 
+// API.AI parameter names.
 const CATEGORY_ARGUMENT = 'category';
 
 // API.AI Contexts/lifespans
@@ -145,10 +145,10 @@ function launchInfoTemplate (data, parameter, past) {
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
 
-  //let requestHeader = JSON.stringify(request.headers);
-  //console.log('Request headers: ' + requestHeader);
-  //let requestBody = JSON.stringify(request.body);
-  //console.log('Request body: ' + requestBody);
+  let requestHeader = JSON.stringify(request.headers);
+  console.log('Request headers: ' + requestHeader);
+  let requestBody = JSON.stringify(request.body);
+  console.log('Request body: ' + requestBody);
 
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
@@ -165,27 +165,27 @@ exports.SpaceXFulfillment = (request, response) => {
     }
     APIrequest(app, '/info', callbackCompany);
   }
-  
+
   function getVehicleInfo (app){
-  
+
     function callbackVehicle (app, data){
-      
+
     }
     APIrequest(app, '/vehicles', callbackVehicle);
   }
-  
+
   function getLaunchInfo (app){
   // this function handles GET_LAUNCH_INFO requests
-    
+
     function callbackLaunch (app, data){
     // this function is called as the callback from within APIrequest(app, '/launches', callbackLaunch)
-      
+
       // gives a shorthand variabel for the LaunchQueryParams (this is essentially the object of the user's question)
       let launchQueryParameter = request.body.result.parameters.LaunchQueryParams;
-      
+
       // Creates a masterResults copy of the data, this list will be chopped and changed, preserving 'data'
       let masterResults = data;
-      // the list of all the parameters, it will include things like the LaunchQueryParams and perhaps some empty parameters, we dont want these. 
+      // the list of all the parameters, it will include things like the LaunchQueryParams and perhaps some empty parameters, we dont want these.
       let paramsList = request.body.result.parameters;
       let cleanedParamsList = [];
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
@@ -202,7 +202,7 @@ exports.SpaceXFulfillment = (request, response) => {
         let results = [];
         // gets the search field from the Parameter:api_term pairing made in the header
         let searchField = ENTITY_SEARCH_FIELD[element];
-        
+
         // this may also need a pairing dictionary as the line above does
         let searchVal = paramsList[element];
 
@@ -215,14 +215,14 @@ exports.SpaceXFulfillment = (request, response) => {
         }
         masterResults = results;
       }
-      
+
       let past = true;
-      
+
       if (request.body.result.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
         //makes master results equal to only its first element
         masterResults = [masterResults[0]];
         past = false;
-        
+
       }else if(request.body.result.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
         //makes master results equal to only its last element
         masterResults = [masterResults[masterResults.length-1]];
@@ -242,15 +242,15 @@ exports.SpaceXFulfillment = (request, response) => {
       }
       app.ask(botResponse);
     }
-    
+
     if (request.body.result.parameters.LaunchTemporal == 'next'){
       APIrequest(app, '/launches/upcoming', callbackLaunch);
     }else{
       APIrequest(app, '/launches', callbackLaunch);
     }
-    
+
   }
-  
+
   function APIrequest (app, path, callback) {
     // this function takes a des
     https.get(API_URL + path, (res) => {
@@ -289,7 +289,7 @@ exports.SpaceXFulfillment = (request, response) => {
     }).on('error', (e) => {
       console.error(`Got error: ${e.message}`);
     });
-    
+
   }
 
   let actionMap = new Map();
