@@ -42,4 +42,4 @@ deploy:
       - gcloud --quiet beta functions deploy SpaceXFulfillment --source-url https://source.developers.google.com/p/r-spacex-ai/r/r-SpaceX-AI-google-source-repo --source-path / --trigger-http
     skip_cleanup: true
     on:
-      all_branches: true
+      branch: master
