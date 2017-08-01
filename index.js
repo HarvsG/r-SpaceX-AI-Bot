@@ -111,24 +111,13 @@ function launchInfoTemplate (data, parameter, past) {
   console.log(data.flight_number);
   console.log('The data being used is:');
   console.log(data);
-  console.log('data.payloads');
-  console.log(data.payloads);
-  console.log('data.payloads[0]');
-  console.log(data.payloads[0]);
-  console.log('data.payloads[0].payload_id');
-  console.log(data.payloads[0].payload_id);
-  console.log("data.payloads[0]['payload_id']");
-  console.log(data.payloads[0]['payload_id']);
-  let payload_id = data.payloads[0].payload_id;
-  console.log('payload_id');
-  console.log(payload_id);
   let tense = past?  "took place":"is due to take place";
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date_local": `The launch of ${payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
+    "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket}`,
@@ -289,9 +278,10 @@ exports.SpaceXFulfillment = (request, response) => {
       res.on('end', () => {
         try {
           const parsedData = JSON.parse(rawData);
+          console.log('rawData');
           console.log(rawData);
-          console.log(parsedData);
-          console.log(parsedData[0].payloads[0].payload_id);
+          console.log('parsedData');;
+          console.log(parsedData);;
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
           callback(app, parsedData)
         } catch (e) {
