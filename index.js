@@ -145,11 +145,6 @@ function launchInfoTemplate (data, parameter, past) {
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
 
-  let requestHeader = JSON.stringify(request.headers);
-  console.log('Request headers: ' + requestHeader);
-  let requestBody = JSON.stringify(request.body);
-  console.log('Request body: ' + requestBody);
-
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
   }
@@ -281,7 +276,7 @@ exports.SpaceXFulfillment = (request, response) => {
           console.log(rawData);
           console.log(parsedData);
           // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
-          callback(app, rawData)
+          callback(app, parsedData)
         } catch (e) {
           console.error(e.message);
         }
