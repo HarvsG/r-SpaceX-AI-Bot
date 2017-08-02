@@ -1,62 +1,118 @@
 {
-  "id": "48d47ff3-6f67-4dec-93a1-22e33548ca68",
-  "timestamp": "2017-07-09T21:43:20.701Z",
+  "id": "e52e17e2-72e5-4eec-b41b-e53c77a5aa79",
+  "timestamp": "2017-08-02T08:59:34.396Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "how many people does SpaceX employ?",
-    "action": "get.companyInformation",
+    "resolvedQuery": "when was the last launch of a falcon 1?",
+    "action": "get.launchInformation",
     "actionIncomplete": false,
     "parameters": {
-      "CompanyParams": "employee"
+      "LaunchOrdinal": "",
+      "LaunchPads": "",
+      "LaunchQueryParams": "launch_date_local",
+      "LaunchTemporal": "last",
+      "MissionOutcome": "",
+      "Vehicles": "Falcon 1"
     },
     "contexts": [
       {
+        "name": "_actions_on_google_",
+        "parameters": {},
+        "lifespan": 100
+      },
+      {
         "name": "global",
         "parameters": {
-          "CompanyParams.original": "how many people",
-          "CompanyParams": "employee"
+          "LaunchTemporal.original": "last",
+          "LaunchPads": "",
+          "LaunchOrdinal.original": "",
+          "Vehicles.original": "falcon 1?",
+          "MissionOutcome": "",
+          "LaunchTemporal": "last",
+          "LaunchQueryParams": "launch_date_local",
+          "MissionOutcome.original": "",
+          "LaunchOrdinal": "",
+          "LaunchQueryParams.original": "when was",
+          "LaunchPads.original": "",
+          "Vehicles": "Falcon 1"
         },
         "lifespan": 98
       },
       {
-        "name": "defaultwelcomeintent-followup",
-        "parameters": {
-          "CompanyParams.original": "how many people",
-          "CompanyParams": "employee"
-        },
-        "lifespan": 1
-      },
-      {
         "name": "welcome",
         "parameters": {
-          "CompanyParams.original": "how many people",
-          "CompanyParams": "employee"
+          "LaunchTemporal.original": "last",
+          "LaunchPads": "",
+          "LaunchOrdinal.original": "",
+          "Vehicles.original": "falcon 1?",
+          "MissionOutcome": "",
+          "LaunchTemporal": "last",
+          "LaunchQueryParams": "launch_date_local",
+          "MissionOutcome.original": "",
+          "LaunchOrdinal": "",
+          "LaunchQueryParams.original": "when was",
+          "LaunchPads.original": "",
+          "Vehicles": "Falcon 1"
         },
-        "lifespan": 4
+        "lifespan": 3
+      },
+      {
+        "name": "launches",
+        "parameters": {
+          "LaunchTemporal.original": "last",
+          "LaunchPads": "",
+          "LaunchOrdinal.original": "",
+          "Vehicles.original": "falcon 1?",
+          "MissionOutcome": "",
+          "LaunchTemporal": "last",
+          "LaunchQueryParams": "launch_date_local",
+          "MissionOutcome.original": "",
+          "LaunchOrdinal": "",
+          "LaunchQueryParams.original": "when was",
+          "LaunchPads.original": "",
+          "Vehicles": "Falcon 1"
+        },
+        "lifespan": 5
       }
     ],
     "metadata": {
-      "intentId": "0b4aa955-4dfc-48dc-bfaf-1341118cc0fb",
+      "intentId": "a2ee538a-1ab4-454e-9ce8-d82521efffe3",
       "webhookUsed": "true",
       "webhookForSlotFillingUsed": "false",
-      "intentName": "companyInformation"
+      "webhookResponseTime": 2517,
+      "intentName": "launchInformation"
     },
     "fulfillment": {
-      "speech": "",
+      "speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. ",
       "messages": [
         {
           "type": 0,
-          "speech": ""
+          "speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. "
         }
-      ]
+      ],
+      "data": {
+        "google": {
+          "expect_user_response": true,
+          "rich_response": {
+            "items": [
+              {
+                "simple_response": {
+                  "text_to_speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. ",
+                  "display_text": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. "
+                }
+              }
+            ],
+            "suggestions": []
+          }
+        }
+      }
     },
     "score": 1
   },
   "status": {
-    "code": 206,
-    "errorType": "partial_content",
-    "errorDetails": "Webhook call failed. Error: Request timeout."
+    "code": 200,
+    "errorType": "success"
   },
-  "sessionId": "b1c4a6c2-fdda-4f33-b53a-5cc4c134d6aa"
+  "sessionId": "439e4fb9-41ce-4fe1-8749-6da23d0aafe3"
 }
