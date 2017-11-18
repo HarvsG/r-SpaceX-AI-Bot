@@ -151,14 +151,14 @@ function launchInfoTemplate (data, parameter, past) {
 
 exports.SpaceXFulfillment = (request, response) => {
   const app = new ApiAiApp({ request, response });
-
+  const queryResult = request.body.queryResult;
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
   }
 
   function getCompanyInfo (app){
     function callbackCompany (app, data){
-      let companyParameter = request.body.result.parameters.CompanyParams;
+      let companyParameter = queryResult.parameters.CompanyParams;
       let botResponse = {
         'speech':companyInfoTemplate(data, companyParameter)+ "Is there anything else I can help with?",
         'displayText':companyInfoTemplate(data, companyParameter),
@@ -183,12 +183,12 @@ exports.SpaceXFulfillment = (request, response) => {
     // this function is called as the callback from within APIrequest(app, '/launches', callbackLaunch)
 
       // gives a shorthand variabel for the LaunchQueryParams (this is essentially the object of the user's question)
-      let launchQueryParameter = request.body.result.parameters.LaunchQueryParams;
+      let launchQueryParameter = queryResult.parameters.LaunchQueryParams;
 
       // Creates a masterResults copy of the data, this list will be chopped and changed, preserving 'data'
       let masterResults = data;
       // the list of all the parameters, it will include things like the LaunchQueryParams and perhaps some empty parameters, we dont want these.
-      let paramsList = request.body.result.parameters;
+      let paramsList = queryResult.parameters;
       let cleanedParamsList = [];
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
       for (var key in paramsList) {
@@ -220,12 +220,12 @@ exports.SpaceXFulfillment = (request, response) => {
 
       let past = true;
 
-      if (request.body.result.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
+      if (queryResult.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
         //makes master results equal to only its first element
         masterResults = [masterResults[0]];
         past = false;
 
-      }else if(request.body.result.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
+      }else if(queryResult.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
         //makes master results equal to only its last element
         masterResults = [masterResults[masterResults.length-1]];
       }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
@@ -245,7 +245,7 @@ exports.SpaceXFulfillment = (request, response) => {
       app.ask(botResponse);
     }
 
-    if (request.body.result.parameters.LaunchTemporal == 'next'){
+    if (queryResult.parameters.LaunchTemporal == 'next'){
       APIrequest(app, '/launches/upcoming', callbackLaunch);
     }else{
       APIrequest(app, '/launches', callbackLaunch);
