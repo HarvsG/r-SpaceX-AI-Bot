@@ -4,7 +4,7 @@
 //a version from scratch built using Actions on Google Client Library
 
 process.env.DEBUG = 'actions-on-google:*';
-const ApiAiApp = require('actions-on-google').ApiAiApp;
+const DialogflowApp = require('actions-on-google').DialogflowApp;
 const https = require('https');
 const http = require('http');
 const queryString = require('query-string');
@@ -150,7 +150,7 @@ function launchInfoTemplate (data, parameter, past) {
 }
 
 exports.SpaceXFulfillment = (request, response) => {
-  const app = new ApiAiApp({ request, response });
+  const app = new DialogflowApp({ request, response });
   const queryResult = request.body.queryResult;
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
@@ -228,9 +228,9 @@ exports.SpaceXFulfillment = (request, response) => {
       }else if(queryResult.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
         //makes master results equal to only its last element
         masterResults = [masterResults[masterResults.length-1]];
-      }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
+      }else if (queryResult.parameters.LaunchOrdinal.ordinal != null && queryResult.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
         //makes master results equal to only its nth element
-        masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
+        masterResults = [masterResults[queryResult.parameters.LaunchOrdinal.ordinal-1]];
       }
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
@@ -284,7 +284,7 @@ exports.SpaceXFulfillment = (request, response) => {
           console.log(rawData);
           console.log('parsedData');
           console.log(parsedData);
-          // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
+          // some code to pick the relevant company data from the user request (queryResult.parameters.CompanyParams)
           callback(app, parsedData);
         } catch (e) {
           console.error(e.message);
