@@ -119,10 +119,10 @@ function launchInfoTemplate (data, parameter, past) {
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}.`,
     "launch_year": `${data.launch_year}.`,
-    "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
+    "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket.rocket_name} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
     "time_local": `${data.time_local}`,
-    "rocket": `${data.rocket}`,
+    "rocket": `${data.rocket.rocket_name}`,
     "rocket_type": `${data.type}`,
     "core_serial": `${data.core_serial}`,
     "cap_serial": `${data.cap_serial}`,
