@@ -1,7 +1,7 @@
-# API.ai Agent
-The API.ai agent can be found [here](https://github.com/HarvsG/r-SpaceX-AI-Bot/tree/master/API%20Agent/r-SpaceX-AI).
+# Dialogflow Agent
+The Dialogflow agent can be found [here](https://github.com/HarvsG/r-SpaceX-AI-Bot/tree/master/API%20Agent/r-SpaceX-AI).
 
-You can use your own implementation of the agent by going to [API.ai](https://api.ai/)
+You can use your own implementation of the agent by going to [Dialogflow](https://dialogflow.com)
   - Sign Up or Log In
   - Create a new agent
   - Click the cog wheel next to the agent name
