@@ -150,8 +150,8 @@ function launchInfoTemplate (data, parameter, past) {
 }
 
 exports.SpaceXFulfillment = (request, response) => {
-  const app = new DialogflowApp({request: request, response: response, sessionStarted:sessionStarted});
-  const queryResult = request.body.queryResult;
+  const app = new DialogflowApp({request: request, response: response});
+  const queryResult = request.body.result;
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
   }
