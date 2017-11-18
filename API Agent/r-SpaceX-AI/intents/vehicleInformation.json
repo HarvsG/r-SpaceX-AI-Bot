@@ -1,27 +1,42 @@
 {
-  "userSays": [],
   "id": "01df34dd-3646-4a98-bc97-c45c238cf6a4",
   "name": "vehicleInformation",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "vehicles"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "get.vehicleInformation",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "vehicles",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "information-given",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
       "parameters": [],
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": []
         }
       ],
-      "defaultResponsePlatforms": {}
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1499799072189,
   "fallbackIntent": false,
   "events": []
 }

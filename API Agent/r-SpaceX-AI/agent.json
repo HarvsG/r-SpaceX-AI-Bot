@@ -1,6 +1,7 @@
 {
   "description": "This chat bot will answer queries all about SpaceX",
   "language": "en",
+  "disableInteractionLogs": false,
   "googleAssistant": {
     "googleAssistantCompatible": true,
     "project": "r-spacex-ai",
@@ -8,7 +9,8 @@
     "startIntents": [],
     "systemIntents": [],
     "endIntentIds": [
-      "b7026236-55ac-415f-864e-f62b0932d916"
+      "b7026236-55ac-415f-864e-f62b0932d916",
+      "92f8646f-c3d2-493c-b748-f7dc9a5e0208"
     ],
     "oAuthLinking": {
       "required": false,
@@ -25,9 +27,13 @@
       "": ""
     },
     "available": true,
-    "useForDomains": false
+    "useForDomains": false,
+    "cloudFunctionsEnabled": false,
+    "cloudFunctionsInitialized": true
   },
   "isPrivate": true,
   "customClassifierMode": "use.after",
-  "mlMinConfidence": 0.3
+  "mlMinConfidence": 0.3,
+  "supportedLanguages": [],
+  "enableOnePlatformApi": false
 }

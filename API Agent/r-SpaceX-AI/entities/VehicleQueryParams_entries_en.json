@@ -1,0 +1,236 @@
+[
+  {
+    "value": "id",
+    "synonyms": [
+      "id"
+    ]
+  },
+  {
+    "value": "name",
+    "synonyms": [
+      "name"
+    ]
+  },
+  {
+    "value": "active",
+    "synonyms": [
+      "active"
+    ]
+  },
+  {
+    "value": "stages",
+    "synonyms": [
+      "stages"
+    ]
+  },
+  {
+    "value": "cost_per_launch",
+    "synonyms": [
+      "cost_per_launch"
+    ]
+  },
+  {
+    "value": "success_rate_pct",
+    "synonyms": [
+      "success_rate_pct"
+    ]
+  },
+  {
+    "value": "first_flight",
+    "synonyms": [
+      "first_flight"
+    ]
+  },
+  {
+    "value": "country",
+    "synonyms": [
+      "country"
+    ]
+  },
+  {
+    "value": "company",
+    "synonyms": [
+      "company"
+    ]
+  },
+  {
+    "value": "height",
+    "synonyms": [
+      "height"
+    ]
+  },
+  {
+    "value": "diameter",
+    "synonyms": [
+      "diameter"
+    ]
+  },
+  {
+    "value": "radius",
+    "synonyms": [
+      "radius"
+    ]
+  },
+  {
+    "value": "mass",
+    "synonyms": [
+      "mass"
+    ]
+  },
+  {
+    "value": "leo_weight",
+    "synonyms": [
+      "leo_weight"
+    ]
+  },
+  {
+    "value": "gto_weight",
+    "synonyms": [
+      "gto_weight"
+    ]
+  },
+  {
+    "value": "mars_weight",
+    "synonyms": [
+      "mars_weight"
+    ]
+  },
+  {
+    "value": "first_stage_reusable",
+    "synonyms": [
+      "first_stage_reusable"
+    ]
+  },
+  {
+    "value": "first_stage_engine_count",
+    "synonyms": [
+      "first_stage_engine_count"
+    ]
+  },
+  {
+    "value": "first_stage_fuel_amount",
+    "synonyms": [
+      "first_stage_fuel_amount"
+    ]
+  },
+  {
+    "value": "first_stage_burn_time",
+    "synonyms": [
+      "first_stage_burn_time"
+    ]
+  },
+  {
+    "value": "first_stage_thrust_sea_level",
+    "synonyms": [
+      "first_stage_thrust_sea_level"
+    ]
+  },
+  {
+    "value": "first_stage_thrust_sea_vacuum",
+    "synonyms": [
+      "first_stage_thrust_sea_vacuum"
+    ]
+  },
+  {
+    "value": "second_stage_engine_count",
+    "synonyms": [
+      "second_stage_engine_count"
+    ]
+  },
+  {
+    "value": "second_stage_fuel_amount",
+    "synonyms": [
+      "second_stage_fuel_amount"
+    ]
+  },
+  {
+    "value": "second_stage_burn_time",
+    "synonyms": [
+      "second_stage_burn_time"
+    ]
+  },
+  {
+    "value": "second_stage_thrust_sea_level",
+    "synonyms": [
+      "second_stage_thrust_sea_level"
+    ]
+  },
+  {
+    "value": "second_stage_payload_options",
+    "synonyms": [
+      "second_stage_payload_options"
+    ]
+  },
+  {
+    "value": "fairing_height",
+    "synonyms": [
+      "fairing_height"
+    ]
+  },
+  {
+    "value": "fairing_diameter",
+    "synonyms": [
+      "fairing_diameter"
+    ]
+  },
+  {
+    "value": "engine_type",
+    "synonyms": [
+      "engine_type"
+    ]
+  },
+  {
+    "value": "engine_layout",
+    "synonyms": [
+      "engine_layout"
+    ]
+  },
+  {
+    "value": "engine_loss_max",
+    "synonyms": [
+      "engine_loss_max"
+    ]
+  },
+  {
+    "value": "propellants",
+    "synonyms": [
+      "propellants"
+    ]
+  },
+  {
+    "value": "thrust_sea_level",
+    "synonyms": [
+      "thrust_sea_level"
+    ]
+  },
+  {
+    "value": "thrust_vaccuum",
+    "synonyms": [
+      "thrust_vaccuum"
+    ]
+  },
+  {
+    "value": "thrust_to_weight",
+    "synonyms": [
+      "thrust_to_weight"
+    ]
+  },
+  {
+    "value": "landing_legs_material",
+    "synonyms": [
+      "landing_legs_material"
+    ]
+  },
+  {
+    "value": "landing_legs_number",
+    "synonyms": [
+      "landing_legs_number"
+    ]
+  },
+  {
+    "value": "description",
+    "synonyms": [
+      "description"
+    ]
+  }
+]

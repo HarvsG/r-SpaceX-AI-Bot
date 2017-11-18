@@ -1,0 +1,64 @@
+[
+  {
+    "value": "Falcon 1",
+    "synonyms": [
+      "Falcon 1",
+      "F1",
+      "falcon one"
+    ]
+  },
+  {
+    "value": "Falcon 9",
+    "synonyms": [
+      "Falcon 9",
+      "F9",
+      "Falcon 9"
+    ]
+  },
+  {
+    "value": "Falcon Heavy",
+    "synonyms": [
+      "Falcon Heavy",
+      "FH"
+    ]
+  },
+  {
+    "value": "Dragon 1",
+    "synonyms": [
+      "Dragon 1",
+      "D1",
+      "Origional Dragon",
+      "First generation dragon"
+    ]
+  },
+  {
+    "value": "Dragon 2",
+    "synonyms": [
+      "Dragon 2",
+      "Crew Dragon",
+      "red dragon"
+    ]
+  },
+  {
+    "value": "ITS Spaceship",
+    "synonyms": [
+      "ITS Spaceship",
+      "MCT",
+      "Mars colonial transporter",
+      "interplanetary transport system"
+    ]
+  },
+  {
+    "value": "ITS Booster",
+    "synonyms": [
+      "ITS Booster",
+      "MCT booster"
+    ]
+  },
+  {
+    "value": "ITS Tanker",
+    "synonyms": [
+      "ITS Tanker"
+    ]
+  }
+]

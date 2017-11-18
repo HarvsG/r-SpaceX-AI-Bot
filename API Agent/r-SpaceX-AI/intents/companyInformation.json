@@ -1,238 +1,4 @@
 {
-  "userSays": [
-    {
-      "id": "b528f50a-70c7-4819-91f7-43a6cf5e7f58",
-      "data": [
-        {
-          "text": "When was it "
-        },
-        {
-          "text": "founded",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "586965a0-47b8-4dab-8e24-1ea41737030f",
-      "data": [
-        {
-          "text": "What did you say the company\u0027s "
-        },
-        {
-          "text": "name",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " was?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "aab1ef72-3dae-497a-a816-6305f17dcce0",
-      "data": [
-        {
-          "text": "How many people",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " does SpaceX employ?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "0b1b9ac6-ee10-4798-b7ac-5555df4d3427",
-      "data": [
-        {
-          "text": "How many "
-        },
-        {
-          "text": "launch sites",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " does SpaceX have?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "abf44f5a-3a9b-4b60-a694-4233e163b667",
-      "data": [
-        {
-          "text": "How much is SpaceX "
-        },
-        {
-          "text": "worth",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "fafd8bbc-3d04-4a14-b1f4-ad9d5da66dce",
-      "data": [
-        {
-          "text": "Who is "
-        },
-        {
-          "text": "CTO",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " of SpaceX?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "8d353138-af8b-4570-8052-2b03e9b3b4a2",
-      "data": [
-        {
-          "text": "Who is "
-        },
-        {
-          "text": "COO",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "1e00ead4-8b54-4690-88a2-b6d6f5168990",
-      "data": [
-        {
-          "text": "Who is "
-        },
-        {
-          "text": "CEO",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " of SpaceX?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "c33e07ad-fcd2-4ddb-885b-e2b97afe7f4e",
-      "data": [
-        {
-          "text": "Where is the SpaceX "
-        },
-        {
-          "text": "HQ",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "2de3b3c6-9a36-4ada-9174-6967d359a465",
-      "data": [
-        {
-          "text": "How many "
-        },
-        {
-          "text": "vehicles",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " does SpaceX have?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "e1908780-aff6-4a68-aef7-32a3dd04685d",
-      "data": [
-        {
-          "text": "when was SpaceX "
-        },
-        {
-          "text": "started",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "f48e4129-8581-45d2-81ca-90b45494cbaa",
-      "data": [
-        {
-          "text": "Who founded",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        },
-        {
-          "text": " SpaceX?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "817c108d-26bd-48ed-836c-6e073786cf2b",
-      "data": [
-        {
-          "text": "When was SpaceX "
-        },
-        {
-          "text": "founded?",
-          "alias": "CompanyParams",
-          "meta": "@CompanyParams",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    }
-  ],
   "id": "0b4aa955-4dfc-48dc-bfaf-1341118cc0fb",
   "name": "companyInformation",
   "auto": true,
@@ -248,10 +14,17 @@
           "name": "company",
           "parameters": {},
           "lifespan": 5
+        },
+        {
+          "name": "information-given",
+          "parameters": {},
+          "lifespan": 5
         }
       ],
       "parameters": [
         {
+          "id": "bc371049-b9e2-4bf3-a5c8-e22f74666b1c",
+          "required": false,
           "dataType": "@CompanyParams",
           "name": "CompanyParams",
           "value": "$CompanyParams",
@@ -261,15 +34,18 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": []
         }
       ],
-      "defaultResponsePlatforms": {}
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1499799072203,
   "fallbackIntent": false,
   "events": []
 }
