@@ -91,20 +91,20 @@ function vehicleInfoTemplate (data, parameter) {
 }
 function companyInfoTemplate (data, parameter) {
   const COMPANY_INFO = {
-    "name": `The company is called Space Exploration Technologies or ${data.name} for short.`,
-    "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}`,
-    "founded": `${data.name} was founded in ${data.founded} by ${data.founder}`,
-    "employees": `${data.name} currently has about ${data.employees} employees`,
-    "vehicles": `${data.name} currently has ${data.vehicles} different vehicles`,
-    "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites`,
-    "test_sites": `${data.name} currently operates ${data.test_sites} test site`,
-    "ceo": `The current Chief Executive Officer of ${data.name} is ${data.ceo}`,
-    "cto": `The current Chief Technology Officer of ${data.name} is ${data.cto}`,
-    "coo": `The current Chief Operating Officer of ${data.name} is ${data.coo}`,
-    "cto_propulsion": `${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}`,
-    "valuation": `${data.name} is currently valued at ${data.valuation}USD`,
-    "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city},${data.headquarters.state}, its address is ${data.headquarters.address}`,
-    "summary": `${data.summary}`
+    "name": `The company is called Space Exploration Technologies or ${data.name} for short. `,
+    "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}. `,
+    "founded": `${data.name} was founded in ${data.founded} by ${data.founder}. `,
+    "employees": `${data.name} currently has about ${data.employees} employees. `,
+    "vehicles": `${data.name} currently has ${data.vehicles} different vehicles. `,
+    "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites. `,
+    "test_sites": `${data.name} currently operates ${data.test_sites} test site. `,
+    "ceo": `The current Chief Executive Officer of ${data.name} is ${data.ceo}. `,
+    "cto": `The current Chief Technology Officer of ${data.name} is ${data.cto}. `,
+    "coo": `The current Chief Operating Officer of ${data.name} is ${data.coo}. `,
+    "cto_propulsion": `${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}. `,
+    "valuation": `${data.name} is currently valued at ${data.valuation}USD. `,
+    "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city}, ${data.headquarters.state}, its address is ${data.headquarters.address}. `,
+    "summary": `${data.summary}. `
   };
   return COMPANY_INFO[parameter];
 }
@@ -117,7 +117,7 @@ function launchInfoTemplate (data, parameter, past) {
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
-    "flight_number": `${data.flight_number}.`,
+    "flight_number": `${data.flight_number}. `,
     "launch_year": `${data.launch_year}.`,
     "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket.rocket_name} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
@@ -160,7 +160,7 @@ exports.SpaceXFulfillment = (request, response) => {
     function callbackCompany (app, data){
       let companyParameter = request.body.result.parameters.CompanyParams;
       let botResponse = {
-        'speech':companyInfoTemplate(data, companyParameter),
+        'speech':companyInfoTemplate(data, companyParameter)+ "Is there anything else I can help with?",
         'displayText':companyInfoTemplate(data, companyParameter),
       };
       app.ask(botResponse);
@@ -239,7 +239,7 @@ exports.SpaceXFulfillment = (request, response) => {
       }
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. Is there anything else I can help with? ":speech;
       let botResponse = {
-        'speech': speech,
+        'speech': speech + "Is there anything else I can help with?",
         'displayText': speech,
       };
       app.ask(botResponse);
