@@ -1,118 +1,139 @@
 {
-  "id": "e52e17e2-72e5-4eec-b41b-e53c77a5aa79",
-  "timestamp": "2017-08-02T08:59:34.396Z",
-  "lang": "en",
-  "result": {
-    "source": "agent",
-    "resolvedQuery": "when was the last launch of a falcon 1?",
-    "action": "get.launchInformation",
-    "actionIncomplete": false,
-    "parameters": {
-      "LaunchOrdinal": "",
-      "LaunchPads": "",
-      "LaunchQueryParams": "launch_date_local",
-      "LaunchTemporal": "last",
-      "MissionOutcome": "",
-      "Vehicles": "Falcon 1"
-    },
-    "contexts": [
-      {
-        "name": "_actions_on_google_",
-        "parameters": {},
-        "lifespan": 100
+   "id":"4a95aaa0-bcaf-4c25-8339-d7faa2f68ae8",
+   "timestamp":"2017-11-19T18:36:13.96Z",
+   "lang":"en",
+   "result":{
+      "source":"agent",
+      "resolvedQuery":"when was the last launch failure?",
+      "speech":"",
+      "action":"get.launchInformation",
+      "actionIncomplete":false,
+      "parameters":{
+         "LaunchPads":"",
+         "LaunchTemporal":"last",
+         "MissionOutcome":"false",
+         "LaunchQueryParams":"launch_date_local",
+         "LaunchOrdinal":"",
+         "Vehicles":""
       },
-      {
-        "name": "global",
-        "parameters": {
-          "LaunchTemporal.original": "last",
-          "LaunchPads": "",
-          "LaunchOrdinal.original": "",
-          "Vehicles.original": "falcon 1?",
-          "MissionOutcome": "",
-          "LaunchTemporal": "last",
-          "LaunchQueryParams": "launch_date_local",
-          "MissionOutcome.original": "",
-          "LaunchOrdinal": "",
-          "LaunchQueryParams.original": "when was",
-          "LaunchPads.original": "",
-          "Vehicles": "Falcon 1"
-        },
-        "lifespan": 98
-      },
-      {
-        "name": "welcome",
-        "parameters": {
-          "LaunchTemporal.original": "last",
-          "LaunchPads": "",
-          "LaunchOrdinal.original": "",
-          "Vehicles.original": "falcon 1?",
-          "MissionOutcome": "",
-          "LaunchTemporal": "last",
-          "LaunchQueryParams": "launch_date_local",
-          "MissionOutcome.original": "",
-          "LaunchOrdinal": "",
-          "LaunchQueryParams.original": "when was",
-          "LaunchPads.original": "",
-          "Vehicles": "Falcon 1"
-        },
-        "lifespan": 3
-      },
-      {
-        "name": "launches",
-        "parameters": {
-          "LaunchTemporal.original": "last",
-          "LaunchPads": "",
-          "LaunchOrdinal.original": "",
-          "Vehicles.original": "falcon 1?",
-          "MissionOutcome": "",
-          "LaunchTemporal": "last",
-          "LaunchQueryParams": "launch_date_local",
-          "MissionOutcome.original": "",
-          "LaunchOrdinal": "",
-          "LaunchQueryParams.original": "when was",
-          "LaunchPads.original": "",
-          "Vehicles": "Falcon 1"
-        },
-        "lifespan": 5
-      }
-    ],
-    "metadata": {
-      "intentId": "a2ee538a-1ab4-454e-9ce8-d82521efffe3",
-      "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
-      "webhookResponseTime": 2517,
-      "intentName": "launchInformation"
-    },
-    "fulfillment": {
-      "speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. ",
-      "messages": [
-        {
-          "type": 0,
-          "speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. "
-        }
+      "contexts":[
+         {
+            "name":"information-given",
+            "parameters":{
+               "LaunchTemporal.original":"last",
+               "LaunchPads":"",
+               "LaunchOrdinal.original":"",
+               "Vehicles.original":"",
+               "MissionOutcome":"false",
+               "LaunchTemporal":"last",
+               "LaunchQueryParams":"launch_date_local",
+               "MissionOutcome.original":"launch failure",
+               "LaunchOrdinal":"",
+               "LaunchQueryParams.original":"When was",
+               "LaunchPads.original":"",
+               "Vehicles":""
+            },
+            "lifespan":5
+         },
+         {
+            "name":"global",
+            "parameters":{
+               "LaunchTemporal.original":"last",
+               "LaunchPads":"",
+               "LaunchOrdinal.original":"",
+               "Vehicles.original":"",
+               "MissionOutcome":"false",
+               "LaunchTemporal":"last",
+               "LaunchQueryParams":"launch_date_local",
+               "MissionOutcome.original":"launch failure",
+               "LaunchOrdinal":"",
+               "LaunchQueryParams.original":"When was",
+               "LaunchPads.original":"",
+               "Vehicles":""
+            },
+            "lifespan":98
+         },
+         {
+            "name":"defaultwelcomeintent-followup",
+            "parameters":{
+               "LaunchTemporal.original":"last",
+               "LaunchPads":"",
+               "LaunchOrdinal.original":"",
+               "Vehicles.original":"",
+               "MissionOutcome":"false",
+               "LaunchTemporal":"last",
+               "LaunchQueryParams":"launch_date_local",
+               "MissionOutcome.original":"launch failure",
+               "LaunchOrdinal":"",
+               "LaunchQueryParams.original":"When was",
+               "LaunchPads.original":"",
+               "Vehicles":""
+            },
+            "lifespan":0
+         },
+         {
+            "name":"welcome",
+            "parameters":{
+               "LaunchTemporal.original":"last",
+               "LaunchPads":"",
+               "LaunchOrdinal.original":"",
+               "Vehicles.original":"",
+               "MissionOutcome":"false",
+               "LaunchTemporal":"last",
+               "LaunchQueryParams":"launch_date_local",
+               "MissionOutcome.original":"launch failure",
+               "LaunchOrdinal":"",
+               "LaunchQueryParams.original":"When was",
+               "LaunchPads.original":"",
+               "Vehicles":""
+            },
+            "lifespan":3
+         },
+         {
+            "name":"launches",
+            "parameters":{
+               "LaunchTemporal.original":"last",
+               "LaunchPads":"",
+               "LaunchOrdinal.original":"",
+               "Vehicles.original":"",
+               "MissionOutcome":"false",
+               "LaunchTemporal":"last",
+               "LaunchQueryParams":"launch_date_local",
+               "MissionOutcome.original":"launch failure",
+               "LaunchOrdinal":"",
+               "LaunchQueryParams.original":"When was",
+               "LaunchPads.original":"",
+               "Vehicles":""
+            },
+            "lifespan":5
+         }
       ],
-      "data": {
-        "google": {
-          "expect_user_response": true,
-          "rich_response": {
-            "items": [
-              {
-                "simple_response": {
-                  "text_to_speech": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. ",
-                  "display_text": "The launch of RazakSAT aboard SpaceX's Falcon 1 from Kwajalein Atoll took place at Mon, 13 Jul 2009 03:35 GMT. "
-                }
-              }
-            ],
-            "suggestions": []
-          }
-        }
-      }
-    },
-    "score": 1
-  },
-  "status": {
-    "code": 200,
-    "errorType": "success"
-  },
-  "sessionId": "439e4fb9-41ce-4fe1-8749-6da23d0aafe3"
+      "metadata":{
+         "intentId":"a2ee538a-1ab4-454e-9ce8-d82521efffe3",
+         "webhookUsed":"true",
+         "webhookForSlotFillingUsed":"false",
+         "intentName":"launchInformation"
+      },
+      "fulfillment":{
+         "speech":"",
+         "messages":[
+            {
+               "type":0,
+               "platform":"slack",
+               "speech":"slack text response"
+            },
+            {
+               "type":0,
+               "speech":""
+            }
+         ]
+      },
+      "score":1
+   },
+   "status":{
+      "code":200,
+      "errorType":"success",
+      "webhookTimedOut":false
+   },
+   "sessionId":"8d6f0e34-8e72-41e2-9f13-9cff876aadd4"
 }
