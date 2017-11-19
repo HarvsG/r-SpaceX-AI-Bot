@@ -39,7 +39,7 @@ deploy:
   - provider: script
     script:
       # change FUNCTION_NAME PROJECT and REPO to the values from the cloud console: https://console.cloud.google.com/code/develop. Note function name is from your main file, usualy index.js, the main function exports.FUNCTION_NAME
-      - gcloud beta functions deploy SpaceXFulfillment --source https://source.developers.google.com/projects/r-spacex-ai/repos/r-SpaceX-AI-google-source-repo/moveable-aliases/master --trigger-http
+      - gcloud beta --quiet functions deploy SpaceXFulfillment --source https://source.developers.google.com/projects/r-spacex-ai/repos/r-SpaceX-AI-google-source-repo/moveable-aliases/master --trigger-http
       #- gcloud beta functions call SpaceXFulfillment --file=requestExample.json # NOT working, it would be good to emulate and test the function and then only deploy if successful!
     skip_cleanup: true
     on:
