@@ -154,7 +154,7 @@ exports.SpaceXFulfillment = (request, response) => {
   const queryResult = request.body.result;
   //for debugging purposes
   console.log("Request:");
-  console.log(request.body);
+  console.log(JSON.stringify(request.body));
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
   }
