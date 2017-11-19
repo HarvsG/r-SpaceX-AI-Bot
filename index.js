@@ -153,6 +153,7 @@ exports.SpaceXFulfillment = (request, response) => {
   const app = new DialogflowApp({request: request, response: response});
   const queryResult = request.body.result;
   //for debugging purposes
+  console.log("Request:");
   console.log(request);
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
