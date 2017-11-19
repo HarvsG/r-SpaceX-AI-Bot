@@ -15,6 +15,12 @@ cache:
 env:
   global:
 
+before_install:
+# Decrypt the credentials we added to the repo using the key we added with the Travis command line tool
+- openssl aes-256-cbc -K $encrypted_45d1b36fa803_key -iv $encrypted_45d1b36fa803_iv -in credentials.tar.gz.enc -out credentials.tar.gz -d
+# If the SDK is not already cached, download it and unpack it
+- tar -xzf credentials.tar.gz
+- mkdir -p lib
 
 install:
   - npm install
@@ -23,14 +29,14 @@ script:
   - npm test
 
 before_deploy:
-  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
-  - source /home/travis/google-cloud-sdk/path.bash.inc
+  #- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+  #- source /home/travis/google-cloud-sdk/path.bash.inc
   - gcloud --quiet version
   - gcloud --quiet components update
 
   # use the decrypted service account credentials to authenticate the command line tool
   # get the encrypted variable names from travis cli: https://docs.travis-ci.com/user/encrypting-files/
-  - openssl aes-256-cbc -K $encrypted_e82afbcd63e2_key -iv $encrypted_e82afbcd63e2_iv -in gcloud-service-key.json.enc -out gcloud-service-key.json -d
+  #- openssl aes-256-cbc -K $encrypted_e82afbcd63e2_key -iv $encrypted_e82afbcd63e2_iv -in gcloud-service-key.json.enc -out gcloud-service-key.json -d
   - gcloud auth activate-service-account --key-file gcloud-service-key.json
   #ADD YOUR PROJECT ID HERE -- this can be found on the On the Google Cloud Platform Dahsboard under 'Project info'
   - gcloud config set project r-spacex-ai
