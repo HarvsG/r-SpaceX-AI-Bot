@@ -163,7 +163,7 @@ exports.SpaceXFulfillment = (request, response) => {
         'speech':companyInfoTemplate(data, companyParameter)+ "Is there anything else I can help with?",
         'displayText':companyInfoTemplate(data, companyParameter),
       };
-      app.ask(botResponse);
+      response.json(botResponse);
     }
     APIrequest(app, '/info', callbackCompany);
   }
