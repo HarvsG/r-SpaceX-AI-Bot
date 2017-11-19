@@ -244,6 +244,8 @@ exports.SpaceXFulfillment = (request, response) => {
       //  'displayText': speech,
       //};
       //app.ask(botResponse);
+      
+      //this JSON struncture can be used to build rich slack responses with hyperlinks and more https://api.slack.com/docs/messages
       let slackMessage = {
         "text": speech,
         "attachments": [
@@ -258,7 +260,8 @@ exports.SpaceXFulfillment = (request, response) => {
       botResponse.speech = speech + "Anything else I can help with?";
       botResponse.speech = speech + "Is there anything else I can help with?";
       botResponse.data = {};
-      botResponse.data.slack = slackMessage;
+      //uncomment this line to enable rich slack responses. 
+      //botResponse.data.slack = slackMessage;
       response.json(botResponse);      
     }
 
