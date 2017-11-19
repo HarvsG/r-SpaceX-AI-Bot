@@ -251,8 +251,7 @@ exports.SpaceXFulfillment = (request, response) => {
           "title": "SpaceX",
           "title_link": "http://www.spacex.com/",
           "color": "#36a64f"
-          },
-          "thumb_url": "http://www.spacex.com/sites/all/themes/spacex2012/logo.png",
+          }
         ]
       }
       let botResponse = {};
