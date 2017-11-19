@@ -238,11 +238,29 @@ exports.SpaceXFulfillment = (request, response) => {
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. Is there anything else I can help with? ":speech;
-      let botResponse = {
-        'speech': speech + "Is there anything else I can help with?",
-        'displayText': speech,
-      };
-      app.ask(botResponse);
+      //replaces below with format agnostic responses. Using app.ask seems to only work with the google assistant
+      //let botResponse = {
+      //  'speech': speech + "Is there anything else I can help with?",
+      //  'displayText': speech,
+      //};
+      //app.ask(botResponse);
+      let slackMessage = {
+        "text": speech,
+        "attachments": [
+          {
+          "title": "SpaceX",
+          "title_link": "http://www.spacex.com/",
+          "color": "#36a64f"
+          },
+          "thumb_url": "http://www.spacex.com/sites/all/themes/spacex2012/logo.png",
+        ]
+      }
+      let botResponse = {};
+      botResponse.speech = speech + "Anything else I can help with?";
+      botResponse.speech = speech + "Is there anything else I can help with?";
+      botResponse.data = {};
+      botResponse.data.slack = slackMessage;
+      response.json(botResponse);      
     }
 
     if (queryResult.parameters.LaunchTemporal == 'next'){
