@@ -2,28 +2,6 @@
   "id": "3e1f3b98-e5aa-4707-aa95-7c3a1422c9dc",
   "name": "MissionOutcome",
   "isOverridable": true,
-  "entries": [
-    {
-      "value": "true",
-      "synonyms": [
-        "successful mission",
-        "mission that succeeded",
-        "mission to succeed",
-        "launch to succeed",
-        "successful launch"
-      ]
-    },
-    {
-      "value": "false",
-      "synonyms": [
-        "failed mission",
-        "mission that failed",
-        "mission to fail",
-        "failed launch",
-        "launch failure"
-      ]
-    }
-  ],
   "isEnum": false,
   "automatedExpansion": false
 }

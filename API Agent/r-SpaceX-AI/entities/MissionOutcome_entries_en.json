@@ -1,0 +1,22 @@
+[
+  {
+    "value": "true",
+    "synonyms": [
+      "successful mission",
+      "mission that succeeded",
+      "mission to succeed",
+      "launch to succeed",
+      "successful launch"
+    ]
+  },
+  {
+    "value": "false",
+    "synonyms": [
+      "failed mission",
+      "mission that failed",
+      "mission to fail",
+      "failed launch",
+      "launch failure"
+    ]
+  }
+]

@@ -1,5 +1,4 @@
 {
-  "userSays": [],
   "id": "ae6d016f-27e5-41a9-9dee-299b4ff3a1e0",
   "name": "Default Fallback Intent",
   "auto": false,
@@ -13,6 +12,7 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": [
             "I didn\u0027t get that. Can you say it again?",
             "I missed what you said. Say it again?",
@@ -28,12 +28,15 @@
             "I missed that."
           ]
         }
-      ]
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1499799072311,
   "fallbackIntent": true,
   "events": []
 }

@@ -1,0 +1,950 @@
+[
+  {
+    "id": "5fc4eb8e-e21b-448a-8eb9-f57a8a408a9e",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1499804106
+  },
+  {
+    "id": "470e7698-6fed-4f48-8ef8-0b782b11ba9d",
+    "data": [
+      {
+        "text": "when was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "one",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "c8b237be-4e10-4df9-b1fc-723aba002b31",
+    "data": [
+      {
+        "text": "when is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": false
+      },
+      {
+        "text": " one?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "cbec02b3-8bc0-4c24-ad50-a7c9b489e9c9",
+    "data": [
+      {
+        "text": "Do you have a ",
+        "userDefined": false
+      },
+      {
+        "text": "video link",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " for the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499982910
+  },
+  {
+    "id": "3d487705-8fad-4a85-b433-91dfb5fa774b",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "launch failure",
+        "alias": "MissionOutcome",
+        "meta": "@MissionOutcome",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1499982910
+  },
+  {
+    "id": "44d9f4a6-ac5e-42ab-a148-076bf847f8c0",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "successful launch",
+        "alias": "MissionOutcome",
+        "meta": "@MissionOutcome",
+        "userDefined": false
+      },
+      {
+        "text": " of the ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 1",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499980281
+  },
+  {
+    "id": "10b41345-155f-4527-9400-943c6f34b646",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": " on a ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 9",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499972088
+  },
+  {
+    "id": "b1a8f64f-bb36-481e-9480-05292311c023",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499972088
+  },
+  {
+    "id": "119a0d8e-c322-4f3f-9700-0d1d89fefe8d",
+    "data": [
+      {
+        "text": "what pad",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " did the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch use?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499808145
+  },
+  {
+    "id": "36f783b7-c490-4c00-b5da-a70d1758e670",
+    "data": [
+      {
+        "text": "What was the core serial number",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " of the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "rocket",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " to fly?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499807787
+  },
+  {
+    "id": "7407b4b4-6c41-40a9-8672-ec93119e80b6",
+    "data": [
+      {
+        "text": "What rocket",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " was the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " to launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499807461
+  },
+  {
+    "id": "2ac32444-11d4-4877-bf97-5f5973ec306e",
+    "data": [
+      {
+        "text": "Which rocket",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " flew from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499807461
+  },
+  {
+    "id": "1f121dc8-f457-4216-b7a1-2875763c7892",
+    "data": [
+      {
+        "text": "What was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "fifth",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " launch of the ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 1",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499807103
+  },
+  {
+    "id": "1bb47b09-f186-4d6c-a2a7-64aa5bbd0da2",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "second",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " launch of the ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 1",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499807041
+  },
+  {
+    "id": "217bba4c-039e-4586-bfbb-4c4a6e5b1f95",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " launch of the ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 9",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1499807041
+  },
+  {
+    "id": "0d8ee250-ffdf-4edf-83fb-64d98b862936",
+    "data": [
+      {
+        "text": "when was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon 9",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": " launch from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc 40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499802374
+  },
+  {
+    "id": "c2fb52f9-1071-4a17-947f-d7e717c887df",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the next launch of a ",
+        "userDefined": false
+      },
+      {
+        "text": "Falcon Heavy",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": " from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc 40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499802374
+  },
+  {
+    "id": "f5f257ee-a985-40c0-a9e5-a168d387457d",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the next launch of a ",
+        "userDefined": false
+      },
+      {
+        "text": "Falcon Heavy",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": " from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc 39A",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1499802374
+  },
+  {
+    "id": "8fa88744-6e6c-4b23-b5c4-21ac2b969cca",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " launch from ",
+        "userDefined": false
+      },
+      {
+        "text": "39a",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1499802374
+  },
+  {
+    "id": "9085b02f-efcb-4b03-801d-7953bc08dc62",
+    "data": [
+      {
+        "text": "When was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "first",
+        "alias": "LaunchOrdinal",
+        "meta": "@LaunchOrdinal",
+        "userDefined": false
+      },
+      {
+        "text": " launch from ",
+        "userDefined": false
+      },
+      {
+        "text": "slc 40",
+        "alias": "LaunchPads",
+        "meta": "@LaunchPads",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499799443
+  },
+  {
+    "id": "b3933989-8839-453c-a2dd-996994bcdb26",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch of the ",
+        "userDefined": false
+      },
+      {
+        "text": "FH",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "2fb821ed-20fb-4504-a9e0-fdd953d36a23",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch on a ",
+        "userDefined": false
+      },
+      {
+        "text": "Falcon 9",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "85dffc9f-f9d5-4884-93d8-75625c774f6a",
+    "data": [
+      {
+        "text": "What time",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " is the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "27d8001a-243a-4a5a-a60b-ea96c516c770",
+    "data": [
+      {
+        "text": "What are",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "upcoming",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": false
+      },
+      {
+        "text": " launches?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0ac04b30-b5ba-43a5-b327-a481772d4ba6",
+    "data": [
+      {
+        "text": "What was",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d2a10d22-c1fc-4117-b418-64d5fc5ca468",
+    "data": [
+      {
+        "text": "What was the payload",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " on the ",
+        "userDefined": false
+      },
+      {
+        "text": "last",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1499802374
+  },
+  {
+    "id": "30979e20-6b0a-4201-9935-c85177950867",
+    "data": [
+      {
+        "text": "When will",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": true
+      },
+      {
+        "text": " launch of a re-used booster be?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

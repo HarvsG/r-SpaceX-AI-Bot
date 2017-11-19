@@ -1,106 +1,4 @@
 {
-  "userSays": [
-    {
-      "id": "f44c060d-1dfb-43cd-af2a-4a35c8c92d18",
-      "data": [
-        {
-          "text": "cancel"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "aa7e1c1e-0c7e-4cfb-a154-7be795667fb2",
-      "data": [
-        {
-          "text": "stop"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "cfbcaef7-2d2a-4efc-ad47-1ad853d1b30e",
-      "data": [
-        {
-          "text": "dismiss"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "2f535f38-c564-4385-abcb-165f7c631551",
-      "data": [
-        {
-          "text": "skip"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "244d4314-6915-47b1-a332-33b1be84cfb3",
-      "data": [
-        {
-          "text": "forget that"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "1ca80f8c-2f8a-4d71-a640-549b14551dad",
-      "data": [
-        {
-          "text": "stop it"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "5646695b-b5dd-46a2-89a7-13498f915c9f",
-      "data": [
-        {
-          "text": "never mind"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "34e671e3-d275-4ee7-b7e5-077e1a2aeea2",
-      "data": [
-        {
-          "text": "do nothing"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "91eda8ee-86cc-4d49-bdb5-4f241139794d",
-      "data": [
-        {
-          "text": "just forget about it"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "d515ca0e-6d8c-46d3-89d8-cfcd822f7158",
-      "data": [
-        {
-          "text": "cancel that"
-        }
-      ],
-      "isTemplate": false,
-      "count": 3
-    }
-  ],
   "id": "b7026236-55ac-415f-864e-f62b0932d916",
   "parentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
   "rootParentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
@@ -126,15 +24,18 @@
       "messages": [
         {
           "type": 0,
+          "lang": "en",
           "speech": []
         }
       ],
-      "defaultResponsePlatforms": {}
+      "defaultResponsePlatforms": {},
+      "speech": []
     }
   ],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
+  "lastUpdate": 1499799072556,
   "fallbackIntent": false,
   "events": []
 }

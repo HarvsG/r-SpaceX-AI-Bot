@@ -1,0 +1,35 @@
+{
+  "id": "92f8646f-c3d2-493c-b748-f7dc9a5e0208",
+  "name": "LeaveIntent",
+  "auto": true,
+  "contexts": [
+    "information-given"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Goodbye",
+            "Until next time"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1511040026,
+  "fallbackIntent": false,
+  "events": []
+}

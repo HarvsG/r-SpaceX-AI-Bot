@@ -4,7 +4,7 @@
 //a version from scratch built using Actions on Google Client Library
 
 process.env.DEBUG = 'actions-on-google:*';
-const ApiAiApp = require('actions-on-google').ApiAiApp;
+const DialogflowApp = require('actions-on-google').DialogflowApp;
 const https = require('https');
 const http = require('http');
 const queryString = require('query-string');
@@ -91,20 +91,20 @@ function vehicleInfoTemplate (data, parameter) {
 }
 function companyInfoTemplate (data, parameter) {
   const COMPANY_INFO = {
-    "name": `The company is called Space Exploration Technologies or ${data.name} for short.`,
-    "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}`,
-    "founded": `${data.name} was founded in ${data.founded} by ${data.founder}`,
-    "employees": `${data.name} currently has about ${data.employees} employees`,
-    "vehicles": `${data.name} currently has ${data.vehicles} different vehicles`,
-    "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites`,
-    "test_sites": `${data.name} currently operates ${data.test_sites} test site`,
-    "ceo": `The current Chief Executive Officer of ${data.name} is ${data.ceo}`,
-    "cto": `The current Chief Technology Officer of ${data.name} is ${data.cto}`,
-    "coo": `The current Chief Operating Officer of ${data.name} is ${data.coo}`,
-    "cto_propulsion": `${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}`,
-    "valuation": `${data.name} is currently valued at ${data.valuation}USD`,
-    "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city},${data.headquarters.state}, its address is ${data.headquarters.address}`,
-    "summary": `${data.summary}`
+    "name": `The company is called Space Exploration Technologies or ${data.name} for short. `,
+    "founder": `${data.name}'s founder was ${data.founder} in ${data.founded}. `,
+    "founded": `${data.name} was founded in ${data.founded} by ${data.founder}. `,
+    "employees": `${data.name} currently has about ${data.employees} employees. `,
+    "vehicles": `${data.name} currently has ${data.vehicles} different vehicles. `,
+    "launch_sites": `${data.name} currently operates ${data.launch_sites} independant launch sites. `,
+    "test_sites": `${data.name} currently operates ${data.test_sites} test site. `,
+    "ceo": `The current Chief Executive Officer of ${data.name} is ${data.ceo}. `,
+    "cto": `The current Chief Technology Officer of ${data.name} is ${data.cto}. `,
+    "coo": `The current Chief Operating Officer of ${data.name} is ${data.coo}. `,
+    "cto_propulsion": `${data.name}'s current Chief Technology Officer of Propulsion is ${data.cto_propulsion}. `,
+    "valuation": `${data.name} is currently valued at ${data.valuation}USD. `,
+    "headquarters": `${data.name}'s headquarters is based in ${data.headquarters.city}, ${data.headquarters.state}, its address is ${data.headquarters.address}. `,
+    "summary": `${data.summary}. `
   };
   return COMPANY_INFO[parameter];
 }
@@ -117,7 +117,7 @@ function launchInfoTemplate (data, parameter, past) {
   let date = new Date(data.launch_date_utc);
   let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
-    "flight_number": `${data.flight_number}.`,
+    "flight_number": `${data.flight_number}. `,
     "launch_year": `${data.launch_year}.`,
     "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket.rocket_name} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
@@ -150,20 +150,20 @@ function launchInfoTemplate (data, parameter, past) {
 }
 
 exports.SpaceXFulfillment = (request, response) => {
-  const app = new ApiAiApp({ request, response });
-
+  const app = new DialogflowApp({request: request, response: response});
+  const queryResult = request.body.result;
   function unrecognised (app) {
     app.ask("Sorry I didn't get that");
   }
 
   function getCompanyInfo (app){
     function callbackCompany (app, data){
-      let companyParameter = request.body.result.parameters.CompanyParams;
+      let companyParameter = queryResult.parameters.CompanyParams;
       let botResponse = {
-        'speech':companyInfoTemplate(data, companyParameter),
+        'speech':companyInfoTemplate(data, companyParameter)+ "Is there anything else I can help with?",
         'displayText':companyInfoTemplate(data, companyParameter),
       };
-      app.ask(botResponse);
+      response.json(botResponse);
     }
     APIrequest(app, '/info', callbackCompany);
   }
@@ -183,12 +183,12 @@ exports.SpaceXFulfillment = (request, response) => {
     // this function is called as the callback from within APIrequest(app, '/launches', callbackLaunch)
 
       // gives a shorthand variabel for the LaunchQueryParams (this is essentially the object of the user's question)
-      let launchQueryParameter = request.body.result.parameters.LaunchQueryParams;
+      let launchQueryParameter = queryResult.parameters.LaunchQueryParams;
 
       // Creates a masterResults copy of the data, this list will be chopped and changed, preserving 'data'
       let masterResults = data;
       // the list of all the parameters, it will include things like the LaunchQueryParams and perhaps some empty parameters, we dont want these.
-      let paramsList = request.body.result.parameters;
+      let paramsList = queryResult.parameters;
       let cleanedParamsList = [];
       // looks through the parameters sent in the JSON request picks out the ones to be used for searching then adds them to a list
       for (var key in paramsList) {
@@ -220,17 +220,17 @@ exports.SpaceXFulfillment = (request, response) => {
 
       let past = true;
 
-      if (request.body.result.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
+      if (queryResult.parameters.LaunchTemporal == 'next' && masterResults.length !== 0){
         //makes master results equal to only its first element
         masterResults = [masterResults[0]];
         past = false;
 
-      }else if(request.body.result.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
+      }else if(queryResult.parameters.LaunchTemporal == 'last' && masterResults.length !== 0){
         //makes master results equal to only its last element
         masterResults = [masterResults[masterResults.length-1]];
-      }else if (request.body.result.parameters.LaunchOrdinal.ordinal != null && request.body.result.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
+      }else if (queryResult.parameters.LaunchOrdinal.ordinal != null && queryResult.parameters.LaunchOrdinal.ordinal !== '' && masterResults.length !== 0){
         //makes master results equal to only its nth element
-        masterResults = [masterResults[request.body.result.parameters.LaunchOrdinal.ordinal-1]];
+        masterResults = [masterResults[queryResult.parameters.LaunchOrdinal.ordinal-1]];
       }
       let speech = '';
       for (let n = 0; n < masterResults.length; n++) {
@@ -238,14 +238,34 @@ exports.SpaceXFulfillment = (request, response) => {
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. Is there anything else I can help with? ":speech;
-      let botResponse = {
-        'speech': speech,
-        'displayText': speech,
-      };
-      app.ask(botResponse);
+      //replaces below with format agnostic responses. Using app.ask seems to only work with the google assistant
+      //let botResponse = {
+      //  'speech': speech + "Is there anything else I can help with?",
+      //  'displayText': speech,
+      //};
+      //app.ask(botResponse);
+      
+      //this JSON struncture can be used to build rich slack responses with hyperlinks and more https://api.slack.com/docs/messages
+      let slackMessage = {
+        "text": speech,
+        "attachments": [
+          {
+          "title": "SpaceX",
+          "title_link": "http://www.spacex.com/",
+          "color": "#36a64f"
+          }
+        ]
+      }
+      let botResponse = {};
+      botResponse.speech = speech + "Anything else I can help with?";
+      botResponse.displayText = speech + "Is there anything else I can help with?";
+      //uncomment this line to enable rich slack responses. 
+      //botResponse.data = {};
+      //botResponse.data.slack = slackMessage;
+      response.json(botResponse);      
     }
 
-    if (request.body.result.parameters.LaunchTemporal == 'next'){
+    if (queryResult.parameters.LaunchTemporal == 'next'){
       APIrequest(app, '/launches/upcoming', callbackLaunch);
     }else{
       APIrequest(app, '/launches', callbackLaunch);
@@ -284,7 +304,7 @@ exports.SpaceXFulfillment = (request, response) => {
           console.log(rawData);
           console.log('parsedData');
           console.log(parsedData);
-          // some code to pick the relevant company data from the user request (request.body.result.parameters.CompanyParams)
+          // some code to pick the relevant company data from the user request (queryResult.parameters.CompanyParams)
           callback(app, parsedData);
         } catch (e) {
           console.error(e.message);
