@@ -240,8 +240,9 @@ exports.SpaceXFulfillment = (request, response) => {
         let ele = masterResults[n];
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
+      //below statement is an easter egg to be removed when FH comes into use. 
       if (queryResult.parameters.Vehicles == "Falcon Heavy"){
-        speech = "I just called Elon, he says six months from now";
+        speech = "I just called Elon, he says six months from now. ";
       };
       speech = (speech === '')? "Unfortunately I couldn't find any launches that met your descriptions. ":speech;
 
