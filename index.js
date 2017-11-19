@@ -258,7 +258,7 @@ exports.SpaceXFulfillment = (request, response) => {
       }
       let botResponse = {};
       botResponse.speech = speech + "Anything else I can help with?";
-      botResponse.speech = speech + "Is there anything else I can help with?";
+      botResponse.displayText = speech + "Is there anything else I can help with?";
       botResponse.data = {};
       //uncomment this line to enable rich slack responses. 
       //botResponse.data.slack = slackMessage;
