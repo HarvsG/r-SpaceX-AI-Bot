@@ -1,5 +1,6 @@
 # Dialogflow <----> r/SpaceX-API Webhook.
 [![Build Status](https://travis-ci.org/HarvsG/r-SpaceX-AI-Bot.svg?branch=master)](https://travis-ci.org/HarvsG/r-SpaceX-AI-Bot)
+[![GitHub release](https://img.shields.io/github/release/HarvsG/r-SpaceX-AI-Bot.svg)]()
 
 This is a webhook/[google cloud function](https://cloud.google.com/functions/) implementation that will receive queries from [Dialogflow](https://dialogflow.com) and requests information from the [r/SpaceX API](https://github.com/r-spacex/SpaceX-API)
 
