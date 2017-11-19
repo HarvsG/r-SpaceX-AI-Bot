@@ -5,8 +5,8 @@
 3. Creating verbose replies for all the query parameters
 
 4. Consider making [rich-content replies](https://api.ai/docs/rich-messages#card).
- * for actoins on google [format](https://developers.google.com/actions/dialogflow/webhook)
- * for slack [format](https://api.slack.com/docs/messages)
+  * for actoins on google [format](https://developers.google.com/actions/dialogflow/webhook)
+  * for slack [format](https://api.slack.com/docs/messages)
 
 5. Different display and speech text where appropriate.
 
