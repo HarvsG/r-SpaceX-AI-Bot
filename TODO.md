@@ -1,7 +1,7 @@
 ### Road to Beta
 Before a beta release numbers 2 and 3 need to be done. As well as to do the corresponding vehicle info training on the dialogflow agent. The dialogflow agent needs to have comprehensive fallback phrases. There needs to be some robust pre-deployment tests. Ideally also a parralel development build and deployment pathway.
 
-1. [ ] As [r/SpaceX API](https://github.com/r-spacex/SpaceX-API) gets a more advanced search query system, the searches need not be done within the webhook, instead, custom https get queries can be used. 
+1. As [r/SpaceX API](https://github.com/r-spacex/SpaceX-API) gets a more advanced search query system, the searches need not be done within the webhook, instead, custom https get queries can be used. [ ]  
 
 2. Vehicle info [function](https://github.com/HarvsG/r-SpaceX-AI-Bot/blob/70dcf6479f757a79c22b5fd456bf958b99133bc6/index.js#L174).
 
