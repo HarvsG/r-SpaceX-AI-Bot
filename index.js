@@ -114,8 +114,8 @@ function launchInfoTemplate (data, parameter, past) {
   console.log('The data being used is:');
   console.log(data);
   let tense = past?  "took place":"is due to take place";
-  let date = new Date(data.launch_date_utc);
-  let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
+  let date = (data.launch_date_utc = "TBD")? "an unannounced time":new Date(data.launch_date_utc).toUTCString().replace(":00", "");
+  //let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}. `,
     "launch_year": `${data.launch_year}.`,
