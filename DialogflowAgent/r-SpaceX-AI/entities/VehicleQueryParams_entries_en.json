@@ -14,31 +14,42 @@
   {
     "value": "active",
     "synonyms": [
-      "active"
+      "active",
+      "in use",
+      "flying"
     ]
   },
   {
     "value": "stages",
     "synonyms": [
-      "stages"
+      "stages",
+      "how many stages",
+      "number of stages"
     ]
   },
   {
     "value": "cost_per_launch",
     "synonyms": [
-      "cost_per_launch"
+      "cost_per_launch",
+      "cost",
+      "cost per launch"
     ]
   },
   {
     "value": "success_rate_pct",
     "synonyms": [
-      "success_rate_pct"
+      "success rate",
+      "how successful",
+      "reliable"
     ]
   },
   {
     "value": "first_flight",
     "synonyms": [
-      "first_flight"
+      "first_flight",
+      "first fly",
+      "first launch",
+      "first take off"
     ]
   },
   {
@@ -50,187 +61,155 @@
   {
     "value": "company",
     "synonyms": [
-      "company"
+      "company",
+      "who"
     ]
   },
   {
-    "value": "height",
+    "value": "size",
     "synonyms": [
-      "height"
-    ]
-  },
-  {
-    "value": "diameter",
-    "synonyms": [
-      "diameter"
-    ]
-  },
-  {
-    "value": "radius",
-    "synonyms": [
-      "radius"
-    ]
-  },
-  {
-    "value": "mass",
-    "synonyms": [
-      "mass"
+      "height",
+      "how tall",
+      "how high",
+      "how big",
+      "how heavy is",
+      "diameter",
+      "how wide",
+      "thick",
+      "width",
+      "weight",
+      "weigh",
+      "dry mass"
     ]
   },
   {
     "value": "leo_weight",
     "synonyms": [
-      "leo_weight"
+      "leo_weight",
+      "carry to LEO",
+      "Low Earth Orbit",
+      "low earth orbit",
+      "how much to leo",
+      "how much to low earth orbit"
     ]
   },
   {
     "value": "gto_weight",
     "synonyms": [
-      "gto_weight"
+      "gto_weight",
+      "carry to GTO",
+      "carry to gto",
+      "carry to geostationary transfer orbit",
+      "launch to geostationary transfer orbit",
+      "launch to GTO",
+      "deliver to geostationary transfer orbit",
+      "deliver to GTO"
     ]
   },
   {
     "value": "mars_weight",
     "synonyms": [
-      "mars_weight"
+      "mars_weight",
+      "carry to Mars",
+      "take to Mars",
+      "launch to Mars",
+      "deliver to Mars"
     ]
   },
   {
     "value": "first_stage_reusable",
     "synonyms": [
-      "first_stage_reusable"
+      "first_stage_reusable",
+      "recyclable",
+      "reusable"
     ]
   },
   {
-    "value": "first_stage_engine_count",
+    "value": "fuel",
     "synonyms": [
-      "first_stage_engine_count"
-    ]
-  },
-  {
-    "value": "first_stage_fuel_amount",
-    "synonyms": [
-      "first_stage_fuel_amount"
-    ]
-  },
-  {
-    "value": "first_stage_burn_time",
-    "synonyms": [
-      "first_stage_burn_time"
-    ]
-  },
-  {
-    "value": "first_stage_thrust_sea_level",
-    "synonyms": [
-      "first_stage_thrust_sea_level"
-    ]
-  },
-  {
-    "value": "first_stage_thrust_sea_vacuum",
-    "synonyms": [
-      "first_stage_thrust_sea_vacuum"
-    ]
-  },
-  {
-    "value": "second_stage_engine_count",
-    "synonyms": [
-      "second_stage_engine_count"
-    ]
-  },
-  {
-    "value": "second_stage_fuel_amount",
-    "synonyms": [
-      "second_stage_fuel_amount"
-    ]
-  },
-  {
-    "value": "second_stage_burn_time",
-    "synonyms": [
-      "second_stage_burn_time"
-    ]
-  },
-  {
-    "value": "second_stage_thrust_sea_level",
-    "synonyms": [
-      "second_stage_thrust_sea_level"
+      "first_stage_fuel_amount",
+      "how much fuel",
+      "how much RP-1",
+      "how much propellant",
+      "what fuel",
+      "what propellant",
+      "which propellant"
     ]
   },
   {
     "value": "second_stage_payload_options",
     "synonyms": [
-      "second_stage_payload_options"
+      "second_stage_payload_options",
+      "payload options",
+      "types of payloads",
+      "types of payload",
+      "payload types",
+      "payloads",
+      "kinds of payload"
     ]
   },
   {
-    "value": "fairing_height",
+    "value": "fairing_size",
     "synonyms": [
-      "fairing_height"
-    ]
-  },
-  {
-    "value": "fairing_diameter",
-    "synonyms": [
-      "fairing_diameter"
-    ]
-  },
-  {
-    "value": "engine_type",
-    "synonyms": [
-      "engine_type"
-    ]
-  },
-  {
-    "value": "engine_layout",
-    "synonyms": [
-      "engine_layout"
+      "fairing_height",
+      "fairing height",
+      "height",
+      "fairing"
     ]
   },
   {
     "value": "engine_loss_max",
     "synonyms": [
-      "engine_loss_max"
+      "engine_loss_max",
+      "redundancy",
+      "engine loss"
     ]
   },
   {
-    "value": "propellants",
+    "value": "landing_legs",
     "synonyms": [
-      "propellants"
-    ]
-  },
-  {
-    "value": "thrust_sea_level",
-    "synonyms": [
-      "thrust_sea_level"
-    ]
-  },
-  {
-    "value": "thrust_vaccuum",
-    "synonyms": [
-      "thrust_vaccuum"
-    ]
-  },
-  {
-    "value": "thrust_to_weight",
-    "synonyms": [
-      "thrust_to_weight"
-    ]
-  },
-  {
-    "value": "landing_legs_material",
-    "synonyms": [
-      "landing_legs_material"
-    ]
-  },
-  {
-    "value": "landing_legs_number",
-    "synonyms": [
-      "landing_legs_number"
+      "landing_legs_material",
+      "landing legs",
+      "legs"
     ]
   },
   {
     "value": "description",
     "synonyms": [
-      "description"
+      "description",
+      "about",
+      "information",
+      "info"
+    ]
+  },
+  {
+    "value": "engines",
+    "synonyms": [
+      "which engines",
+      "which motor",
+      "which engine",
+      "which motors",
+      "what engine",
+      "what engines",
+      "what motor",
+      "what motors"
+    ]
+  },
+  {
+    "value": "engine_stats",
+    "synonyms": [
+      "engine_stats",
+      "thrust to weight",
+      "sea level thrust",
+      "how much thrust",
+      "what thrust",
+      "vacuum thrust",
+      "how powerful",
+      "how much force",
+      "engine statistics",
+      "engine specs",
+      "specific impulse",
+      "TWR"
     ]
   }
 ]

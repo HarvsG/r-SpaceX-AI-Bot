@@ -1,6 +1,70 @@
 [
   {
-    "id": "5fc4eb8e-e21b-448a-8eb9-f57a8a408a9e",
+    "id": "88138195-c174-4765-8c5b-a092bb685b94",
+    "data": [
+      {
+        "text": "When will",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon heavy",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1
+  },
+  {
+    "id": "620e1063-3a64-4157-9f26-d4148aaddda1",
+    "data": [
+      {
+        "text": "When is",
+        "alias": "LaunchQueryParams",
+        "meta": "@LaunchQueryParams",
+        "userDefined": false
+      },
+      {
+        "text": " the ",
+        "userDefined": false
+      },
+      {
+        "text": "next",
+        "alias": "LaunchTemporal",
+        "meta": "@LaunchTemporal",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "falcon heavy",
+        "alias": "Vehicles",
+        "meta": "@Vehicles",
+        "userDefined": false
+      },
+      {
+        "text": " launch?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "115ea568-f2ac-484c-a9f6-4287565dd9a3",
     "data": [
       {
         "text": "When is",
@@ -28,7 +92,7 @@
     "updated": 1499804106
   },
   {
-    "id": "470e7698-6fed-4f48-8ef8-0b782b11ba9d",
+    "id": "08a9ff81-1b63-479e-b97d-e57537a792a5",
     "data": [
       {
         "text": "when was",
@@ -64,7 +128,7 @@
     "count": 0
   },
   {
-    "id": "c8b237be-4e10-4df9-b1fc-723aba002b31",
+    "id": "3fbe760e-6151-47bb-ba54-6ccb928b1f7a",
     "data": [
       {
         "text": "when is",
@@ -91,7 +155,7 @@
     "count": 0
   },
   {
-    "id": "cbec02b3-8bc0-4c24-ad50-a7c9b489e9c9",
+    "id": "d9ad2409-7c39-4e07-9717-b6fb97f7638f",
     "data": [
       {
         "text": "Do you have a ",
@@ -123,7 +187,7 @@
     "updated": 1499982910
   },
   {
-    "id": "3d487705-8fad-4a85-b433-91dfb5fa774b",
+    "id": "84fcf460-6af0-4188-9d52-e2da306151e8",
     "data": [
       {
         "text": "When was",
@@ -161,7 +225,7 @@
     "updated": 1499982910
   },
   {
-    "id": "44d9f4a6-ac5e-42ab-a148-076bf847f8c0",
+    "id": "93db76b0-1890-4b8f-8626-f2dbf654a52c",
     "data": [
       {
         "text": "When was",
@@ -209,7 +273,7 @@
     "updated": 1499980281
   },
   {
-    "id": "10b41345-155f-4527-9400-943c6f34b646",
+    "id": "53110e39-f8d0-435d-9164-ea9c0eb9d369",
     "data": [
       {
         "text": "When was",
@@ -257,7 +321,7 @@
     "updated": 1499972088
   },
   {
-    "id": "b1a8f64f-bb36-481e-9480-05292311c023",
+    "id": "276d3b08-a4a3-4176-aa93-567a658a5934",
     "data": [
       {
         "text": "When is",
@@ -295,7 +359,7 @@
     "updated": 1499972088
   },
   {
-    "id": "119a0d8e-c322-4f3f-9700-0d1d89fefe8d",
+    "id": "2fd22da7-8ab2-42b9-a13c-886cf1cf55fb",
     "data": [
       {
         "text": "what pad",
@@ -323,7 +387,7 @@
     "updated": 1499808145
   },
   {
-    "id": "36f783b7-c490-4c00-b5da-a70d1758e670",
+    "id": "4d6008f4-134e-4876-ae87-005f5f04eb00",
     "data": [
       {
         "text": "What was the core serial number",
@@ -360,7 +424,7 @@
     "updated": 1499807787
   },
   {
-    "id": "7407b4b4-6c41-40a9-8672-ec93119e80b6",
+    "id": "129728b6-870f-40cb-a4b1-0f62ec2c8c52",
     "data": [
       {
         "text": "What rocket",
@@ -388,7 +452,7 @@
     "updated": 1499807461
   },
   {
-    "id": "2ac32444-11d4-4877-bf97-5f5973ec306e",
+    "id": "870c3e47-139a-4288-be43-a9af544ae469",
     "data": [
       {
         "text": "Which rocket",
@@ -426,7 +490,7 @@
     "updated": 1499807461
   },
   {
-    "id": "1f121dc8-f457-4216-b7a1-2875763c7892",
+    "id": "3a0a5063-9565-45d2-a273-25334e1d4a3b",
     "data": [
       {
         "text": "What was",
@@ -464,7 +528,7 @@
     "updated": 1499807103
   },
   {
-    "id": "1bb47b09-f186-4d6c-a2a7-64aa5bbd0da2",
+    "id": "4d65661d-e6d7-4ff8-95db-a9f4acf1c96b",
     "data": [
       {
         "text": "When was",
@@ -498,7 +562,7 @@
     "updated": 1499807041
   },
   {
-    "id": "217bba4c-039e-4586-bfbb-4c4a6e5b1f95",
+    "id": "0d40c3a6-c5b5-4512-a411-34616251c331",
     "data": [
       {
         "text": "When was",
@@ -536,7 +600,7 @@
     "updated": 1499807041
   },
   {
-    "id": "0d8ee250-ffdf-4edf-83fb-64d98b862936",
+    "id": "5bc0ece6-e419-438a-b037-409f1f055865",
     "data": [
       {
         "text": "when was",
@@ -584,7 +648,7 @@
     "updated": 1499802374
   },
   {
-    "id": "c2fb52f9-1071-4a17-947f-d7e717c887df",
+    "id": "224a01d7-134a-442c-83f9-f3454ee51443",
     "data": [
       {
         "text": "When is",
@@ -622,7 +686,7 @@
     "updated": 1499802374
   },
   {
-    "id": "f5f257ee-a985-40c0-a9e5-a168d387457d",
+    "id": "ae9b0e0f-233a-47c6-b68b-be9dc093f690",
     "data": [
       {
         "text": "When is",
@@ -660,7 +724,7 @@
     "updated": 1499802374
   },
   {
-    "id": "8fa88744-6e6c-4b23-b5c4-21ac2b969cca",
+    "id": "cd39dc12-97a9-4324-8e13-53148c7fd070",
     "data": [
       {
         "text": "When was",
@@ -698,7 +762,7 @@
     "updated": 1499802374
   },
   {
-    "id": "9085b02f-efcb-4b03-801d-7953bc08dc62",
+    "id": "242ea79e-db26-445c-b2fd-ba0b624b216e",
     "data": [
       {
         "text": "When was",
@@ -732,7 +796,7 @@
     "updated": 1499799443
   },
   {
-    "id": "b3933989-8839-453c-a2dd-996994bcdb26",
+    "id": "11a3a884-6a3b-4ce1-9394-0e031c24da2d",
     "data": [
       {
         "text": "When is",
@@ -770,7 +834,7 @@
     "updated": 0
   },
   {
-    "id": "2fb821ed-20fb-4504-a9e0-fdd953d36a23",
+    "id": "f2a9c124-b448-42ee-9878-53b531216fdf",
     "data": [
       {
         "text": "When is",
@@ -808,7 +872,7 @@
     "updated": 0
   },
   {
-    "id": "85dffc9f-f9d5-4884-93d8-75625c774f6a",
+    "id": "bf37aa75-980c-4f3b-af90-9063a6152ca4",
     "data": [
       {
         "text": "What time",
@@ -836,7 +900,7 @@
     "updated": 0
   },
   {
-    "id": "27d8001a-243a-4a5a-a60b-ea96c516c770",
+    "id": "22299d41-c77d-427e-b4d1-e2907180a855",
     "data": [
       {
         "text": "What are",
@@ -864,7 +928,7 @@
     "updated": 0
   },
   {
-    "id": "0ac04b30-b5ba-43a5-b327-a481772d4ba6",
+    "id": "ca4eb80d-f517-4491-b80b-a01b60990e33",
     "data": [
       {
         "text": "What was",
@@ -892,7 +956,7 @@
     "updated": 0
   },
   {
-    "id": "d2a10d22-c1fc-4117-b418-64d5fc5ca468",
+    "id": "d714421d-f3b1-4ceb-b1b7-2b8004c20890",
     "data": [
       {
         "text": "What was the payload",
@@ -920,7 +984,7 @@
     "updated": 1499802374
   },
   {
-    "id": "30979e20-6b0a-4201-9935-c85177950867",
+    "id": "7af63fe5-c238-4786-b654-ed7c0a530696",
     "data": [
       {
         "text": "When will",

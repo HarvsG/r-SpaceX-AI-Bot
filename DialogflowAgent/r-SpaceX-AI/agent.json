@@ -20,9 +20,9 @@
     "capabilities": [],
     "protocolVersion": "V2"
   },
-  "defaultTimezone": "Europe/Madrid",
+  "defaultTimezone": "Africa/Casablanca",
   "webhook": {
-    "url": "https://us-central1-r-spacex-ai.cloudfunctions.net/SpaceXFulfillment",
+    "url": "https://3ec2bb3d.ngrok.io/r-SpaceX-AI/us-central1/SpaceXFulfillment",
     "headers": {
       "": ""
     },

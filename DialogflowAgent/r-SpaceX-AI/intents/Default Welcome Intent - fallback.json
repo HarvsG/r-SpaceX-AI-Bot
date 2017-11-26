@@ -1,0 +1,35 @@
+{
+  "id": "b2a2d0cb-2b71-49a0-9858-2f3e971df6c8",
+  "parentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "rootParentId": "7f953c0d-aeaa-415d-ba2c-dfadd0330c19",
+  "name": "Default Welcome Intent - fallback",
+  "auto": false,
+  "contexts": [
+    "DefaultWelcomeIntent-followup",
+    "global",
+    "welcome"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I\u0027m sorry, I didn\u0027t catch that. Would you like to know about launches, vehicles or the company?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1508189124811,
+  "fallbackIntent": true,
+  "events": []
+}

@@ -21,12 +21,41 @@
           "lifespan": 5
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "c8071646-d657-44ad-8e49-14f4ef32d4b4",
+          "required": true,
+          "dataType": "@VehicleQueryParams",
+          "name": "VehicleQueryParams",
+          "value": "$VehicleQueryParams",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What would you like to know about the vehicle?"
+            }
+          ],
+          "isList": true
+        },
+        {
+          "id": "0ae14514-9e0e-4c51-94a6-afbc9d6f6178",
+          "required": true,
+          "dataType": "@Vehicles",
+          "name": "Vehicles",
+          "value": "$Vehicles",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What vehicle do you want to know about?"
+            }
+          ],
+          "isList": true
+        }
+      ],
       "messages": [
         {
           "type": 0,
           "lang": "en",
-          "speech": []
+          "speech": "I\u0027m sorry I didn\u0027t understand that, maybe try again?"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -34,7 +63,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "lastUpdate": 1499799072189,
   "fallbackIntent": false,
