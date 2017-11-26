@@ -143,7 +143,7 @@ function launchInfoTemplate (data, parameter, past) {
     "mission_patch": `${data.links.mission_patch}`,
     "article_link": `${data.links.article_link}`,
     "video_link": `${data.links.video_link}`,
-    "details": `The launch of ${data.rocket.second_stage.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
+    "details": `The launch of ${data.rocket.second_stage.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${date}. ${data.details}. `
   };
   console.log('launchInfoTemplate() is returning: ' + LAUNCH_INFO[parameter]);
   return LAUNCH_INFO[parameter];
