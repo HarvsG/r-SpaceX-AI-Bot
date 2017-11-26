@@ -52,29 +52,29 @@ function vehicleInfoTemplate (data, parameter) {
   const VEHICLE_INFO = {
     "id": ``,
     "name": ``,
-    "active": `The ${data.name} is ${data.active?  "active":"not active"}`,
-    "stages": `The ${data.name} has ${data.stages} stages`,
-    "cost_per_launch": `The launch cost of the ${data.name} is ${data.cost_per_launch}%`,
-    "success_rate_pct": `The success rate of the ${data.name} is ${data.success_rate_pct}%`,
+    "active": `The ${data.name} is ${data.active?  "active":"not active"}. `,
+    "stages": `The ${data.name} has ${data.stages} stages. `,
+    "cost_per_launch": `The launch cost of the ${data.name} is ${data.cost_per_launch}. `,
+    "success_rate_pct": `The success rate of the ${data.name} is ${data.success_rate_pct}%. `,
     "first_flight": `The first flight of the ${data.name} ${date}. `,
     "country": ``,
     "company": ``,
     // vehicle data structure is inconsistant and that breaks this https://github.com/r-spacex/SpaceX-API/issues/53
     //"size": `The ${data.name} is ${data.height.meters} meters tall and ${data.diameter.meters} meters in diameter. It has a dry mass of ${data.mass.kg} kilograms. `,
-    "leo_weight": `The ${data.name} can launch ${data.payload_weights[0].kg} kilograms to ${data.payload_weights[0].name}`,
+    "leo_weight": `The ${data.name} can launch ${data.payload_weights[0].kg} kilograms to ${data.payload_weights[0].name}. `,
     //engine data structure in the API differs over different vehicles. https://github.com/r-spacex/SpaceX-API/issues/53
-    //"gto_weight": `The ${data.name} can launch ${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}`,
-    //"mars_weight": `The ${data.name} can launch ${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}`,
-    "first_stage_reusable": `The ${data.name} is ${data.first_stage.reusable? "":"not "}a reusable rocket`,
+    //"gto_weight": `The ${data.name} can launch ${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}. `,
+    //"mars_weight": `The ${data.name} can launch ${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}. `,
+    "first_stage_reusable": `The ${data.name} is ${data.first_stage.reusable? "":"not "}a reusable rocket. `,
     //"engines":`The first stage has ${data.first_stage.engines.number} ${data.engines.type} ${data.engines.version}s. The second stage has ${data.second_stage.engines.number} ${data.second_stage.engines.type}s. `,
     //"engine_stats":`The first stage's ${data.engines.number} ${data.first_stage.engines.type}s can burn for ${data.first_stage.burn_time_sec} with a sea level thrust of ${data.first_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.first_stage.engines.thrust_vacuum}. The second stage's ${data.second_stage.engines.number} ${data.second_stage.engines.type}s can burn for ${data.second_stage.burn_time_sec} with a sea level thrust of ${data.second_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.second_stage.engines.thrust_vacuum}. `,
     //"fuel":`The first satge on the ${data.name} carries ${data.first_stage.fuel_amount_tons} tons of ${data.first_stage.engines.propellant_1} and ${data.first_stage.engines.propellant_2}, The second satge on the carries ${data.second_stage.fuel_amount_tons} tons of ${data.second_stage.engines.propellant_1} and ${data.second_stage.engines.propellant_2}. `,
-    "second_stage_payload_options":`${data.second_stage.payloads.option_1} and ${data.second_stage.payloads.option_2}`,
+    "second_stage_payload_options":`${data.second_stage.payloads.option_1} and ${data.second_stage.payloads.option_2}. `,
     "fairing_size":` The fairing is ${data.second_stage.payloads.composite_fairing.height.meters} meters tall and ${data.second_stage.payloads.composite_fairing.diameter.meters} meters in diameter. `,
-    //"engine_loss_max":`${data.engines.engine_loss_max} can be lost during flight without causing mission failure`,
-    //"landing_legs":`The ${data.name} has ${data.landing_legs.number} landing legs which are made from ${data.landing_legs.material}`,
+    //"engine_loss_max":`${data.engines.engine_loss_max} can be lost during flight without causing mission failure. `,
+    //"landing_legs":`The ${data.name} has ${data.landing_legs.number} landing legs which are made from ${data.landing_legs.material}. `,
     //
-    "description": "Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit."
+    "description": `${data.description} `
   };
   console.log("Template end");
   return VEHICLE_INFO[parameter];
