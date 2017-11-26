@@ -10,7 +10,7 @@ const http = require('http');
 const queryString = require('query-string');
 
 //Links
-const API_URL = 'https://api.spacexdata.com/v1';
+const API_URL = 'https://api.spacexdata.com/v2';
 
 // API.AI actions
 const UNRECOGNIZED_DEEP_LINK = 'deeplink.unknown';
