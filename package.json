@@ -1,6 +1,6 @@
 {
   "name": "Dialogflow-r-SpaceX-Webhook",
-  "version": "0.0.2",
+  "version": "0.2-alpha",
   "description": "A webhook to allow an API.ai app to get information for the r/SpaceX API",
   "main": "index.js",
   "scripts": {
