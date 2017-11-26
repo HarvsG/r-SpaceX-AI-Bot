@@ -1,139 +1,139 @@
 {
-   "id":"4a95aaa0-bcaf-4c25-8339-d7faa2f68ae8",
-   "timestamp":"2017-11-19T18:36:13.96Z",
-   "lang":"en",
-   "result":{
-      "source":"agent",
-      "resolvedQuery":"when was the last launch failure?",
-      "speech":"",
-      "action":"get.launchInformation",
-      "actionIncomplete":false,
-      "parameters":{
-         "LaunchPads":"",
-         "LaunchTemporal":"last",
-         "MissionOutcome":"false",
-         "LaunchQueryParams":"launch_date_local",
-         "LaunchOrdinal":"",
-         "Vehicles":""
-      },
-      "contexts":[
-         {
-            "name":"information-given",
-            "parameters":{
-               "LaunchTemporal.original":"last",
-               "LaunchPads":"",
-               "LaunchOrdinal.original":"",
-               "Vehicles.original":"",
-               "MissionOutcome":"false",
-               "LaunchTemporal":"last",
-               "LaunchQueryParams":"launch_date_local",
-               "MissionOutcome.original":"launch failure",
-               "LaunchOrdinal":"",
-               "LaunchQueryParams.original":"When was",
-               "LaunchPads.original":"",
-               "Vehicles":""
-            },
-            "lifespan":5
-         },
-         {
-            "name":"global",
-            "parameters":{
-               "LaunchTemporal.original":"last",
-               "LaunchPads":"",
-               "LaunchOrdinal.original":"",
-               "Vehicles.original":"",
-               "MissionOutcome":"false",
-               "LaunchTemporal":"last",
-               "LaunchQueryParams":"launch_date_local",
-               "MissionOutcome.original":"launch failure",
-               "LaunchOrdinal":"",
-               "LaunchQueryParams.original":"When was",
-               "LaunchPads.original":"",
-               "Vehicles":""
-            },
-            "lifespan":98
-         },
-         {
-            "name":"defaultwelcomeintent-followup",
-            "parameters":{
-               "LaunchTemporal.original":"last",
-               "LaunchPads":"",
-               "LaunchOrdinal.original":"",
-               "Vehicles.original":"",
-               "MissionOutcome":"false",
-               "LaunchTemporal":"last",
-               "LaunchQueryParams":"launch_date_local",
-               "MissionOutcome.original":"launch failure",
-               "LaunchOrdinal":"",
-               "LaunchQueryParams.original":"When was",
-               "LaunchPads.original":"",
-               "Vehicles":""
-            },
-            "lifespan":0
-         },
-         {
-            "name":"welcome",
-            "parameters":{
-               "LaunchTemporal.original":"last",
-               "LaunchPads":"",
-               "LaunchOrdinal.original":"",
-               "Vehicles.original":"",
-               "MissionOutcome":"false",
-               "LaunchTemporal":"last",
-               "LaunchQueryParams":"launch_date_local",
-               "MissionOutcome.original":"launch failure",
-               "LaunchOrdinal":"",
-               "LaunchQueryParams.original":"When was",
-               "LaunchPads.original":"",
-               "Vehicles":""
-            },
-            "lifespan":3
-         },
-         {
-            "name":"launches",
-            "parameters":{
-               "LaunchTemporal.original":"last",
-               "LaunchPads":"",
-               "LaunchOrdinal.original":"",
-               "Vehicles.original":"",
-               "MissionOutcome":"false",
-               "LaunchTemporal":"last",
-               "LaunchQueryParams":"launch_date_local",
-               "MissionOutcome.original":"launch failure",
-               "LaunchOrdinal":"",
-               "LaunchQueryParams.original":"When was",
-               "LaunchPads.original":"",
-               "Vehicles":""
-            },
-            "lifespan":5
-         }
-      ],
-      "metadata":{
-         "intentId":"a2ee538a-1ab4-454e-9ce8-d82521efffe3",
-         "webhookUsed":"true",
-         "webhookForSlotFillingUsed":"false",
-         "intentName":"launchInformation"
-      },
-      "fulfillment":{
-         "speech":"",
-         "messages":[
+    "id": "67e6c72f-9a94-4b1a-bffe-058f76dbfdcb",
+    "timestamp": "2017-11-26T14:21:21.616Z",
+    "lang": "en",
+    "result": {
+        "source": "agent",
+        "resolvedQuery": "when was the last launch failure?",
+        "speech": "",
+        "action": "get.launchInformation",
+        "actionIncomplete": false,
+        "parameters": {
+            "LaunchPads": "",
+            "LaunchTemporal": "last",
+            "MissionOutcome": "false",
+            "LaunchQueryParams": "launch_date_local",
+            "LaunchOrdinal": "",
+            "Vehicles": ""
+        },
+        "contexts": [
             {
-               "type":0,
-               "platform":"slack",
-               "speech":"slack text response"
+                "name": "information-given",
+                "parameters": {
+                    "LaunchTemporal.original": "last",
+                    "LaunchPads": "",
+                    "LaunchOrdinal.original": "",
+                    "Vehicles.original": "",
+                    "MissionOutcome": "false",
+                    "LaunchTemporal": "last",
+                    "LaunchQueryParams": "launch_date_local",
+                    "MissionOutcome.original": "launch failure",
+                    "LaunchOrdinal": "",
+                    "LaunchQueryParams.original": "When was",
+                    "LaunchPads.original": "",
+                    "Vehicles": ""
+                },
+                "lifespan": 5
             },
             {
-               "type":0,
-               "speech":""
+                "name": "global",
+                "parameters": {
+                    "LaunchTemporal.original": "last",
+                    "LaunchPads": "",
+                    "LaunchOrdinal.original": "",
+                    "Vehicles.original": "",
+                    "MissionOutcome": "false",
+                    "LaunchTemporal": "last",
+                    "LaunchQueryParams": "launch_date_local",
+                    "MissionOutcome.original": "launch failure",
+                    "LaunchOrdinal": "",
+                    "LaunchQueryParams.original": "When was",
+                    "LaunchPads.original": "",
+                    "Vehicles": ""
+                },
+                "lifespan": 98
+            },
+            {
+                "name": "defaultwelcomeintent-followup",
+                "parameters": {
+                    "LaunchTemporal.original": "last",
+                    "LaunchPads": "",
+                    "LaunchOrdinal.original": "",
+                    "Vehicles.original": "",
+                    "MissionOutcome": "false",
+                    "LaunchTemporal": "last",
+                    "LaunchQueryParams": "launch_date_local",
+                    "MissionOutcome.original": "launch failure",
+                    "LaunchOrdinal": "",
+                    "LaunchQueryParams.original": "When was",
+                    "LaunchPads.original": "",
+                    "Vehicles": ""
+                },
+                "lifespan": 0
+            },
+            {
+                "name": "welcome",
+                "parameters": {
+                    "LaunchTemporal.original": "last",
+                    "LaunchPads": "",
+                    "LaunchOrdinal.original": "",
+                    "Vehicles.original": "",
+                    "MissionOutcome": "false",
+                    "LaunchTemporal": "last",
+                    "LaunchQueryParams": "launch_date_local",
+                    "MissionOutcome.original": "launch failure",
+                    "LaunchOrdinal": "",
+                    "LaunchQueryParams.original": "When was",
+                    "LaunchPads.original": "",
+                    "Vehicles": ""
+                },
+                "lifespan": 3
+            },
+            {
+                "name": "launches",
+                "parameters": {
+                    "LaunchTemporal.original": "last",
+                    "LaunchPads": "",
+                    "LaunchOrdinal.original": "",
+                    "Vehicles.original": "",
+                    "MissionOutcome": "false",
+                    "LaunchTemporal": "last",
+                    "LaunchQueryParams": "launch_date_local",
+                    "MissionOutcome.original": "launch failure",
+                    "LaunchOrdinal": "",
+                    "LaunchQueryParams.original": "When was",
+                    "LaunchPads.original": "",
+                    "Vehicles": ""
+                },
+                "lifespan": 5
             }
-         ]
-      },
-      "score":1
-   },
-   "status":{
-      "code":200,
-      "errorType":"success",
-      "webhookTimedOut":false
-   },
-   "sessionId":"8d6f0e34-8e72-41e2-9f13-9cff876aadd4"
+        ],
+        "metadata": {
+            "intentId": "a2ee538a-1ab4-454e-9ce8-d82521efffe3",
+            "webhookUsed": "true",
+            "webhookForSlotFillingUsed": "false",
+            "intentName": "launchInformation"
+        },
+        "fulfillment": {
+            "speech": "I'm sorry I could find any information on that.",
+            "messages": [
+                {
+                    "type": 0,
+                    "platform": "slack",
+                    "speech": "slack text response"
+                },
+                {
+                    "type": 0,
+                    "speech": "I'm sorry I could find any information on that."
+                }
+            ]
+        },
+        "score": 1
+    },
+    "status": {
+        "code": 200,
+        "errorType": "success",
+        "webhookTimedOut": false
+    },
+    "sessionId": "8d6f0e34-8e72-41e2-9f13-9cff876aadd4"
 }
