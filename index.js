@@ -119,7 +119,7 @@ function launchInfoTemplate (data, parameter, past) {
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}. `,
     "launch_year": `${data.launch_year}.`,
-    "launch_date_local": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket.rocket_name} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
+    "launch_date_local": `The launch of ${data.second_stage.payloads[0].payload_id} aboard SpaceX's ${data.rocket.rocket_name} from ${data.launch_site.site_name} ${tense} at ${dateString0}. `,
     "launch_date_utc": `${dateString0}`,
     "time_local": `${data.time_local}`,
     "rocket": `${data.rocket.rocket_name}`,
@@ -127,14 +127,14 @@ function launchInfoTemplate (data, parameter, past) {
     "core_serial": `${data.core_serial}`,
     "cap_serial": `${data.cap_serial}`,
     "launch_site": `${data.launch_site.site_name}`,//could consider adding a google maps rich data reply
-    "payload_1": `${data.payloads[0].payload_id}`,
-    //"payload_2": `${data.payloads[1]? data.payloads[1].payload_id:'There was no second payload'}`,// not working
-    "payload_type": `${data.payloads[0].payload_type}`,
-    "payload_mass_kg": `${data.payloads[0].payload_mass_kg}`,
-    "payload_mass_lbs": `${data.payloads[0].payload_mass_lbs}`,
-    "orbit": `${data.payloads[0].orbit}`,
-    "customer_1": `${data.payloads[0].customers[0]}`,
-    //"customer_2": `${data.payloads[1].customers[0]}`,
+    "payload_1": `${data.second_stage.payloads[0].payload_id}`,
+    //"payload_2": `${data.second_stage.payloads[1]? data.payloads[1].payload_id:'There was no second payload'}`,// not working
+    "payload_type": `${data.second_stage.payloads[0].payload_type}`,
+    "payload_mass_kg": `${data.second_stage.payloads[0].payload_mass_kg}`,
+    "payload_mass_lbs": `${data.second_stage.payloads[0].payload_mass_lbs}`,
+    "orbit": `${data.second_stage.payloads[0].orbit}`,
+    "customer_1": `${data.second_stage.payloads[0].customers[0]}`,
+    //"customer_2": `${data.second_stage.payloads[1].customers[0]}`,
     "launch_success": `${data.launch_success}`,
     "reused": `${data.reused}`,
     "land_success": `${data.land_success}`,
@@ -143,7 +143,7 @@ function launchInfoTemplate (data, parameter, past) {
     "mission_patch": `${data.links.mission_patch}`,
     "article_link": `${data.links.article_link}`,
     "video_link": `${data.links.video_link}`,
-    "details": `The launch of ${data.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
+    "details": `The launch of ${data.second_stage.payloads[0].payload_id} aboard SpaceX's ${data.rocket} from ${data.launch_site.site_name} ${tense} at ${dateString0}. ${data.details}. `
   };
   console.log('launchInfoTemplate() is returning: ' + LAUNCH_INFO[parameter]);
   return LAUNCH_INFO[parameter];
