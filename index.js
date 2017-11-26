@@ -158,7 +158,25 @@ exports.SpaceXFulfillment = (request, response) => {
   function getVehicleInfo (app){
 
     function callbackVehicle (app, data){
+      let vehicleParameters = queryResult.parameters.VehicleQueryParams;
+      let vehicles = queryResult.parameters.Vehicles;
 
+      let speech  = "";
+      for (var vehicle in vehicles) {
+        if (vehicles.hasOwnProperty(vehicle)) {
+
+          for (var vehicleParameter in vehicleParameters) {
+            if (vehicleParameters.hasOwnProperty(vehicleParameter)) {
+              speech += vehicleInfoTemplate(data[vehicle], vehicleParameter);
+            }
+          }
+        }
+      }
+      let botResponse = {
+        'speech':speech+ "Is there anything else I can help with?",
+        'displayText':speech,
+      };
+      response.json(botResponse);
     }
     APIrequest(app, '/vehicles', callbackVehicle);
   }
@@ -224,7 +242,7 @@ exports.SpaceXFulfillment = (request, response) => {
         let ele = masterResults[n];
         speech += launchInfoTemplate(ele, launchQueryParameter, past);
       }
-      //below statement is an easter egg to be removed when FH comes into use. 
+      //below statement is an easter egg to be removed when FH comes into use.
       if (queryResult.parameters.Vehicles == "Falcon Heavy"){
         speech = "I just called Elon, he says six months from now. ";
       };
@@ -236,7 +254,7 @@ exports.SpaceXFulfillment = (request, response) => {
       //  'displayText': speech,
       //};
       //app.ask(botResponse);
-      
+
       //this JSON struncture can be used to build rich slack responses with hyperlinks and more https://api.slack.com/docs/messages
       let slackMessage = {
         "text": speech,
@@ -251,10 +269,10 @@ exports.SpaceXFulfillment = (request, response) => {
       let botResponse = {};
       botResponse.speech = speech + "Anything else I can help with?";
       botResponse.displayText = speech + "Is there anything else I can help with?";
-      //uncomment this line to enable rich slack responses. 
+      //uncomment this line to enable rich slack responses.
       //botResponse.data = {};
       //botResponse.data.slack = slackMessage;
-      response.json(botResponse);      
+      response.json(botResponse);
     }
 
     if (queryResult.parameters.LaunchTemporal == 'next'){
