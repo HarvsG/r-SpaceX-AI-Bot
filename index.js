@@ -160,14 +160,25 @@ exports.SpaceXFulfillment = (request, response) => {
     function callbackVehicle (app, data){
       let vehicleParameters = queryResult.parameters.VehicleQueryParams;
       let vehicles = queryResult.parameters.Vehicles;
-
+      let vehicleData = {};
       let speech  = "";
       for (var vehicle in vehicles) {
         if (vehicles.hasOwnProperty(vehicle)) {
 
+          //loop through the list of all vehicles in the data and retieve only the vehicle in question
+          for (var i in data) {
+          	if (data.hasOwnProperty(i)) {
+
+            	if (data[i].id == vehicle){
+              	vehicleData = data[i];
+              }
+            }
+          }
+
+
           for (var vehicleParameter in vehicleParameters) {
             if (vehicleParameters.hasOwnProperty(vehicleParameter)) {
-              speech += vehicleInfoTemplate(data[vehicle], vehicleParameter);
+              speech += vehicleInfoTemplate(vehicleData, vehicleParameter);
             }
           }
         }
