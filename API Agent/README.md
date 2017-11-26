@@ -1,6 +1,8 @@
 # Dialogflow Agent
 The Dialogflow agent can be found [here](https://github.com/HarvsG/r-SpaceX-AI-Bot/tree/master/API%20Agent/r-SpaceX-AI).
 
+This folder is not part of the webhook and is not needed to deploy the webhook.
+
 You can use your own implementation of the agent by going to [Dialogflow](https://dialogflow.com)
   - Sign Up or Log In
   - Create a new agent
