@@ -46,6 +46,9 @@ const ENTITY_SEARCH_FIELD = {
 };
 
 function vehicleInfoTemplate (data, parameter) {
+  console.log("Template start");
+  console.log(data);
+  let date = (data.first_flight == "TBD")? "is yet to be announced":"was on " + new Date(data.first_flight).toDateString();
   const VEHICLE_INFO = {
     "id": ``,
     "name": ``,
@@ -53,24 +56,27 @@ function vehicleInfoTemplate (data, parameter) {
     "stages": `The ${data.name} has ${data.stages} stages`,
     "cost_per_launch": `The launch cost of the ${data.name} is ${data.cost_per_launch}%`,
     "success_rate_pct": `The success rate of the ${data.name} is ${data.success_rate_pct}%`,
-    "first_flight": `The first flight of the ${data.name} was ${new Date(data.first_flight).toDateString()}`,
+    "first_flight": `The first flight of the ${data.name} ${date}. `,
     "country": ``,
     "company": ``,
-    "size": `The ${data.name} is ${data.height.meters} meters tall and ${data.diameter.meters} meters in diameter. It has a dry mass of ${data.mass.kg} kilograms. `,
+    // vehicle data structure is inconsistant and that breaks this https://github.com/r-spacex/SpaceX-API/issues/53
+    //"size": `The ${data.name} is ${data.height.meters} meters tall and ${data.diameter.meters} meters in diameter. It has a dry mass of ${data.mass.kg} kilograms. `,
     "leo_weight": `The ${data.name} can launch ${data.payload_weights[0].kg} kilograms to ${data.payload_weights[0].name}`,
-    "gto_weight": `The ${data.name} can launch ${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}`,
-    "mars_weight": `The ${data.name} can launch ${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}`,
-    "first_stage_reusable": `The ${data.name} is ${data.first_stage.reusable? "":"not "}a reusable rocket`,
     //engine data structure in the API differs over different vehicles. https://github.com/r-spacex/SpaceX-API/issues/53
-    "engines":`The first stage has ${data.first_stage.engines.number} ${data.engines.type} ${data.engines.version}s. The second stage has ${data.second_stage.engines.number} ${data.second_stage.engines.type}s. `,
-    "engine_stats":`The first stage's ${data.engines.number} ${data.first_stage.engines.type}s can burn for ${data.first_stage.burn_time_sec} with a sea level thrust of ${data.first_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.first_stage.engines.thrust_vacuum}. The second stage's ${data.second_stage.engines.number} ${data.second_stage.engines.type}s can burn for ${data.second_stage.burn_time_sec} with a sea level thrust of ${data.second_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.second_stage.engines.thrust_vacuum}. `,    "fuel":`The first satge on the ${data.name} carries ${data.first_stage.fuel_amount_tons} tons of ${data.first_stage.engines.propellant_1} and ${data.first_stage.engines.propellant_2}, The second satge on the carries ${data.second_stage.fuel_amount_tons} tons of ${data.second_stage.engines.propellant_1} and ${data.second_stage.engines.propellant_2}. `,
+    //"gto_weight": `The ${data.name} can launch ${data.payload_weights[1].kg} kilograms to ${data.payload_weights[1].name}`,
+    //"mars_weight": `The ${data.name} can launch ${data.payload_weights[2].kg} kilograms to ${data.payload_weights[2].name}`,
+    "first_stage_reusable": `The ${data.name} is ${data.first_stage.reusable? "":"not "}a reusable rocket`,
+    //"engines":`The first stage has ${data.first_stage.engines.number} ${data.engines.type} ${data.engines.version}s. The second stage has ${data.second_stage.engines.number} ${data.second_stage.engines.type}s. `,
+    //"engine_stats":`The first stage's ${data.engines.number} ${data.first_stage.engines.type}s can burn for ${data.first_stage.burn_time_sec} with a sea level thrust of ${data.first_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.first_stage.engines.thrust_vacuum}. The second stage's ${data.second_stage.engines.number} ${data.second_stage.engines.type}s can burn for ${data.second_stage.burn_time_sec} with a sea level thrust of ${data.second_stage.engines.thrust_sea_level} and a vacuum thrust of ${data.second_stage.engines.thrust_vacuum}. `,
+    //"fuel":`The first satge on the ${data.name} carries ${data.first_stage.fuel_amount_tons} tons of ${data.first_stage.engines.propellant_1} and ${data.first_stage.engines.propellant_2}, The second satge on the carries ${data.second_stage.fuel_amount_tons} tons of ${data.second_stage.engines.propellant_1} and ${data.second_stage.engines.propellant_2}. `,
     "second_stage_payload_options":`${data.second_stage.payloads.option_1} and ${data.second_stage.payloads.option_2}`,
     "fairing_size":` The fairing is ${data.second_stage.payloads.composite_fairing.height.meters} meters tall and ${data.second_stage.payloads.composite_fairing.diameter.meters} meters in diameter. `,
-    "engine_loss_max":`${data.engines.engine_loss_max} can be lost during flight without causing mission failure`,
+    //"engine_loss_max":`${data.engines.engine_loss_max} can be lost during flight without causing mission failure`,
+    //"landing_legs":`The ${data.name} has ${data.landing_legs.number} landing legs which are made from ${data.landing_legs.material}`,
     //
-    "landing_legs":`The ${data.name} has ${data.landing_legs.number} landing legs which are made from ${data.landing_legs.material}`,
     "description": "Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit."
   };
+  console.log("Template end");
   return VEHICLE_INFO[parameter];
 }
 function companyInfoTemplate (data, parameter) {
@@ -98,7 +104,7 @@ function launchInfoTemplate (data, parameter, past) {
   console.log('The data being used is:');
   console.log(data);
   let tense = past?  "took place":"is due to take place";
-  let date = (data.launch_date_utc = "TBD")? "an unannounced time":new Date(data.launch_date_utc).toUTCString().replace(":00", "");
+  let date = (data.launch_date_utc == "TBD")? "an unannounced time":new Date(data.launch_date_utc).toUTCString().replace(":00", "");
   //let dateString0 = date.toUTCString().replace(":00", ""); //not future proof if API reports seconds
   const LAUNCH_INFO = {
     "flight_number": `${data.flight_number}. `,
@@ -162,14 +168,13 @@ exports.SpaceXFulfillment = (request, response) => {
       let vehicles = queryResult.parameters.Vehicles;
       let vehicleData = {};
       let speech  = "";
+
       for (var vehicle in vehicles) {
         if (vehicles.hasOwnProperty(vehicle)) {
-
           //loop through the list of all vehicles in the data and retieve only the vehicle in question
           for (var i in data) {
           	if (data.hasOwnProperty(i)) {
-
-            	if (data[i].id == vehicle){
+            	if (data[i].id == vehicles[vehicle]){
               	vehicleData = data[i];
               }
             }
@@ -178,7 +183,8 @@ exports.SpaceXFulfillment = (request, response) => {
 
           for (var vehicleParameter in vehicleParameters) {
             if (vehicleParameters.hasOwnProperty(vehicleParameter)) {
-              speech += vehicleInfoTemplate(vehicleData, vehicleParameter);
+              console.log(vehicleParameters[vehicleParameter]);
+              speech += vehicleInfoTemplate(vehicleData, vehicleParameters[vehicleParameter]);
             }
           }
         }
@@ -276,7 +282,7 @@ exports.SpaceXFulfillment = (request, response) => {
           "color": "#36a64f"
           }
         ]
-      }
+      };
       let botResponse = {};
       botResponse.speech = speech + "Anything else I can help with?";
       botResponse.displayText = speech + "Is there anything else I can help with?";
