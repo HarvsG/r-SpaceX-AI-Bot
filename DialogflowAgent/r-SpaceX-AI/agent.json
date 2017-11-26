@@ -22,7 +22,7 @@
   },
   "defaultTimezone": "Africa/Casablanca",
   "webhook": {
-    "url": "https://3ec2bb3d.ngrok.io/r-SpaceX-AI/us-central1/SpaceXFulfillment",
+    "url": "https://us-central1-r-spacex-ai.cloudfunctions.net/SpaceXFulfillment",
     "headers": {
       "": ""
     },
