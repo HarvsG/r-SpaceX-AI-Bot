@@ -195,7 +195,7 @@ exports.SpaceXFulfillment = (request, response) => {
       };
       response.json(botResponse);
     }
-    APIrequest(app, '/vehicles', callbackVehicle);
+    APIrequest(app, '/rockets', callbackVehicle);
   }
 
   function getLaunchInfo (app){
