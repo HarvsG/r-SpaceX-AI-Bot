@@ -101,7 +101,7 @@ function companyInfoTemplate (data, parameter) {
 function launchInfoTemplate (data, parameter, past) {
   console.log('Addressing flight number:');
   console.log(data.flight_number);
-  console.log('The data being used is:');
+  console.log('The data being used are:');
   console.log(data);
   let tense = past?  "took place":"is due to take place";
   let date = (data.launch_date_utc == "TBD")? "an unannounced time":new Date(data.launch_date_utc).toUTCString().replace(":00", "");
@@ -229,12 +229,13 @@ exports.SpaceXFulfillment = (request, response) => {
 
         // this may also need a pairing dictionary as the line above does
         let searchVal = paramsList[element];
-
         // loops through each of the launches in the data array and sees if the seach field matches the value, is true then appends to results
+
         for (let x = 0; x < masterResults.length; x++) {
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0. .toString as values will sometimes be booleen
-          if (masterResults[x][searchField].toString().indexOf(searchVal) != -1) {
+          if (JSON.stringify(masterResults[x][searchField]).indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
+
           }
         }
         masterResults = results;
