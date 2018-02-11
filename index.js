@@ -53,7 +53,7 @@ function vehicleInfoTemplate (data, parameter) {
     "id": ``,
     "name": ``,
     "active": `The ${data.name} is ${data.active?  "active":"not active"}. `,
-    "stages": `The ${data.name} has ${data.stages} stages${data.boosters?  "and two side boosters":""}.`,
+    "stages": `The ${data.name} has ${data.stages} stages${data.boosters?  " and two side boosters":""}. `,
     "cost_per_launch": `The launch cost of the ${data.name} is ${data.cost_per_launch}. `,
     "success_rate_pct": `The success rate of the ${data.name} is ${data.success_rate_pct}%. `,
     "first_flight": `The first flight of the ${data.name} ${date}. `,
