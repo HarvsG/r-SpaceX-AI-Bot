@@ -7,7 +7,10 @@
       "what was the flight no.",
       "what will the flight number be",
       "what were the flights numbers",
-      "what will the flight numbers be"
+      "what will the flight numbers be",
+      "how many flights",
+      "how many missions",
+      "how many launches"
     ]
   },
   {
@@ -27,7 +30,8 @@
       "when will",
       "what time",
       "when is",
-      "when was"
+      "when was",
+      "when did"
     ]
   },
   {
@@ -280,6 +284,12 @@
       "information",
       "about",
       "what was"
+    ]
+  },
+  {
+    "value": "What are",
+    "synonyms": [
+      "What are"
     ]
   }
 ]

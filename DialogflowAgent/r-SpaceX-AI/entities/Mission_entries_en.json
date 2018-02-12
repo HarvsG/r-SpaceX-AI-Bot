@@ -1,0 +1,500 @@
+[
+  {
+    "value": "FalconSat",
+    "synonyms": [
+      "FalconSat"
+    ]
+  },
+  {
+    "value": "DemoSat",
+    "synonyms": [
+      "DemoSat"
+    ]
+  },
+  {
+    "value": "Trailblazer",
+    "synonyms": [
+      "Trailblazer"
+    ]
+  },
+  {
+    "value": "PRESat",
+    "synonyms": [
+      "PRESat"
+    ]
+  },
+  {
+    "value": "NanoSail-D",
+    "synonyms": [
+      "NanoSail-D"
+    ]
+  },
+  {
+    "value": "Explorers",
+    "synonyms": [
+      "Explorers"
+    ]
+  },
+  {
+    "value": "RatSat",
+    "synonyms": [
+      "RatSat"
+    ]
+  },
+  {
+    "value": "RazakSat",
+    "synonyms": [
+      "RazakSat"
+    ]
+  },
+  {
+    "value": "Falcon 9 Demo",
+    "synonyms": [
+      "Falcon 9 Demo"
+    ]
+  },
+  {
+    "value": "COTS 1",
+    "synonyms": [
+      "COTS 1"
+    ]
+  },
+  {
+    "value": "COTS 2",
+    "synonyms": [
+      "COTS 2"
+    ]
+  },
+  {
+    "value": "CRS-1",
+    "synonyms": [
+      "CRS-1"
+    ]
+  },
+  {
+    "value": "OG2",
+    "synonyms": [
+      "OG2"
+    ]
+  },
+  {
+    "value": "CRS-2",
+    "synonyms": [
+      "CRS-2"
+    ]
+  },
+  {
+    "value": "CASSIOPE",
+    "synonyms": [
+      "CASSIOPE"
+    ]
+  },
+  {
+    "value": "SES-8",
+    "synonyms": [
+      "SES-8"
+    ]
+  },
+  {
+    "value": "Thaicom 6",
+    "synonyms": [
+      "Thaicom 6"
+    ]
+  },
+  {
+    "value": "CRS-3",
+    "synonyms": [
+      "CRS-3"
+    ]
+  },
+  {
+    "value": "OG2",
+    "synonyms": [
+      "OG2"
+    ]
+  },
+  {
+    "value": "AsiaSat 8",
+    "synonyms": [
+      "AsiaSat 8"
+    ]
+  },
+  {
+    "value": "AsiaSat 6",
+    "synonyms": [
+      "AsiaSat 6"
+    ]
+  },
+  {
+    "value": "CRS-4",
+    "synonyms": [
+      "CRS-4"
+    ]
+  },
+  {
+    "value": "CRS-5",
+    "synonyms": [
+      "CRS-5"
+    ]
+  },
+  {
+    "value": "DSCOVR",
+    "synonyms": [
+      "DSCOVR"
+    ]
+  },
+  {
+    "value": "Eutelsat 115W B",
+    "synonyms": [
+      "Eutelsat 115W B"
+    ]
+  },
+  {
+    "value": "ABS-3A",
+    "synonyms": [
+      "ABS-3A"
+    ]
+  },
+  {
+    "value": "CRS-6",
+    "synonyms": [
+      "CRS-6"
+    ]
+  },
+  {
+    "value": "MonacoSat",
+    "synonyms": [
+      "MonacoSat"
+    ]
+  },
+  {
+    "value": "CRS-7",
+    "synonyms": [
+      "CRS-7"
+    ]
+  },
+  {
+    "value": "Jason-3",
+    "synonyms": [
+      "Jason-3"
+    ]
+  },
+  {
+    "value": "SES-9",
+    "synonyms": [
+      "SES-9"
+    ]
+  },
+  {
+    "value": "CRS-8",
+    "synonyms": [
+      "CRS-8"
+    ]
+  },
+  {
+    "value": "BEAM",
+    "synonyms": [
+      "BEAM"
+    ]
+  },
+  {
+    "value": "JCSAT-14",
+    "synonyms": [
+      "JCSAT-14"
+    ]
+  },
+  {
+    "value": "Thaicom 8",
+    "synonyms": [
+      "Thaicom 8"
+    ]
+  },
+  {
+    "value": "Eutelsat 117W B",
+    "synonyms": [
+      "Eutelsat 117W B"
+    ]
+  },
+  {
+    "value": "IDA-2",
+    "synonyms": [
+      "IDA-2"
+    ]
+  },
+  {
+    "value": "CRS-9",
+    "synonyms": [
+      "CRS-9"
+    ]
+  },
+  {
+    "value": "JCSAT-16",
+    "synonyms": [
+      "JCSAT-16"
+    ]
+  },
+  {
+    "value": "Amos-6",
+    "synonyms": [
+      "Amos-6"
+    ]
+  },
+  {
+    "value": "Iridium",
+    "synonyms": [
+      "Iridium"
+    ]
+  },
+  {
+    "value": "Iridium 1",
+    "synonyms": [
+      "Iridium 1"
+    ]
+  },
+  {
+    "value": "CRS-10",
+    "synonyms": [
+      "CRS-10"
+    ]
+  },
+  {
+    "value": "STP-H5",
+    "synonyms": [
+      "STP-H5"
+    ]
+  },
+  {
+    "value": "SAGE III",
+    "synonyms": [
+      "SAGE III"
+    ]
+  },
+  {
+    "value": "SAGE NVP",
+    "synonyms": [
+      "SAGE NVP"
+    ]
+  },
+  {
+    "value": "EchoStar 23",
+    "synonyms": [
+      "EchoStar 23"
+    ]
+  },
+  {
+    "value": "SES-10",
+    "synonyms": [
+      "SES-10"
+    ]
+  },
+  {
+    "value": "SES",
+    "synonyms": [
+      "SES"
+    ]
+  },
+  {
+    "value": "CRS",
+    "synonyms": [
+      "CRS"
+    ]
+  },
+  {
+    "value": "NROL-76",
+    "synonyms": [
+      "NROL-76"
+    ]
+  },
+  {
+    "value": "NROL",
+    "synonyms": [
+      "NROL"
+    ]
+  },
+  {
+    "value": "Inmarsat 5-F4",
+    "synonyms": [
+      "Inmarsat 5-F4"
+    ]
+  },
+  {
+    "value": "Inmarsat",
+    "synonyms": [
+      "Inmarsat"
+    ]
+  },
+  {
+    "value": "CRS-11",
+    "synonyms": [
+      "CRS-11"
+    ]
+  },
+  {
+    "value": "ROSA",
+    "synonyms": [
+      "ROSA"
+    ]
+  },
+  {
+    "value": "NICER",
+    "synonyms": [
+      "NICER"
+    ]
+  },
+  {
+    "value": "MUSES",
+    "synonyms": [
+      "MUSES"
+    ]
+  },
+  {
+    "value": "BulgariaSat-1",
+    "synonyms": [
+      "BulgariaSat-1"
+    ]
+  },
+  {
+    "value": "BulgariaSat",
+    "synonyms": [
+      "BulgariaSat"
+    ]
+  },
+  {
+    "value": "Iridium 2",
+    "synonyms": [
+      "Iridium 2"
+    ]
+  },
+  {
+    "value": "Intelsat 35e",
+    "synonyms": [
+      "Intelsat 35e"
+    ]
+  },
+  {
+    "value": "CRS-12",
+    "synonyms": [
+      "CRS-12"
+    ]
+  },
+  {
+    "value": "CREAM",
+    "synonyms": [
+      "CREAM"
+    ]
+  },
+  {
+    "value": "ELaNa XXII",
+    "synonyms": [
+      "ELaNa XXII"
+    ]
+  },
+  {
+    "value": "FORMOSAT",
+    "synonyms": [
+      "FORMOSAT"
+    ]
+  },
+  {
+    "value": "FORMOSAT 5",
+    "synonyms": [
+      "FORMOSAT 5"
+    ]
+  },
+  {
+    "value": "X-37B OTV-5",
+    "synonyms": [
+      "X-37B OTV-5"
+    ]
+  },
+  {
+    "value": "OTV",
+    "synonyms": [
+      "OTV"
+    ]
+  },
+  {
+    "value": "Iridium 3",
+    "synonyms": [
+      "Iridium 3"
+    ]
+  },
+  {
+    "value": "EchoStar 105",
+    "synonyms": [
+      "EchoStar 105"
+    ]
+  },
+  {
+    "value": "EchoStar",
+    "synonyms": [
+      "EchoStar"
+    ]
+  },
+  {
+    "value": "KoreaSat 5A",
+    "synonyms": [
+      "KoreaSat 5A"
+    ]
+  },
+  {
+    "value": "KoreaSat",
+    "synonyms": [
+      "KoreaSat"
+    ]
+  },
+  {
+    "value": "CRS-13",
+    "synonyms": [
+      "CRS-13"
+    ]
+  },
+  {
+    "value": "TSIS",
+    "synonyms": [
+      "TSIS"
+    ]
+  },
+  {
+    "value": "SDS",
+    "synonyms": [
+      "SDS"
+    ]
+  },
+  {
+    "value": "Iridium 4",
+    "synonyms": [
+      "Iridium 4"
+    ]
+  },
+  {
+    "value": "Zuma",
+    "synonyms": [
+      "Zuma"
+    ]
+  },
+  {
+    "value": "GovSat-1",
+    "synonyms": [
+      "GovSat-1"
+    ]
+  },
+  {
+    "value": "GovSat",
+    "synonyms": [
+      "GovSat"
+    ]
+  },
+  {
+    "value": "Tesla",
+    "synonyms": [
+      "Tesla"
+    ]
+  },
+  {
+    "value": "Roadster",
+    "synonyms": [
+      "Roadster"
+    ]
+  }
+]

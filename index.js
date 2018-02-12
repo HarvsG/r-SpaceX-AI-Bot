@@ -42,7 +42,8 @@ const ENTITY_SEARCH_FIELD = {
   'Vehicles':'rocket',
   'LaunchPads':'launch_site',
   'LaunchOrdinal':'flight_number',
-  'MissionOutcome':'launch_success'
+  'MissionOutcome':'launch_success',
+  'Mission':'rocket'
 };
 
 function vehicleInfoTemplate (data, parameter) {
@@ -234,7 +235,6 @@ exports.SpaceXFulfillment = (request, response) => {
           //if (masterResults[x][searchField] == searchVal) { // not always working since Dragon 1 can be Dragon 1.1 or Dragon 1.0. .toString as values will sometimes be booleen
           if (JSON.stringify(masterResults[x][searchField]).indexOf(searchVal) != -1) {
             results.push(masterResults[x]);
-
           }
         }
         masterResults = results;

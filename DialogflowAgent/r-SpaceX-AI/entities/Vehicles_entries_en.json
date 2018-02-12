@@ -1,13 +1,5 @@
 [
   {
-    "value": "falcon1",
-    "synonyms": [
-      "Falcon 1",
-      "F1",
-      "falcon one"
-    ]
-  },
-  {
     "value": "falcon9",
     "synonyms": [
       "Falcon 9",
@@ -16,10 +8,11 @@
     ]
   },
   {
-    "value": "falcon_heavy",
+    "value": "Dragon 2",
     "synonyms": [
-      "Falcon Heavy",
-      "FH"
+      "Dragon 2",
+      "Crew Dragon",
+      "red dragon"
     ]
   },
   {
@@ -32,11 +25,25 @@
     ]
   },
   {
-    "value": "Dragon 2",
+    "value": "ITS Booster",
     "synonyms": [
-      "Dragon 2",
-      "Crew Dragon",
-      "red dragon"
+      "ITS Booster",
+      "MCT booster"
+    ]
+  },
+  {
+    "value": "falcon1",
+    "synonyms": [
+      "Falcon 1",
+      "F1",
+      "falcon one"
+    ]
+  },
+  {
+    "value": "falconheavy",
+    "synonyms": [
+      "Falcon Heavy",
+      "FH"
     ]
   },
   {
@@ -46,13 +53,6 @@
       "MCT",
       "Mars colonial transporter",
       "interplanetary transport system"
-    ]
-  },
-  {
-    "value": "ITS Booster",
-    "synonyms": [
-      "ITS Booster",
-      "MCT booster"
     ]
   },
   {

@@ -28,6 +28,12 @@
           "dataType": "@LaunchQueryParams",
           "name": "LaunchQueryParams",
           "value": "$LaunchQueryParams",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I\u0027m sorry I\u0027m not sure what you want me to look for."
+            }
+          ],
           "isList": false
         },
         {
@@ -71,6 +77,14 @@
           "name": "MissionOutcome",
           "value": "$MissionOutcome",
           "isList": false
+        },
+        {
+          "id": "5b4561d1-b41d-4384-9e9f-c27518480b1f",
+          "required": false,
+          "dataType": "@Mission",
+          "name": "Mission",
+          "value": "$Mission",
+          "isList": false
         }
       ],
       "messages": [
@@ -95,7 +109,7 @@
   "priority": 500000,
   "webhookUsed": true,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1499982910,
+  "lastUpdate": 1518452276,
   "fallbackIntent": false,
   "events": []
 }

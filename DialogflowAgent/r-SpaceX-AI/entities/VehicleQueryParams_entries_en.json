@@ -1,96 +1,10 @@
 [
   {
-    "value": "id",
-    "synonyms": [
-      "id"
-    ]
-  },
-  {
-    "value": "name",
-    "synonyms": [
-      "name"
-    ]
-  },
-  {
     "value": "active",
     "synonyms": [
       "active",
       "in use",
       "flying"
-    ]
-  },
-  {
-    "value": "stages",
-    "synonyms": [
-      "stages",
-      "how many stages",
-      "number of stages"
-    ]
-  },
-  {
-    "value": "cost_per_launch",
-    "synonyms": [
-      "cost_per_launch",
-      "cost",
-      "cost per launch"
-    ]
-  },
-  {
-    "value": "success_rate_pct",
-    "synonyms": [
-      "success rate",
-      "how successful",
-      "reliable"
-    ]
-  },
-  {
-    "value": "first_flight",
-    "synonyms": [
-      "first_flight",
-      "first fly",
-      "first launch",
-      "first take off"
-    ]
-  },
-  {
-    "value": "country",
-    "synonyms": [
-      "country"
-    ]
-  },
-  {
-    "value": "company",
-    "synonyms": [
-      "company",
-      "who"
-    ]
-  },
-  {
-    "value": "size",
-    "synonyms": [
-      "height",
-      "how tall",
-      "how high",
-      "how big",
-      "how heavy is",
-      "diameter",
-      "how wide",
-      "thick",
-      "width",
-      "weight",
-      "weigh",
-      "dry mass"
-    ]
-  },
-  {
-    "value": "leo_weight",
-    "synonyms": [
-      "leo_weight",
-      "carry to LEO",
-      "Low Earth Orbit",
-      "low earth orbit",
-      "how much to leo",
-      "how much to low earth orbit"
     ]
   },
   {
@@ -107,21 +21,12 @@
     ]
   },
   {
-    "value": "mars_weight",
+    "value": "first_flight",
     "synonyms": [
-      "mars_weight",
-      "carry to Mars",
-      "take to Mars",
-      "launch to Mars",
-      "deliver to Mars"
-    ]
-  },
-  {
-    "value": "first_stage_reusable",
-    "synonyms": [
-      "first_stage_reusable",
-      "recyclable",
-      "reusable"
+      "first_flight",
+      "first fly",
+      "first launch",
+      "first take off"
     ]
   },
   {
@@ -149,37 +54,9 @@
     ]
   },
   {
-    "value": "fairing_size",
+    "value": "id",
     "synonyms": [
-      "fairing_height",
-      "fairing height",
-      "height",
-      "fairing"
-    ]
-  },
-  {
-    "value": "engine_loss_max",
-    "synonyms": [
-      "engine_loss_max",
-      "redundancy",
-      "engine loss"
-    ]
-  },
-  {
-    "value": "landing_legs",
-    "synonyms": [
-      "landing_legs_material",
-      "landing legs",
-      "legs"
-    ]
-  },
-  {
-    "value": "description",
-    "synonyms": [
-      "description",
-      "about",
-      "information",
-      "info"
+      "id"
     ]
   },
   {
@@ -192,7 +69,9 @@
       "what engine",
       "what engines",
       "what motor",
-      "what motors"
+      "what motors",
+      "engines",
+      "motors"
     ]
   },
   {
@@ -210,6 +89,134 @@
       "engine specs",
       "specific impulse",
       "TWR"
+    ]
+  },
+  {
+    "value": "leo_weight",
+    "synonyms": [
+      "leo_weight",
+      "carry to LEO",
+      "Low Earth Orbit",
+      "low earth orbit",
+      "how much to leo",
+      "how much to low earth orbit"
+    ]
+  },
+  {
+    "value": "name",
+    "synonyms": [
+      "name"
+    ]
+  },
+  {
+    "value": "country",
+    "synonyms": [
+      "country"
+    ]
+  },
+  {
+    "value": "landing_legs",
+    "synonyms": [
+      "landing_legs_material",
+      "landing legs",
+      "legs"
+    ]
+  },
+  {
+    "value": "cost_per_launch",
+    "synonyms": [
+      "cost_per_launch",
+      "cost",
+      "cost per launch"
+    ]
+  },
+  {
+    "value": "success_rate_pct",
+    "synonyms": [
+      "success rate",
+      "how successful",
+      "reliable"
+    ]
+  },
+  {
+    "value": "stages",
+    "synonyms": [
+      "stages",
+      "how many stages",
+      "number of stages",
+      "boosters",
+      "cores",
+      "side cores",
+      "how may rockets"
+    ]
+  },
+  {
+    "value": "size",
+    "synonyms": [
+      "height",
+      "how tall",
+      "how high",
+      "how big",
+      "how heavy is",
+      "diameter",
+      "how wide",
+      "thick",
+      "width",
+      "weight",
+      "weigh",
+      "dry mass",
+      "dimensions"
+    ]
+  },
+  {
+    "value": "first_stage_reusable",
+    "synonyms": [
+      "first_stage_reusable",
+      "recyclable",
+      "reusable"
+    ]
+  },
+  {
+    "value": "fairing_size",
+    "synonyms": [
+      "fairing_height",
+      "fairing height",
+      "height",
+      "fairing"
+    ]
+  },
+  {
+    "value": "engine_loss_max",
+    "synonyms": [
+      "engine_loss_max",
+      "redundancy",
+      "engine loss"
+    ]
+  },
+  {
+    "value": "company",
+    "synonyms": [
+      "company",
+      "who"
+    ]
+  },
+  {
+    "value": "mars_weight",
+    "synonyms": [
+      "mars_weight",
+      "carry to Mars",
+      "take to Mars",
+      "launch to Mars",
+      "deliver to Mars"
+    ]
+  },
+  {
+    "value": "description",
+    "synonyms": [
+      "description",
+      "about",
+      "information",
+      "info"
     ]
   }
 ]
