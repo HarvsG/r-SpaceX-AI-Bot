@@ -15,7 +15,7 @@ Before a beta release numbers ~~2~~ and 3 need to be done. As well as to do the 
 
 - [ ] Optional ‘More info’ Buttons/Speech options
 
-- [ ] Allow users to ask questions about specific launches e.g “What pad did CRS-10 take-off from”
+- [x] Allow users to ask questions about specific launches e.g “What pad did CRS-10 take-off from”
 
 - [ ] More help options in conversation
 
